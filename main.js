@@ -82,7 +82,7 @@ function renderLineGraph(dexcomData) {
 
     xScale = d3
         .scaleTime()
-        .domain(d3.extent(dexcomData, (d) => new d.timestamp))
+        .domain(d3.extent(dexcomData, (d) => d.timestamp))
         .range([usableArea.left, usableArea.right])
         .nice();
 

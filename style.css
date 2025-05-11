@@ -1,0 +1,8 @@
+/* style.css */
+
+.gridlines {
+    stroke: var(--gridline-color);
+    stroke-width: 0.5;
+    color: var(--gridline-color);
+  }
+  
