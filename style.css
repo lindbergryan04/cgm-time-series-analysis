@@ -9,6 +9,15 @@
     --gridline-color: #ccc;
   }
 
+  #chart {
+    width: 1000px;
+    height: 600px;
+    margin: 40px auto; /* centers horizontally */
+    border: 1px solid #ccc; 
+    max-width: 95vw;  /* responsive width */
+    overflow-x: auto;
+}
+
 .gridlines {
     stroke: var(--gridline-color);
     stroke-width: 0.5;

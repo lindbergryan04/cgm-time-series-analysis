@@ -44,7 +44,7 @@ Preview of dexcomData:
     },
     // ... more entries ...
 ]
-*/ 
+*/
 
 
 
@@ -58,16 +58,18 @@ Preview of dexcomData:
 // render scatter plot function, ripped from lab 6, which will be modified to fit the dexcom and food log data as a line graph. (probably)
 const width = 1000;
 const height = 600;
+let patiend_id = 1; // add selector for patient id in future
 let xScale;
 let yScale;
 function renderLineGraph(dexcomData) {
 
     const svg = d3
         .select('#chart')
-        .attr('width', width)
-        .attr('height', height)
         .append('svg')
         .attr('viewBox', [0, 0, width, height])
+        .attr('preserveAspectRatio', 'xMidYMid meet')  // keep proportions on resize
+        .style('width', '100%')
+        .style('height', '100%')
         .style('overflow', 'visible');
 
     const margin = { top: 10, right: 10, bottom: 30, left: 20 };
@@ -80,15 +82,18 @@ function renderLineGraph(dexcomData) {
         height: height - margin.top - margin.bottom,
     };
 
+    // Filter data to a only the patient_id that is currently selected
+    const filteredData = dexcomData.filter(d => d.patient_id === patiend_id);
+
     xScale = d3
         .scaleTime()
-        .domain(d3.extent(dexcomData, (d) => d.timestamp))
+        .domain(d3.extent(filteredData, (d) => d.timestamp))
         .range([usableArea.left, usableArea.right])
         .nice();
 
     yScale = d3
         .scaleLinear()
-        .domain([30, 180])
+        .domain([d3.min(filteredData, d => d.value) - 5, d3.max(filteredData, d => d.value) + 5])
         .range([usableArea.bottom, usableArea.top]);
 
     // Add gridlines BEFORE the axes
@@ -155,6 +160,17 @@ function renderLineGraph(dexcomData) {
         .attr('transform', `translate(${usableArea.left}, 0)`)
         .call(yAxis);
 
+    // Create the line graph
+    svg.append("path")
+        .datum(filteredData)
+        .attr("fill", "none")
+        .attr("stroke", "steelblue")
+        .attr("stroke-width", 1.5)
+        .attr("d", d3.line()
+            .x(d => xScale(d.timestamp))
+            .y(d => yScale(d.value))
+            .curve(d3.curveMonotoneX)  // optional smoothing
+        );
 }
 
 renderLineGraph(dexcomData);
