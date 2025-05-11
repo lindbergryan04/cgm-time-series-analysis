@@ -2,7 +2,7 @@ import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 
 // load data functions
 async function loadDexcomData() {
-    const data = await d3.csv('data/cleaned_data/dexcom/cleaned_data.csv', (row) => ({
+    const data = await d3.csv('data/cleaned_data/dexcom.csv', (row) => ({
         ...row,
         timestamp: new Date(row.timestamp),
         value: Number(row.value),
