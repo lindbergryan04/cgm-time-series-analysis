@@ -60,7 +60,7 @@ const width = 1000;
 const height = 600;
 let xScale;
 let yScale;
-function renderScatterPlot(data, commits) {
+function renderLinegraph(dexcomData) {
 
     const svg = d3
         .select('#chart')
@@ -82,13 +82,13 @@ function renderScatterPlot(data, commits) {
 
     xScale = d3
         .scaleTime()
-        .domain(d3.extent(data, (d) => new Date(d.datetime)))
+        .domain(d3.extent(dexcomData, (d) => new d.timestamp))
         .range([usableArea.left, usableArea.right])
         .nice();
 
     yScale = d3
         .scaleLinear()
-        .domain([0, 24])
+        .domain([30, 180])
         .range([usableArea.bottom, usableArea.top]);
 
     // Add gridlines BEFORE the axes
@@ -141,9 +141,7 @@ function renderScatterPlot(data, commits) {
 
     // Create the axes
     const xAxis = d3.axisBottom(xScale);
-    const yAxis = d3
-        .axisLeft(yScale)
-        .tickFormat((d) => String(d % 24).padStart(2, '0') + ':00');
+    const yAxis = d3.axisLeft(yScale);
 
     // Add X axis
     svg
@@ -159,4 +157,4 @@ function renderScatterPlot(data, commits) {
 
 }
 
-
+renderLineGraph(dexcomData);
