@@ -1,0 +1,1422 @@
+timestamp,value,food,patient_id
+2020-02-13 18:00:00,83.0,Strawberry Smoothie,1
+2020-02-13 20:30:00,0.0,chicken leg,1
+2020-02-13 20:30:00,0.8,Asparagus,1
+2020-02-14 07:10:00,8.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,1
+2020-02-14 07:10:00,10.0,"(Kellogg's) Frosted Flakes, Cereal",1
+2020-02-14 09:38:00,22.0,"(Giant) Breakfast Blend, Trail Mix",1
+2020-02-14 12:38:00,8.5,Spinach And Strawberry Salad,1
+2020-02-14 12:38:00,0.2,Large Egg,1
+2020-02-14 19:30:00,75.0,(Smoothie King) Acai Adventure Smoothie,1
+2020-02-14 20:00:00,1.5,(Trader Joe's) Macaroni and Cheese,1
+2020-02-14 20:00:00,0.1,Coconut Shrimp,1
+2020-02-15 07:30:00,38.0,Spinach Smoothie,1
+2020-02-15 11:02:00,22.0,"(Giant) Breakfast Blend, Trail Mix",1
+2020-02-15 12:38:00,8.5,Spinach And Strawberry Salad,1
+2020-02-15 12:38:00,0.2,Large Egg,1
+2020-02-15 15:30:00,0.3,Babybel Cheese,1
+2020-02-15 15:35:00,22.0,"(Giant) Breakfast Blend, Trail Mix",1
+2020-02-15 20:30:00,9.4,Bourbon Chicken,1
+2020-02-15 20:30:00,0.0,Rice,1
+2020-02-15 20:30:00,0.0,Shrimp,1
+2020-02-15 20:30:00,2.1,Cabbage,1
+2020-02-16 07:00:00,8.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,1
+2020-02-16 07:00:00,10.0,"(Kellogg's) Frosted Flakes, Cereal",1
+2020-02-16 08:15:00,22.0,"(Giant) Breakfast Blend, Trail Mix",1
+2020-02-16 08:49:00,25.0,Hot Chocolate,1
+2020-02-16 11:56:00,6.0,"(Skinny Pop) Popcorn, Sweet & Salty Kettle",1
+2020-02-16 12:15:00,9.4,Bourbon Chicken,1
+2020-02-16 12:15:00,0.0,Shrimp,1
+2020-02-16 21:10:00,0.0,Chai Tea,1
+2020-02-17 06:42:00,13.0,Maple Brown Sugar Oatmeal,1
+2020-02-17 12:30:00,17.0,"(Just Salad) Salad Topping, Dried Cranberries",1
+2020-02-17 12:30:00,0.0,Chicken Nuggets,1
+2020-02-17 21:00:00,2.1,Kale Salad,1
+2020-02-17 21:00:00,3.8,Pizza,1
+2020-02-17 21:56:00,9.3,Oreo Cookies,1
+2020-02-18 06:20:00,8.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,1
+2020-02-18 06:20:00,10.0,"(Kellogg's) Frosted Flakes, Cereal",1
+2020-02-18 11:00:00,18.0,Muffin,1
+2020-02-18 11:45:00,1.7,Grilled Chicken Wrap,1
+2020-02-18 01:40:00,37.5,Kale Smoothie,1
+2020-02-18 22:00:00,0.6,Ranch Wings,1
+2020-02-19 11:00:00,75.0,(Smoothie King) Acai Adventure Smoothie,1
+2020-02-19 15:30:00,21.0,Lemon Loaf,1
+2020-02-19 18:00:00,3.9,Turkey Slider,1
+2020-02-19 20:00:00,1.0,Chicken and Rice,1
+2020-02-20 07:37:00,38.0,Green Smoothie,1
+2020-02-20 07:37:00,4.4,Bagel,1
+2020-02-20 12:30:00,1.2,Salad,1
+2020-02-20 13:00:00,25.0,Hot Chocolate,1
+2020-02-20 12:30:00,0.3,Babybel Cheese,1
+2020-02-20 18:45:00,9.3,Tangerine,1
+2020-02-20 20:15:00,1.2,Salad,1
+2020-02-20 20:30:00,38.0,Green Smoothie,1
+2020-02-21 07:30:00,8.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,1
+2020-02-21 07:30:00,10.0,"(Kellogg's) Frosted Flakes, Cereal",1
+2020-02-21 11:00:00,0.3,Babybel Cheese,1
+2020-02-21 12:30:00,2.4,Chicken Salad,1
+2020-02-21 12:30:00,2.5,Small Pita Bread,1
+2020-02-21 19:50:00,0.0,Generic - Serbian Cheese Pita,1
+2020-02-21 20:00:00,38.0,Spinach Smoothie,1
+2020-02-22 15:10:00,40.0,Boost,1
+2020-02-21 10:09:00,48.0,Mello Yello,2
+2020-02-21 10:11:00,3.0,"(Jimmy Dean) Sandwiches, Biscuit Southern Style Chicken",2
+2020-02-21 12:09:00,3.6,Large Beef Jerky,2
+2020-02-21 12:12:00,20.4,Gatorade Fierce Grape,2
+2020-02-21 14:02:00,4.0,Banquet Chicken Pot Pie,2
+2020-02-21 18:00:00,28.0,"Red Baron, Brick Oven Crust Pizza, Pepperoni",2
+2020-02-21 20:19:00,56.0,M&M's Milk Chocolate Candies (formerly M&M's Plain Chocolate Candies),2
+2020-02-22 05:39:00,8.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,2
+2020-02-22 05:39:00,10.0,"(Kellogg's) Frosted Flakes, Cereal",2
+2020-02-22 06:30:00,48.0,Mello Yello,2
+2020-02-22 13:46:00,34.0,Powerade Sports Drink,2
+2020-02-22 16:08:00,34.0,Powerade Sports Drink,2
+2020-02-22 17:50:00,2.0,"Stouffer's, Salisbury Steak",2
+2020-02-22 17:50:00,2.0,Mashed Potato,2
+2020-02-22 18:22:00,34.0,Chocolate Milk,2
+2020-02-22 20:45:00,7.1,"Frozen novelties, ice type, pop",2
+2020-02-23 10:34:00,1.4,Bacon And Cheese Omelette,2
+2020-02-23 10:36:00,34.0,Chocolate Milk,2
+2020-02-23 13:00:00,19.0,Mello Yello,2
+2020-02-23 15:00:00,5.0,(Arby's) Classic Roast Beef,2
+2020-02-23 15:00:00,48.0,Mello Yello,2
+2020-02-23 18:48:00,38.0,Mello Yello,2
+2020-02-23 20:59:00,0.5,Tortilla Chips,2
+2020-02-23 20:59:00,2.6,Salsa,2
+2020-02-24 00:33:00,17.0,Powerade Sports Drink,2
+2020-02-24 09:30:00,8.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,2
+2020-02-24 09:30:00,10.0,"(Kellogg's) Frosted Flakes, Cereal",2
+2020-02-24 12:12:00,22.0,Mountain Dew,2
+2020-02-24 15:59:00,16.0,Gatorade Fierce Grape,2
+2020-02-24 15:59:00,8.5,Cheeseburger With Chili,2
+2020-02-24 15:59:00,0.2,Tater Tots,2
+2020-02-24 15:59:00,1.8,"Fast foods, onion rings, breaded and fried",2
+2020-02-24 15:59:00,50.0,Sweet Tea,2
+2020-02-24 20:21:00,16.0,Gatorade Fierce Grape,2
+2020-02-24 21:38:00,42.0,"NABISCO, NEWTONS, FRUIT CHEWY COOKIES, FIG",2
+2020-02-25 04:49:00,48.0,Mello Yello,2
+2020-02-25 14:00:00,0.0,Water,2
+2020-02-25 15:00:00,34.0,Gatorade Fierce Grape,2
+2020-02-25 16:59:00,21.0,Gatorade Fruit Punch,2
+2020-02-25 19:58:00,37.2,Mandarin Oranges,2
+2020-02-25 19:59:00,34.0,Chocolate Milk,2
+2020-02-26 10:05:00,8.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,2
+2020-02-26 10:05:00,10.0,"(Kellogg's) Frosted Flakes, Cereal",2
+2020-02-26 13:35:00,34.0,Gatorade Fierce Grape,2
+2020-02-26 14:32:00,0.0,Vienna Sausage,2
+2020-02-26 14:32:00,4.0,"(Lance) Toast Chee Crackers, Cheddar Cheese",2
+2020-02-26 14:45:00,15.0,Tootsie Roll,2
+2020-02-26 19:00:00,0.0,Steak,2
+2020-02-26 19:00:00,0.3,Fried Potato,2
+2020-02-26 20:00:00,28.0,Ice Cream,2
+2020-02-27 08:42:00,4.0,"(Jimmy Dean) Biscuit, Sausage Egg & Cheese",2
+2020-02-27 08:42:00,48.0,Mello Yello,2
+2020-02-27 13:30:00,4.2,Chex Mix,2
+2020-02-27 14:54:00,51.8,Fig Bar,2
+2020-02-27 19:15:00,0.0,Ribs,2
+2020-02-27 19:15:00,3.0,Mash Potato,2
+2020-02-27 19:15:00,40.0,Sweet Tea,2
+2020-02-27 21:30:00,28.0,Cake,2
+2020-02-27 21:30:00,28.0,Ice Cream,2
+2020-02-28 08:37:00,8.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,2
+2020-02-28 08:37:00,10.0,"(Kellogg's) Frosted Flakes, Cereal",2
+2020-02-28 13:32:00,34.0,Powerade Sports Drink,2
+2020-02-28 17:22:00,3.6,Rice Krispies,2
+2020-02-28 19:00:00,18.0,(Hamburger Helper) Deluxe Cheeseburger Macaroni,2
+2020-02-28 19:00:00,48.0,Mello Yello,2
+2020-02-28 21:30:00,44.0,Chocolate Cake,2
+2020-02-28 21:30:00,28.0,Ice Cream,2
+2020-02-29 08:00:00,40.0,Boost,2
+2020-02-22 10:30:00,1.5823674e+18,170.0,3
+2020-02-22 14:30:00,1.5823818e+18,130.0,3
+2020-02-22 18:55:00,1.5823977e+18,202.5,3
+2020-02-22 20:20:00,1.5824028e+18,60.0,3
+2020-02-22 20:20:00,1.5824028e+18,129.0,3
+2020-02-22 20:20:00,1.5824028e+18,852.0,3
+2020-02-23 05:30:00,1.5824358e+18,60.0,3
+2020-02-23 05:30:00,1.5824358e+18,220.0,3
+2020-02-23 12:00:00,1.5824592e+18,511.2,3
+2020-02-23 16:03:00,1.58247378e+18,268.0,3
+2020-02-23 16:03:00,1.58247378e+18,8.2,3
+2020-02-23 18:09:00,1.58248134e+18,391.0,3
+2020-02-23 18:09:00,1.58248134e+18,122.0,3
+2020-02-23 21:00:00,1.5824916e+18,268.0,3
+2020-02-24 10:00:00,1.5825384e+18,180.0,3
+2020-02-24 13:00:00,1.5825492e+18,270.0,3
+2020-02-24 13:00:00,1.5825492e+18,201.0,3
+2020-02-24 20:00:00,1.5825744e+18,498.0,3
+2020-02-24 20:00:00,1.5825744e+18,53.0,3
+2020-02-24 19:30:00,1.5825726e+18,535.0,3
+2020-02-24 19:30:00,1.5825726e+18,33.0,3
+2020-02-24 19:30:00,1.5825726e+18,293.0,3
+2020-02-25 06:50:00,1.5826134e+18,60.0,3
+2020-02-25 06:50:00,1.5826134e+18,220.0,3
+2020-02-25 09:00:00,1.5826212e+18,29.0,3
+2020-02-25 11:50:00,1.5826314e+18,50.0,3
+2020-02-25 12:50:00,1.582635e+18,252.0,3
+2020-02-25 12:50:00,1.582635e+18,20.0,3
+2020-02-25 12:50:00,1.582635e+18,13.0,3
+2020-02-25 19:30:00,1.582659e+18,760.0,3
+2020-02-25 19:30:00,1.582659e+18,654.9,3
+2020-02-25 19:30:00,1.582659e+18,140.0,3
+2020-02-25 19:30:00,1.582659e+18,182.0,3
+2020-02-25 19:30:00,1.582659e+18,59.0,3
+2020-02-25 19:30:00,1.582659e+18,678.0,3
+2020-02-26 10:00:00,1.5827112e+18,560.0,3
+2020-02-26 18:30:00,1.5827418e+18,262.9,3
+2020-02-26 18:30:00,1.5827418e+18,37.0,3
+2020-02-26 18:30:00,1.5827418e+18,296.0,3
+2020-02-26 18:30:00,1.5827418e+18,146.0,3
+2020-02-27 05:30:00,1.5827814e+18,60.0,3
+2020-02-27 05:30:00,1.5827814e+18,220.0,3
+2020-02-27 12:15:00,1.5828057e+18,18.0,3
+2020-02-27 12:15:00,1.5828057e+18,5.0,3
+2020-02-27 12:15:00,1.5828057e+18,39.0,3
+2020-02-27 13:00:00,1.5828084e+18,98.0,3
+2020-02-27 21:15:00,1.5828381e+18,382.0,3
+2020-02-28 14:30:00,1.5829002e+18,191.0,3
+2020-02-28 20:00:00,1.58292e+18,355.0,3
+2020-02-28 20:00:00,1.58292e+18,53.3,3
+2020-02-28 20:00:00,1.58292e+18,129.0,3
+2020-02-29 08:15:00,1.5829641e+18,60.0,3
+2020-02-29 08:15:00,1.5829641e+18,220.0,3
+2020-02-29 14:15:00,1.5829857e+18,451.0,3
+2020-02-29 20:40:00,1.5830088e+18,70.0,3
+2020-02-29 20:40:00,1.5830088e+18,80.3,3
+2020-03-01 08:30:00,1.5830514e+18,654.0,3
+2020-02-27 13:30:00,7.6,Grapes,4
+2020-02-27 16:00:00,0.0,Turkey Wings,4
+2020-02-27 18:00:00,15.0,Peach,4
+2020-02-28 08:00:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,4
+2020-02-28 08:00:00,20.0,(Kellogg's) Frosted Flakes,4
+2020-02-28 12:45:00,0.0,Turkey Wings,4
+2020-02-28 12:45:00,0.8,Spinach,4
+2020-02-28 12:45:00,1.3,Coffee,4
+2020-02-28 12:45:00,28.0,Creamers,4
+2020-02-28 20:15:00,7.6,Grapes,4
+2020-02-28 20:15:00,15.0,Peach,4
+2020-02-29 08:30:00,1.3,Coffee,4
+2020-02-29 14:00:00,0.0,Chicken Breast,4
+2020-02-29 14:00:00,0.1,Chicken Wing,4
+2020-02-29 14:00:00,0.8,Spinach,4
+2020-02-29 14:00:00,15.0,Peach,4
+2020-02-29 20:00:00,0.5,Bag Popcorn,4
+2020-02-29 20:00:00,0.0,Tea With Lemon,4
+2020-03-01 08:45:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,4
+2020-03-01 08:45:00,20.0,(Kellogg's) Frosted Flakes,4
+2020-03-01 13:15:00,0.0,Turkey Wings,4
+2020-03-01 13:15:00,0.8,Spinach,4
+2020-03-01 13:15:00,0.0,Tea,4
+2020-03-02 08:15:00,1.3,Coffee,4
+2020-03-02 08:15:00,15.0,Peach,4
+2020-03-02 08:15:00,14.0,Banana,4
+2020-03-02 12:30:00,0.0,Baked Chicken,4
+2020-03-02 12:30:00,4.5,Squash,4
+2020-03-02 16:30:00,5.6,Chipotle Bowl,4
+2020-03-02 20:45:00,1.1,Peanut Butter,4
+2020-03-02 20:45:00,5.0,Biscotti,4
+2020-03-03 09:30:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,4
+2020-03-03 09:30:00,20.0,(Kellogg's) Frosted Flakes,4
+2020-03-03 15:30:00,0.0,Baked Chicken,4
+2020-03-03 15:30:00,4.5,Green Bean,4
+2020-03-03 15:30:00,0.0,Tea With Lemon,4
+2020-03-03 20:30:00,0.0,Salmon,4
+2020-03-03 20:30:00,0.8,Spinach,4
+2020-03-04 20:30:00,3.0,Mash Potatoes,4
+2020-03-04 11:30:00,0.4,Eggs,4
+2020-03-04 11:30:00,0.0,Bacon,4
+2020-03-04 11:30:00,0.0,Waffle,4
+2020-03-04 11:30:00,49.0,Soda,4
+2020-03-04 18:30:00,0.5,Bag Popcorn,4
+2020-03-04 18:30:00,29.7,Cookies,4
+2020-03-04 18:30:00,0.3,Cheese Stick,4
+2020-03-05 09:00:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,4
+2020-03-05 09:00:00,20.0,(Kellogg's) Frosted Flakes,4
+2020-03-05 09:00:00,14.0,Banana,4
+2020-03-05 13:15:00,0.0,Chicken Breast,4
+2020-03-05 13:15:00,0.8,Spinach,4
+2020-03-05 13:15:00,20.0,Biscotti,4
+2020-03-05 20:00:00,0.0,Chicken Breast,4
+2020-03-05 20:00:00,0.8,Spinach,4
+2020-03-06 08:00:00,40.0,Boost,4
+2020-02-27 12:45:00,0.0,Chicken,5
+2020-02-27 12:45:00,0.6,Fries,5
+2020-02-27 12:45:00,1.3,Biscuit,5
+2020-02-27 15:45:00,3.8,Peppermint Candy,5
+2020-02-27 19:00:00,2.4,Cereal,5
+2020-02-27 19:00:00,14.0,Banana,5
+2020-02-27 22:00:00,0.8,"(Lindt) Supreme Dark Chocolate, 90% Cocoa",5
+2020-02-28 09:00:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,5
+2020-02-28 09:00:00,20.0,(Kellogg's) Frosted Flakes,5
+2020-02-28 14:00:00,4.5,Turkey Sub,5
+2020-02-28 15:30:00,8.0,Chocolate Toffee,5
+2020-02-28 19:00:00,1.3,Ziti,5
+2020-02-28 19:30:00,28.0,Banana Bread,5
+2020-02-28 22:00:00,0.1,Cheese,5
+2020-02-29 09:00:00,0.0,Coffee,5
+2020-02-29 09:00:00,0.0,Creamer,5
+2020-02-29 09:00:00,8.5,Sugar,5
+2020-02-29 10:30:00,3.5,Chicken Biscuit,5
+2020-02-29 11:00:00,36.0,Muffin,5
+2020-02-29 16:20:00,19.0,Apple,5
+2020-02-29 17:45:00,6.1,Salad,5
+2020-02-29 17:45:00,1.3,Ranch Dressing,5
+2020-02-29 17:45:00,1.0,Baked Potato,5
+2020-02-29 22:30:00,0.3,Babybel,5
+2020-02-29 22:30:00,0.0,Pepperoni,5
+2020-03-01 08:00:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,5
+2020-03-01 08:00:00,20.0,(Kellogg's) Frosted Flakes,5
+2020-03-01 11:00:00,0.0,(Buffets) Traditional Baked Chicken - Thigh,5
+2020-03-01 11:00:00,1.0,Baked Potato,5
+2020-03-01 18:00:00,0.0,Chicken,5
+2020-03-01 18:00:00,1.0,Peppers,5
+2020-03-01 18:00:00,3.2,Onions,5
+2020-03-01 18:00:00,0.0,Flour Tortilla,5
+2020-03-01 18:00:00,0.3,Black Beans,5
+2020-03-01 22:00:00,0.3,Babybel,5
+2020-03-01 10:00:00,0.0,Pepperoni,5
+2020-03-02 11:00:00,0.0,Chicken,5
+2020-03-02 11:00:00,1.0,Peppers,5
+2020-03-02 11:00:00,3.2,Onions,5
+2020-03-02 16:00:00,1.8,Peanut Butter,5
+2020-03-02 18:00:00,7.9,Salad,5
+2020-03-02 18:00:00,2.0,Ranch Dressing,5
+2020-03-02 22:30:00,0.1,Cheese,5
+2020-03-03 09:40:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,5
+2020-03-03 09:40:00,20.0,(Kellogg's) Frosted Flakes,5
+2020-03-03 13:15:00,0.0,Chicken Chorizo,5
+2020-03-03 13:15:00,0.3,Pepperjack Cheese,5
+2020-03-03 13:15:00,12.0,Grapes,5
+2020-03-03 13:15:00,4.2,Strawberries,5
+2020-03-03 14:00:00,0.8,"(Lindt) Supreme Dark Chocolate, 90% Cocoa",5
+2020-03-03 18:00:00,0.0,Coffee,5
+2020-03-03 18:00:00,0.0,Creamer,5
+2020-03-03 18:00:00,8.5,Sugar,5
+2020-03-03 19:30:00,3.1,Taco Salad,5
+2020-03-03 19:30:00,0.3,Tortilla Chips,5
+2020-03-03 19:30:00,1.0,Salsa,5
+2020-03-03 22:45:00,0.9,Peanut Butter,5
+2020-03-04 11:00:00,0.4,Eggs,5
+2020-03-04 11:00:00,0.1,Cheese,5
+2020-03-04 11:00:00,1.3,Sausage,5
+2020-03-04 11:00:00,0.0,Coffee,5
+2020-03-04 11:00:00,0.0,Creamer,5
+2020-03-04 11:00:00,8.5,Sugar,5
+2020-03-04 14:00:00,12.0,Grapes,5
+2020-03-04 14:00:00,4.2,Strawberries,5
+2020-03-04 14:00:00,0.2,Tortilla Chips,5
+2020-03-04 14:00:00,0.0,Hummus,5
+2020-03-04 18:30:00,8.0,"(Outback Steakhouse) Aussie Tacos, Chicken",5
+2020-03-04 18:30:00,2.0,(Outback Steakhouse) Grilled Asparagus,5
+2020-03-04 18:30:00,10.0,(Outback Steakhouse) Honey Wheat Bread with Butter,5
+2020-03-04 18:30:00,44.0,Mixed Drink,5
+2020-03-04 22:15:00,0.8,"(Lindt) Supreme Dark Chocolate, 90% Cocoa",5
+2020-03-05 08:30:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,5
+2020-03-05 08:30:00,20.0,(Kellogg's) Frosted Flakes,5
+2020-03-05 13:30:00,4.8,Pistachios,5
+2020-03-05 17:00:00,6.1,Salad,5
+2020-03-05 17:00:00,1.3,Ranch Dressing,5
+2020-03-05 18:00:00,16.0,Yogurt,5
+2020-03-05 18:00:00,2.5,Strawberries,5
+2020-03-05 22:00:00,49.0,Granola Bar,5
+2020-03-06 08:00:00,0.0,Coffee,5
+2020-03-06 08:00:00,0.0,Creamer,5
+2020-03-06 08:00:00,8.5,Sugar,5
+2020-03-06 09:00:00,0.4,Eggs,5
+2020-03-06 09:00:00,1.0,Peppers,5
+2020-03-06 09:00:00,3.2,Onions,5
+2020-03-06 09:00:00,0.1,Cheese,5
+2020-03-06 09:00:00,1.3,Sausage,5
+2020-03-06 13:30:00,1.2,Egg Salad,5
+2020-03-06 13:30:00,4.4,Blueberries,5
+2020-03-06 21:00:00,0.0,(Near East) Multigrain Chips,5
+2020-03-06 21:00:00,0.0,Hummus,5
+2020-03-07 09:15:00,40.0,Boost,5
+2020-02-28 08:10:00,0.1,Quest Bar cookie dough,6
+2020-02-28 09:15:00,0.4,Quest Bar cookie dough,6
+2020-02-28 11:25:00,1.0,Premier protein choc shake,6
+2020-02-28 15:30:00,7.2,4 small pizza slices everything,6
+2020-02-28 19:30:00,19.8,Chocolate chip cookies,6
+2020-02-28 23:00:00,3.0,Baked cheetos,6
+2020-02-28 23:50:00,80.0,Oreo shake,6
+2020-02-29 11:50:00,24.0,Std breakfast,6
+2020-02-29 16:00:00,7.2,4 small pizza slices everything,6
+2020-02-29 23:30:00,90.0,Fruit smoothie,6
+2020-02-29 23:30:00,0.0,PB protein whey powder,6
+2020-02-29 23:30:00,3.0,Baked cheetos,6
+2020-03-01 11:00:00,30.0,Fruit smoothie,6
+2020-03-01 11:00:00,0.0,PB protein whey powder,6
+2020-03-01 14:00:00,7.2,4 small pizza slices everything,6
+2020-03-01 23:00:00,90.0,Fruit smoothie,6
+2020-03-01 23:00:00,0.0,PB protein whey powder,6
+2020-03-01 23:00:00,3.0,Baked cheetos,6
+2020-03-02 01:30:00,30.0,Fruit smoothie,6
+2020-03-02 01:30:00,1.0,Baked cheetos,6
+2020-03-02 05:15:00,24.0,Std breakfast,6
+2020-03-02 09:50:00,1.0,Premier protein choc shake,6
+2020-03-02 15:00:00,7.6,Fun size snickers bar,6
+2020-03-02 22:00:00,90.0,Fruit smoothie,6
+2020-03-02 22:00:00,5.0,Baked cheetos,6
+2020-03-03 11:00:00,1.0,Premier protein choc shake,6
+2020-03-03 13:55:00,8.5,Mac and cheese,6
+2020-03-03 13:55:00,0.0,Bacon,6
+2020-03-03 14:40:00,9.0,Blue Bunny fudge bar,6
+2020-03-03 18:25:00,90.0,Fruit smoothie,6
+2020-03-03 18:25:00,0.0,PB protein whey powder,6
+2020-03-03 18:25:00,6.0,Chex Mix cheddar,6
+2020-03-03 20:00:00,0.2,Fritos single serving bag,6
+2020-03-03 23:45:00,3.9,Veggie omelet,6
+2020-03-03 23:45:00,0.0,Bacon,6
+2020-03-03 23:45:00,3.9,Cinnamon raisin bagel,6
+2020-03-03 23:45:00,0.2,Fritos single serving bag,6
+2020-03-04 23:45:00,18.0,Blue Bunny fudge bar,6
+2020-03-04 02:00:00,22.0,2 small fruit bars,6
+2020-03-04 08:25:00,24.0,Std breakfast,6
+2020-03-04 13:20:00,3.9,Veggie omelet,6
+2020-03-04 13:20:00,0.0,Bacon,6
+2020-03-04 13:20:00,3.9,Cinnamon raisin bagel,6
+2020-03-04 20:25:00,8.0,Lean Cuisine mushroom ravioli box meal,6
+2020-03-05 20:25:00,31.0,M&Ms,6
+2020-03-05 11:00:00,1.0,Premier protein choc shake,6
+2020-03-05 18:15:00,1.0,Premier protein choc shake,6
+2020-03-05 23:30:00,90.0,Fruit smoothie,6
+2020-03-05 23:30:00,5.0,Baked cheetos,6
+2020-03-05 23:30:00,0.0,PB protein whey powder,6
+2020-03-06 13:00:00,24.0,Std breakfast,6
+2020-03-06 18:15:00,13.0,Nutrigrain bar,6
+2020-03-06 20:35:00,90.0,Fruit smoothie,6
+2020-03-06 20:35:00,0.0,PB protein whey powder,6
+2020-03-06 20:35:00,6.0,Baked cheetos,6
+2020-03-07 08:20:00,0.0,1/4 blueberry pancake,6
+2020-03-07 08:20:00,0.2,Grits,6
+2020-03-07 08:20:00,0.0,Bacon,6
+2020-03-07 13:30:00,1.0,Premier protein choc shake,6
+2020-03-07 11:45:00,9.7,1 snack size baby ruth,6
+2020-03-07 13:15:00,9.7,1 snack size baby ruth,6
+2020-03-07 14:35:00,5.0,Ritz PB crackers,6
+2020-03-07 18:45:00,1.5,Baked cheetos,6
+2020-03-07 19:15:00,16.0,Totinos pizza,6
+2020-03-07 20:00:00,1.0,Baked cheetos,6
+2020-03-08 10:50:00,24.0,Std breakfast,6
+2020-03-08 12:30:00,0.0,Baked chicken ,6
+2020-03-08 12:30:00,2.3,String beans,6
+2020-03-08 12:30:00,3.0,Lemon risotto,6
+2020-03-08 12:30:00,5.4,Cheesecake,6
+2020-03-08 19:50:00,0.0,3/4 large blueberry pancake,6
+2020-03-08 19:50:00,5.0,Baked cheetos,6
+2020-03-09 07:30:00,40.0,Boost,6
+2019-10-16 00:00:00,0.2,Seafood Stuffed Salmon,7
+2019-10-16 00:00:00,1.1,Riced Cauliflower,7
+2019-10-16 00:00:00,18.0,Navel Orange,7
+2019-10-16 00:00:00,3.7,Salad,7
+2019-10-16 00:00:00,3.4,Chickpeas,7
+2019-10-16 00:00:00,1.2,Red Onion,7
+2019-10-16 00:00:00,0.0,Chicken,7
+2019-10-16 00:00:00,1.6,Red Wine Vinaigrette,7
+2019-10-16 00:00:00,0.0,(Jolly Time) Yellow Popcorn,7
+2019-10-16 00:00:00,0.0,(Virgil's) Zero Black Cherry Cream Soda,7
+2019-10-16 00:00:00,3.0,(Peppridge Farm) Whole Wheat Hamburger Bun,7
+2019-10-16 00:00:00,3.0,(Jif) Extra Crunchy Peanut Butter,7
+2019-10-17 00:00:00,1.0,(Quaker) Old Fashioned Oats,7
+2019-10-17 00:00:00,22.0,Red Delicious Apple,7
+2019-10-17 00:00:00,0.2,Flaxseed,7
+2019-10-17 00:00:00,0.0,(Now) Whole Psyllium Husks,7
+2019-10-17 00:00:00,12.0,(Harris Teeter) Fat Free Organic Milk,7
+2019-10-17 00:00:00,3.0,(Peppridge Farm) Whole Wheat Hamburger Bun,7
+2019-10-17 00:00:00,3.0,(Jif) Extra Crunchy Peanut Butter,7
+2019-10-17 00:00:00,1.3,Homemade Chicken Noodle Soup ,7
+2019-10-17 00:00:00,0.0,Tilapia,7
+2019-10-17 00:00:00,0.7,Crabcake,7
+2019-10-17 00:00:00,0.8,Riced Cauliflower,7
+2019-10-17 00:00:00,1.2,Steamed Broccoli,7
+2019-10-17 00:00:00,0.1,Lemon Juice,7
+2019-10-17 00:00:00,0.0,(Jolly Time) Yellow Popcorn,7
+2019-10-17 00:00:00,0.0,(Virgil's) Zero Black Cherry Cream Soda,7
+2019-10-18 00:00:00,24.0,Std bfast,7
+2019-10-18 00:00:00,4.5,(Firebirds Wood Fired Grill) Steak Sandwich,7
+2019-10-18 00:00:00,0.8,(Firebirds Wood Fired Grill) Seasoned Steak Fries,7
+2019-10-18 00:00:00,25.0,Lemonade,7
+2019-10-18 00:00:00,0.8,Butter Lettuce,7
+2019-10-18 00:00:00,0.8,Red Onion,7
+2019-10-18 00:00:00,0.5,Red Wine Vinaigrette,7
+2019-10-18 00:00:00,0.0,Tilapia,7
+2019-10-18 00:00:00,0.4,Crabcake,7
+2019-10-18 00:00:00,0.1,Lemon Juice,7
+2019-10-18 00:00:00,1.2,Pecans,7
+2019-10-18 00:00:00,0.0,(Jolly Time) Yellow Popcorn,7
+2019-10-18 00:00:00,3.0,(Peppridge Farm) Whole Wheat Hamburger Bun,7
+2019-10-18 00:00:00,0.0,Smart Balance,7
+2019-10-18 00:00:00,18.0,Navel Orange,7
+2019-10-19 00:00:00,1.0,(Quaker) Old Fashioned Oats,7
+2019-10-19 00:00:00,12.0,Red Delicious Apple,7
+2019-10-19 00:00:00,0.2,Flaxseed,7
+2019-10-19 00:00:00,0.0,(Now) Whole Psyllium Husks,7
+2019-10-19 00:00:00,0.1,Cinnamon,7
+2019-10-19 00:00:00,12.0,(Harris Teeter) Fat Free Organic Milk,7
+2019-10-19 00:00:00,1.5,Baked Breaded Chicken Tender,7
+2019-10-19 00:00:00,1.2,Potato,7
+2019-10-19 00:00:00,0.0,Extra Virgin Olive Oil,7
+2019-10-19 00:00:00,0.0,(Crosse and Blackwell) Old Fashioned English Fish and Chip  Vinegar,7
+2019-10-19 00:00:00,8.3,"Homemade soup with Hot Italian sausage, kale, cannolli beans, onion, garlic, (Kirkland) organic chicken stock, white wine",7
+2019-10-19 00:00:00,2.8,"Homemade soup with Hot Italian sausage, kale, cannolli beans, onion, garlic, (Kirkland) organic chicken stock, white wine",7
+2019-10-20 00:00:00,24.0,Std Bfast,7
+2019-10-20 00:00:00,2.8,"Homemade soup with Hot Italian sausage, kale, cannolli beans, onion, garlic, (Kirkland) organic chicken stock, white wine",7
+2019-10-20 00:00:00,1.3,Baked Breaded Chicken Tender,7
+2019-10-20 00:00:00,0.6,Potato,7
+2019-10-20 00:00:00,0.0,Extra Virgin Olive Oil,7
+2019-10-20 00:00:00,0.0,(Crosse and Blackwell) Old Fashioned English Fish and Chip  Vinegar,7
+2019-10-20 00:00:00,0.0,(Jolly Time) Yellow Popcorn,7
+2019-10-20 00:00:00,0.0,(Virgil's) Zero Black Cherry Cream Soda,7
+2019-10-21 00:00:00,24.0,Std Bfast,7
+2019-10-21 00:00:00,1.0,(Quaker) Old Fashioned Oats,7
+2019-10-21 00:00:00,11.0,Red Delicious Apple,7
+2019-10-21 00:00:00,0.2,Flaxseed,7
+2019-10-21 00:00:00,0.0,(Now) Whole Psyllium Husks,7
+2019-10-21 00:00:00,0.1,Cinnamon,7
+2019-10-21 00:00:00,12.0,(Harris Teeter) Fat Free Organic Milk,7
+2019-10-21 00:00:00,1.6,Butter Lettuce,7
+2019-10-21 00:00:00,4.3,Chickpeas,7
+2019-10-21 00:00:00,1.6,Red Onion,7
+2019-10-21 00:00:00,0.0,Chicken,7
+2019-10-21 00:00:00,1.6,Red Wine Vinaigrette,7
+2019-10-22 00:00:00,1.0,(Quaker) Old Fashioned Oats,7
+2019-10-22 00:00:00,12.0,Red Delicious Apple,7
+2019-10-22 00:00:00,0.2,Flaxseed,7
+2019-10-22 00:00:00,0.0,(Now) Whole Psyllium Husks,7
+2019-10-22 00:00:00,0.1,Cinnamon,7
+2019-10-22 00:00:00,12.0,(Harris Teeter) Fat Free Organic Milk,7
+2019-10-22 00:00:00,7.6,"Homemade Beef and Barley Soup with onion, celery, kale, (Simple Truth) fat free organic beef stock, and (Pacific) low sodium organic vegetable broth",7
+2019-10-22 00:00:00,0.9,Butter Lettuce,7
+2019-10-22 00:00:00,2.5,Chickpeas,7
+2019-10-22 00:00:00,0.6,Red Onion,7
+2019-10-22 00:00:00,1.1,Baked Breaded Chicken Tender,7
+2019-10-22 00:00:00,1.1,Red Wine Vinaigrette,7
+2019-10-22 00:00:00,0.5,Potato,7
+2019-10-22 00:00:00,0.0,Extra Virgin Olive Oil,7
+2019-10-22 00:00:00,0.0,(Crosse and Blackwell) Old Fashioned English Fish and Chip  Vinegar,7
+2019-10-23 00:00:00,24.0,Std Bfast,7
+2019-10-23 00:00:00,3.0,(Peppridge Farm) Whole Wheat Hamburger Bun,7
+2019-10-23 00:00:00,3.0,(Jif) Extra Crunchy Peanut Butter,7
+2019-10-23 00:00:00,6.8,Chicken Sandwich,7
+2019-10-23 00:00:00,10.0,(NOSH) Veggie Slaw Side Order,7
+2019-10-23 00:00:00,24.0,Hershey's Milk Chocolate Bar,7
+2019-10-23 00:00:00,0.5,Spring Mix,7
+2019-10-23 00:00:00,3.7,Chickpeas,7
+2019-10-23 00:00:00,0.8,Red Onion,7
+2019-10-23 00:00:00,0.5,Red Wine Vinaigrette,7
+2019-10-23 00:00:00,1.3,Homemade Chicken Noodle Soup ,7
+2019-10-23 00:00:00,0.0,(Jolly Time) Yellow Popcorn,7
+2019-10-23 00:00:00,0.0,(Virgil's) Zero Black Cherry Cream Soda,7
+2019-10-24 00:00:00,40.0,Boost,7
+2020-03-14 14:15:00,2.8,Golden Crust Chicken Patil,8
+2020-03-14 14:15:00,25.0,Pineapple and Ginger Juice,8
+2020-03-14 14:15:00,14.0,Banana,8
+2020-03-14 17:55:00,0.0,Steamed Shrimp,8
+2020-03-14 17:55:00,1.0,Potato,8
+2020-03-14 17:55:00,0.5,Mixed Vegetable,8
+2020-03-14 17:55:00,0.0,Moscato,8
+2020-03-15 09:00:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,8
+2020-03-15 09:00:00,20.0,(Kellogg's) Frosted Flakes,8
+2020-03-15 12:40:00,0.4,Egg,8
+2020-03-15 12:40:00,6.3,Mini Croissants,8
+2020-03-15 12:40:00,0.0,Coffee,8
+2020-03-15 12:40:00,0.7,Turkey Bacon,8
+2020-03-15 16:50:00,1.0,Baked Potato,8
+2020-03-15 16:50:00,7.3,Salad,8
+2020-03-15 16:50:00,0.0,Fried Chicken Wings,8
+2020-03-16 08:56:00,0.4,Egg,8
+2020-03-16 08:56:00,6.3,Mini Croissants,8
+2020-03-16 08:56:00,0.0,Coffee,8
+2020-03-16 08:56:00,0.7,Turkey Bacon,8
+2020-03-16 08:56:00,0.7,Avocado,8
+2020-03-16 14:30:00,14.0,Banana,8
+2020-03-16 14:30:00,22.0,Honey Nut Granola,8
+2020-03-16 19:00:00,15.0,Pizza,8
+2020-03-16 19:00:00,0.0,Brownie,8
+2020-03-16 19:00:00,2.1,Lemon,8
+2020-03-16 19:00:00,2.8,Tomato Mozzarella Salad,8
+2020-03-16 19:00:00,0.0,Corona,8
+2020-03-16 19:00:00,0.7,Blackberries,8
+2020-03-17 09:03:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,8
+2020-03-17 09:03:00,20.0,(Kellogg's) Frosted Flakes,8
+2020-03-17 12:41:00,1.6,Egg Avocado Sandwich,8
+2020-03-17 14:30:00,14.0,Banana,8
+2020-03-17 14:30:00,11.0,Honey Nut Granola,8
+2020-03-17 20:15:00,0.0,Steak,8
+2020-03-17 20:15:00,3.5,Large Baked Potato,8
+2020-03-17 20:15:00,43.0,Mojito,8
+2020-03-17 20:15:00,1.2,Steamed Broccoli,8
+2020-03-18 09:55:00,0.5,Oatmeal,8
+2020-03-18 09:55:00,0.8,Splenda ,8
+2020-03-18 09:55:00,0.0,Coffee,8
+2020-03-18 09:55:00,0.0,Creamer,8
+2020-03-18 09:55:00,0.7,Turkey Bacon,8
+2020-03-18 14:55:00,5.7,Shrimp Cobb Salad,8
+2020-03-18 14:55:00,24.0,Apple Juice,8
+2020-03-18 15:55:00,8.8,Grapes,8
+2020-03-18 15:55:00,22.0,Honey Nut Granola,8
+2020-03-18 19:18:00,0.4,French Fries,8
+2020-03-18 19:18:00,0.0,Moscato,8
+2020-03-19 09:45:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,8
+2020-03-19 09:45:00,20.0,(Kellogg's) Frosted Flakes,8
+2020-03-19 10:35:00,14.0,Banana,8
+2020-03-19 13:28:00,8.3,(Wheat Thins) Ranch,8
+2020-03-19 18:25:00,0.0,Fried Chicken ,8
+2020-03-19 18:25:00,7.3,Salad,8
+2020-03-20 06:35:00,0.4,Egg,8
+2020-03-20 06:35:00,0.7,Turkey Bacon,8
+2020-03-20 06:35:00,6.3,Mini Croissants,8
+2020-03-20 11:58:00,6.8,Chicken Sandwich,8
+2020-03-20 11:58:00,7.1,Vanilla Cookies,8
+2020-03-20 11:58:00,18.0,Grapes,8
+2020-03-20 11:58:00,30.0,Fresh Apple Juice,8
+2020-03-20 17:32:00,8.7,Burger Salad,8
+2020-03-21 09:00:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,8
+2020-03-21 09:00:00,20.0,(Kellogg's) Frosted Flakes,8
+2020-03-21 13:25:00,6.8,Chicken Sandwich,8
+2020-03-21 13:25:00,14.0,Banana,8
+2020-03-21 13:25:00,38.0,Lemon Cookies,8
+2020-03-21 13:25:00,24.0,Apple Juice,8
+2020-03-21 17:00:00,7.4,Baked Sweet Potato,8
+2020-03-21 17:00:00,50.7,Lemon Cookies,8
+2020-03-21 17:00:00,0.0,Moscato,8
+2020-03-22 08:50:00,6.3,Mini Croissants,8
+2020-03-22 08:50:00,0.4,Egg,8
+2020-03-22 08:50:00,0.7,Turkey Bacon,8
+2020-03-22 08:50:00,0.7,Avocado,8
+2020-03-22 08:50:00,0.0,Coffee,8
+2020-03-22 14:10:00,76.0,Lemon Cookies,8
+2020-03-22 19:00:00,0.4,Chicken Wing,8
+2020-03-22 19:00:00,1.0,Potato,8
+2020-03-22 19:00:00,3.0,Mixed Vegetable,8
+2020-03-23 09:00:00,40.0,Boost,8
+2020-03-21 09:15:00,14.0,Banana,9
+2020-03-21 09:15:00,0.0,Coffee,9
+2020-03-21 11:15:00,0.5,"(Blue Diamond) Almonds, Lightly Salted",9
+2020-03-21 13:15:00,0.0,Slice Swiss Cheese,9
+2020-03-21 13:15:00,0.0,Baked Chicken Breast,9
+2020-03-21 13:15:00,2.0,Brussel Sprouts,9
+2020-03-21 13:15:00,8.1,Coleslaw,9
+2020-03-21 15:50:00,7.6,Green Seedless Grape,9
+2020-03-21 16:15:00,0.0,Coffee,9
+2020-03-21 16:15:00,1.1,Coffee Cream,9
+2020-03-21 16:15:00,0.3,(Equal) Equal Original Taste,9
+2020-03-21 19:30:00,4.7,Corn on the Cobb,9
+2020-03-21 19:30:00,4.1,Ham Biscuit,9
+2020-03-21 19:30:00,0.3,Hot Dog,9
+2020-03-22 08:20:00,0.0,Coffee,9
+2020-03-22 08:20:00,1.1,Coffee Cream,9
+2020-03-22 08:20:00,0.3,(Equal) Equal Original Taste,9
+2020-03-22 08:40:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,9
+2020-03-22 08:40:00,20.0,(Kellogg's) Frosted Flakes,9
+2020-03-22 09:35:00,22.0,(Florida's Natural) Orange Juice,9
+2020-03-22 11:00:00,7.6,Green Seedless Grape,9
+2020-03-22 15:15:00,0.0,Coffee,9
+2020-03-22 15:15:00,0.6,Walnut,9
+2020-03-22 15:15:00,7.0,Strawberry,9
+2020-03-22 15:15:00,1.6,Blueberry,9
+2020-03-22 18:15:00,48.0,Smoothie,9
+2020-03-22 21:15:00,11.0,California Roll,9
+2020-03-22 21:25:00,0.8,Townhouse Cracker,9
+2020-03-22 21:30:00,12.0,2% Milk,9
+2020-03-23 08:00:00,0.0,Coffee,9
+2020-03-23 08:00:00,1.1,Coffee Cream,9
+2020-03-23 08:00:00,0.3,(Equal) Equal Original Taste,9
+2020-03-23 11:00:00,0.4,"(Blue Diamond) Almonds, Lightly Salted",9
+2020-03-23 11:00:00,50.0,(Sunkist) Orange Soda,9
+2020-03-23 13:15:00,3.7,Salad,9
+2020-03-23 13:15:00,1.4,Spinach Salad,9
+2020-03-23 17:30:00,1.8,Celery,9
+2020-03-23 17:30:00,2.1,Peanut Butter,9
+2020-03-23 19:50:00,1.3,Cream of Wheat Hot Cereal,9
+2020-03-23 19:50:00,3.5,Strawberry,9
+2020-03-23 19:50:00,12.0,2% Milk,9
+2020-03-24 07:20:00,0.0,Coffee,9
+2020-03-24 07:20:00,1.1,Coffee Cream,9
+2020-03-24 07:20:00,0.3,(Equal) Equal Original Taste,9
+2020-03-24 12:30:00,2.0,(HoneyBaked Ham) Baked Potato Salad,9
+2020-03-24 13:00:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,9
+2020-03-24 13:00:00,20.0,(Kellogg's) Frosted Flakes,9
+2020-03-24 14:00:00,0.0,Slice Swiss Cheese,9
+2020-03-24 14:30:00,0.0,Coffee,9
+2020-03-24 14:30:00,1.1,Coffee Cream,9
+2020-03-24 14:30:00,0.3,(Equal) Equal Original Taste,9
+2020-03-24 17:30:00,1.8,Celery,9
+2020-03-24 17:30:00,2.1,Peanut Butter,9
+2020-03-24 20:00:00,0.0,Chicken,9
+2020-03-25 08:10:00,0.0,Coffee,9
+2020-03-25 08:10:00,1.1,Coffee Cream,9
+2020-03-25 08:10:00,0.3,(Equal) Equal Original Taste,9
+2020-03-25 08:10:00,0.2,Fried Egg,9
+2020-03-25 08:10:00,0.7,Avocado,9
+2020-03-25 08:10:00,2.9,Whole Wheat Toast,9
+2020-03-25 09:00:00,22.0,(Florida's Natural) Orange Juice,9
+2020-03-25 13:55:00,11.0,Grape,9
+2020-03-25 14:35:00,60.0,Smoothie,9
+2020-03-25 20:00:00,0.0,Atlantic Salmon,9
+2020-03-25 20:00:00,0.8,Pita Bread,9
+2020-03-25 20:00:00,11.0,Barbecue Sauce,9
+2020-03-25 20:30:00,12.0,2% Milk,9
+2020-03-26 08:40:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,9
+2020-03-26 08:40:00,20.0,(Kellogg's) Frosted Flakes,9
+2020-03-26 14:00:00,5.0,Ranch Salad,9
+2020-03-26 16:00:00,0.7,"(Blue Diamond) Almonds, Lightly Salted",9
+2020-03-26 19:15:00,0.0,Slice Swiss Cheese,9
+2020-03-26 19:15:00,1.3,Cream of Wheat Hot Cereal,9
+2020-03-27 19:15:00,12.0,2% Milk,9
+2020-03-27 08:00:00,0.0,Coffee,9
+2020-03-27 08:00:00,1.1,Coffee Cream,9
+2020-03-27 08:00:00,0.3,(Equal) Equal Original Taste,9
+2020-03-27 09:00:00,0.4,"(Blue Diamond) Almonds, Lightly Salted",9
+2020-03-27 12:00:00,2.5,Brussel Sprouts,9
+2020-03-27 12:00:00,0.7,Salmon Salad,9
+2020-03-27 17:40:00,1.8,Celery,9
+2020-03-27 17:40:00,2.1,Peanut Butter,9
+2020-03-27 17:40:00,0.0,Slice Swiss Cheese,9
+2020-03-27 19:30:00,1.3,Cream of Wheat Hot Cereal,9
+2020-03-28 19:30:00,12.0,2% Milk,9
+2020-03-28 09:00:00,0.0,Coffee,9
+2020-03-28 09:00:00,1.1,Coffee Cream,9
+2020-03-28 09:00:00,0.3,(Equal) Equal Original Taste,9
+2020-03-28 10:45:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,9
+2020-03-28 10:45:00,20.0,(Kellogg's) Frosted Flakes,9
+2020-03-28 10:45:00,16.5,(Florida's Natural) Orange Juice,9
+2020-03-28 13:45:00,0.5,Egg White,9
+2020-03-28 13:45:00,3.5,Strawberry,9
+2020-03-28 13:45:00,0.4,Walnut,9
+2020-03-28 17:11:00,0.8,Townhouse Cracker,9
+2020-03-28 17:25:00,0.9,Celery,9
+2020-03-28 17:25:00,2.1,Peanut Butter,9
+2020-03-28 18:45:00,0.2,Salmon with Lemon Butter,9
+2020-03-28 19:15:00,22.0,(Florida's Natural) Orange Juice,9
+2020-03-29 08:30:00,40.0,Boost,9
+2020-03-22 10:32:00,0.0,Diet Coke,10
+2020-03-22 10:52:00,1.1,Hard Boiled,10
+2020-03-22 12:30:00,0.0,Boneless Skinless Chicken Thigh,10
+2020-03-22 12:30:00,0.0,(Hannah) Organic Tzatziki ,10
+2020-03-22 12:30:00,4.3,Cup Chopped or Sliced Tomatoes,10
+2020-03-22 12:30:00,6.8,Cup Slices Beet,10
+2020-03-22 12:30:00,2.7,Cup Slices Carrots,10
+2020-03-22 12:30:00,0.9,Cup Slices Cucumber,10
+2020-03-22 12:30:00,1.2,Lettuce Mix,10
+2020-03-22 12:30:00,1.5,Cup Chopped Red Bell Pepper,10
+2020-03-22 13:20:00,8.3,2% Milk,10
+2020-03-22 13:20:00,0.0,Coffee,10
+2020-03-22 15:30:00,15.0,Small Apple,10
+2020-03-22 15:30:00,2.9,2% Cottage Cheese,10
+2020-03-22 17:55:00,0.0,Boneless Skinless Chicken Thigh,10
+2020-03-22 17:55:00,2.0,Potato,10
+2020-03-22 17:55:00,0.4,Cooked Spinach,10
+2020-03-22 18:55:00,2.0,"(GT's) Organic and Raw Kombucha, Cosmic Cranberry",10
+2020-03-22 18:55:00,0.0,(Blue Diamond) Almond Nut-Thins,10
+2020-03-22 19:15:00,0.0,Bacon,10
+2020-03-22 19:40:00,1.5,"(GT's) Organic and Raw Kombucha, Cosmic Cranberry",10
+2020-03-22 20:20:00,25.0,Gin Soaked Raisins,10
+2020-03-23 04:32:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,10
+2020-03-23 04:32:00,20.0,(Kellogg's) Frosted Flakes,10
+2020-03-23 05:40:00,1.1,Hard Boiled,10
+2020-03-23 05:47:00,4.1,2% Milk,10
+2020-03-23 05:47:00,0.0,Coffee,10
+2020-03-23 08:05:00,9.0,(Fage) Greek Yogurt,10
+2020-03-23 08:05:00,8.7,Mixed Berries,10
+2020-03-23 08:05:00,3.2,(Kashi Go Lean) Original Cereal,10
+2020-03-23 09:15:00,0.0,Coffee,10
+2020-03-23 09:15:00,0.6,Half and Half,10
+2020-03-23 11:30:00,1.9,"Homemade potato cauliflower soup with potato, cauliflower, chicken broth, onions",10
+2020-03-23 11:30:00,0.0,Oil,10
+2020-03-23 11:30:00,1.4,Cheddar Cheese,10
+2020-03-23 11:30:00,0.0,Bacon,10
+2020-03-23 11:30:00,0.0,Boneless Skinless Chicken Thigh,10
+2020-03-23 13:30:00,3.8,(Dove) Promises Dark Chocolate,10
+2020-03-23 13:40:00,0.0,Coffee,10
+2020-03-23 13:40:00,4.1,2% Milk,10
+2020-03-23 16:00:00,2.9,2% Cottage Cheese,10
+2020-03-23 16:00:00,15.0,Small Apple,10
+2020-03-23 18:05:00,0.0,Boneless Skinless Chicken Thigh,10
+2020-03-23 18:05:00,0.0,(Hannah) Organic Tzatziki ,10
+2020-03-23 18:05:00,4.3,Cup Chopped or Sliced Tomatoes,10
+2020-03-23 18:05:00,4.8,Balsamic Vinegar,10
+2020-03-23 18:05:00,0.9,Cup Slices Cucumber,10
+2020-03-23 18:05:00,0.6,Salad Greens,10
+2020-03-23 18:05:00,1.5,Cup Chopped Red Bell Pepper,10
+2020-03-23 19:25:00,2.3,Chardonnay Wine,10
+2020-03-23 20:20:00,2.5,Pistachio,10
+2020-03-23 20:20:00,2.3,Chardonnay Wine,10
+2020-03-24 08:50:00,0.0,Coffee,10
+2020-03-24 08:50:00,12.4,2% Milk,10
+2020-03-24 10:20:00,9.0,(Fage) Greek Yogurt,10
+2020-03-24 10:20:00,8.7,Mixed Berries,10
+2020-03-24 10:20:00,3.2,(Kashi Go Lean) Original Cereal,10
+2020-03-24 10:20:00,1.1,Hard Boiled,10
+2020-03-24 12:51:00,0.0,Boneless Skinless Chicken Thigh,10
+2020-03-24 12:51:00,1.9,"Homemade potato cauliflower soup with potato, cauliflower, chicken broth, onions",10
+2020-03-24 13:25:00,0.0,Diet Coke,10
+2020-03-24 15:07:00,2.9,2% Cottage Cheese,10
+2020-03-24 15:07:00,14.0,Clementine,10
+2020-03-24 17:15:00,1.7,Chardonnay Wine,10
+2020-03-24 18:00:00,0.0,Salmon,10
+2020-03-24 18:00:00,7.8,Faro,10
+2020-03-24 18:00:00,2.2,Cooked Broccoli,10
+2020-03-24 18:32:00,15.2,(Dove) Promises Dark Chocolate,10
+2020-03-25 05:34:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,10
+2020-03-25 05:34:00,20.0,(Kellogg's) Frosted Flakes,10
+2020-03-25 06:54:00,1.1,Hard Boiled,10
+2020-03-25 06:57:00,0.0,Coffee,10
+2020-03-25 06:57:00,8.3,2% Milk,10
+2020-03-25 08:45:00,9.0,(Fage) Greek Yogurt,10
+2020-03-25 08:45:00,8.7,Mixed Berries,10
+2020-03-25 08:45:00,3.2,(Kashi Go Lean) Original Cereal,10
+2020-03-25 10:15:00,0.0,Coffee,10
+2020-03-25 10:15:00,3.1,2% Milk,10
+2020-03-25 12:53:00,0.0,Diet Coke,10
+2020-03-25 13:05:00,6.8,Lamb Gyro,10
+2020-03-25 13:05:00,0.1,Homemade Potato Chips,10
+2020-03-25 17:11:00,2.0,"(GT's) Organic and Raw Kombucha, Cosmic Cranberry",10
+2020-03-25 17:11:00,0.0,Boneless Skinless Chicken Thigh,10
+2020-03-25 17:11:00,7.8,Faro,10
+2020-03-25 17:11:00,1.1,Cooked Broccoli,10
+2020-03-25 17:30:00,7.6,(Dove) Promises Dark Chocolate,10
+2020-03-26 04:29:00,0.0,Coffee,10
+2020-03-26 04:29:00,8.3,2% Milk,10
+2020-03-26 05:17:00,1.5,Eggo Waffle,10
+2020-03-26 05:17:00,1.1,Peanut Butter,10
+2020-03-26 08:12:00,9.0,(Fage) Greek Yogurt,10
+2020-03-26 08:12:00,8.7,Mixed Berries,10
+2020-03-26 08:12:00,3.2,(Kashi Go Lean) Original Cereal,10
+2020-03-26 08:12:00,1.1,Hard Boiled,10
+2020-03-26 10:44:00,0.0,Diet Coke,10
+2020-03-26 11:52:00,4.3,Cup Chopped or Sliced Tomatoes,10
+2020-03-26 11:52:00,1.9,"Homemade potato cauliflower soup with potato, cauliflower, chicken broth, onions",10
+2020-03-26 11:52:00,0.0,Boneless Skinless Chicken Thigh,10
+2020-03-26 12:26:00,0.0,Coffee,10
+2020-03-26 12:26:00,4.1,2% Milk,10
+2020-03-26 12:26:00,7.6,(Dove) Promises Dark Chocolate,10
+2020-03-26 15:11:00,15.0,Small Apple,10
+2020-03-26 15:11:00,2.9,2% Cottage Cheese,10
+2020-03-26 17:12:00,0.0,Boneless Skinless Chicken Thigh,10
+2020-03-26 17:12:00,0.0,(Hannah) Organic Tzatziki ,10
+2020-03-26 17:12:00,1.8,Diced Celery,10
+2020-03-26 17:12:00,4.8,Balsamic Vinegar,10
+2020-03-26 17:12:00,0.9,Cup Slices Cucumber,10
+2020-03-26 17:12:00,0.8,Salad Greens,10
+2020-03-26 17:12:00,1.5,Cup Chopped Red Bell Pepper,10
+2020-03-26 19:39:00,2.0,"(GT's) Organic and Raw Kombucha, Cosmic Cranberry",10
+2020-03-27 04:33:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,10
+2020-03-27 04:33:00,20.0,(Kellogg's) Frosted Flakes,10
+2020-03-27 05:38:00,0.0,Coffee,10
+2020-03-27 05:38:00,1.1,Hard Boiled,10
+2020-03-27 08:43:00,9.0,(Fage) Greek Yogurt,10
+2020-03-27 08:43:00,8.7,Mixed Berries,10
+2020-03-27 08:43:00,3.2,(Kashi Go Lean) Original Cereal,10
+2020-03-27 08:43:00,0.0,Diet Coke,10
+2020-03-27 09:44:00,8.9,Plain Bagel,10
+2020-03-27 09:44:00,0.6,Cream Cheese,10
+2020-03-27 11:00:00,7.7,Hershey Kiss,10
+2020-03-27 12:04:00,0.0,Boneless Skinless Chicken Thigh,10
+2020-03-27 13:43:00,0.0,(Hannah) Organic Tzatziki ,10
+2020-03-27 13:43:00,4.3,Cup Chopped or Sliced Tomatoes,10
+2020-03-27 13:43:00,4.8,Balsamic Vinegar,10
+2020-03-27 13:43:00,1.7,Cup Slices Cucumber,10
+2020-03-27 13:43:00,0.8,Salad Greens,10
+2020-03-27 13:43:00,3.0,Cup Chopped Red Bell Pepper,10
+2020-03-27 14:27:00,0.0,Coffee,10
+2020-03-27 14:27:00,4.1,2% Milk,10
+2020-03-27 15:52:00,15.0,Small Apple,10
+2020-03-27 15:52:00,2.9,2% Cottage Cheese,10
+2020-03-27 18:07:00,0.0,Grilled Salmon,10
+2020-03-27 18:07:00,1.9,"Homemade potato cauliflower soup with potato, cauliflower, chicken broth, onions",10
+2020-03-28 04:45:00,0.0,Coffee,10
+2020-03-28 04:45:00,8.3,2% Milk,10
+2020-03-28 05:12:00,1.5,Eggo Waffle,10
+2020-03-28 05:12:00,1.1,Peanut Butter,10
+2020-03-28 08:40:00,9.0,(Fage) Greek Yogurt,10
+2020-03-28 08:40:00,8.7,Mixed Berries,10
+2020-03-28 08:40:00,3.2,(Kashi Go Lean) Original Cereal,10
+2020-03-28 08:40:00,0.6,Hard Boiled,10
+2020-03-28 09:00:00,0.0,Diet Coke,10
+2020-03-28 10:30:00,0.0,Boneless Skinless Chicken Thigh,10
+2020-03-28 10:30:00,8.6,Cup Chopped or Sliced Tomatoes,10
+2020-03-28 13:00:00,4.8,Balsamic Vinegar,10
+2020-03-28 13:00:00,0.9,Cup Slices Cucumber,10
+2020-03-28 13:00:00,0.6,Salad Greens,10
+2020-03-28 13:00:00,3.0,Cup Chopped Red Bell Pepper,10
+2020-03-28 13:00:00,1.8,Diced Celery,10
+2020-03-28 13:40:00,0.0,Coffee,10
+2020-03-28 13:40:00,4.1,2% Milk,10
+2020-03-28 16:20:00,15.0,Small Apple,10
+2020-03-28 16:20:00,2.9,2% Cottage Cheese,10
+2020-03-28 18:04:00,0.0,Boneless Skinless Chicken Thigh,10
+2020-03-28 18:04:00,1.9,"Homemade potato cauliflower soup with potato, cauliflower, chicken broth, onions",10
+2020-03-28 19:22:00,2.0,"(GT's) Organic and Raw Kombucha, Cosmic Cranberry",10
+2020-03-29 04:32:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,10
+2020-03-29 04:32:00,20.0,(Kellogg's) Frosted Flakes,10
+2020-03-29 05:45:00,0.0,Coffee,10
+2020-03-29 05:45:00,8.3,2% Milk,10
+2020-03-29 05:45:00,1.1,Hard Boiled,10
+2020-03-29 08:07:00,3.2,(Kashi Go Lean) Original Cereal,10
+2020-03-29 08:07:00,9.0,(Fage) Greek Yogurt,10
+2020-03-29 08:07:00,8.7,Mixed Berries,10
+2020-03-29 08:30:00,0.0,Diet Coke,10
+2020-03-29 12:50:00,6.5,Chicken Gyro,10
+2020-03-29 12:50:00,0.3,Medium French Fries,10
+2020-03-29 12:50:00,0.0,Diet Pepsi,10
+2020-03-29 15:36:00,0.0,Coffee,10
+2020-03-29 17:30:00,26.0,"Sausage, Kale, Sweet Potato Soup",10
+2020-03-30 07:00:00,40.0,Boost,10
+2020-04-06 10:00:00,14.0,Banana,11
+2020-04-06 11:40:00,4.0,Cheese Steak,11
+2020-04-06 11:40:00,0.0,Tortilla,11
+2020-04-06 11:40:00,0.1,Rice,11
+2020-04-06 11:40:00,1.3,Refried Bean,11
+2020-04-06 19:00:00,9.6,Pizza,11
+2020-04-06 19:00:00,0.9,Salad,11
+2020-04-06 19:00:00,62.0,Mountain Dew,11
+2020-04-06 23:35:00,0.0,Diet Mountain Dew,11
+2020-04-06 23:35:00,18.0,Oreo Cookie,11
+2020-04-07 05:30:00,24.0,Std Bfast,11
+2020-04-07 12:30:00,11.0,Pizza,11
+2020-04-07 12:30:00,62.0,Mountain Dew,11
+2020-04-07 15:00:00,14.5,Mountain Dew,11
+2020-04-07 16:30:00,18.0,Oreo Cookie,11
+2020-04-07 16:30:00,31.0,Mountain Dew,11
+2020-04-07 19:20:00,0.0,Hamburger,11
+2020-04-07 19:20:00,0.5,Chips,11
+2020-04-07 19:20:00,31.0,Mountain Dew,11
+2020-04-07 19:50:00,29.0,Candy Bar,11
+2020-04-08 06:00:00,37.0,Carnation Breakfast Essential,11
+2020-04-08 08:00:00,4.2,Toast,11
+2020-04-08 08:00:00,31.0,Mountain Dew,11
+2020-04-08 13:30:00,19.0,Brunswick Stew,11
+2020-04-08 13:30:00,10.0,Slaw,11
+2020-04-08 13:30:00,31.0,Mountain Dew,11
+2020-04-08 17:30:00,21.0,Reeses Peanut Butter Cup,11
+2020-04-08 19:00:00,0.5,Popcorn,11
+2020-04-08 19:00:00,20.0,Nutty Bar,11
+2020-04-08 19:00:00,31.0,Mountain Dew,11
+2020-04-09 05:50:00,24.0,Std Bfast,11
+2020-04-09 09:50:00,19.0,Apple,11
+2020-04-09 11:50:00,0.0,Diet Mountain Dew,11
+2020-04-09 11:50:00,11.0,Pizza,11
+2020-04-09 11:50:00,19.0,Nutty Bar,11
+2020-04-09 19:20:00,0.0,Chicken Leg,11
+2020-04-09 19:20:00,0.0,Potato Salad,11
+2020-04-09 19:20:00,20.0,Baked Beans,11
+2020-04-09 19:20:00,0.0,Diet Mountain Dew,11
+2020-04-10 05:50:00,3.6,Sausage Biscuit,11
+2020-04-10 05:50:00,0.0,Diet Mountain Dew,11
+2020-04-10 09:30:00,1.8,Sausage Biscuit,11
+2020-04-10 12:00:00,0.0,Chicken,11
+2020-04-10 12:00:00,0.0,Diet Mountain Dew,11
+2020-04-10 12:00:00,0.0,Potato Salad,11
+2020-04-10 12:00:00,9.0,Baked Beans,11
+2020-04-10 19:00:00,3.6,Sausage Biscuit,11
+2020-04-10 19:00:00,1.6,Scrambled Eggs,11
+2020-04-11 05:45:00,24.0,Std Bfast,11
+2020-04-11 09:30:00,14.0,Banana,11
+2020-04-11 09:45:00,7.0,"(Mrs. Freshley's) Sweet Rolles, Pecan Twirls",11
+2020-04-11 11:15:00,14.0,Donut,11
+2020-04-11 12:15:00,5.0,"(Stouffer's) Green Pepper Steak, Classics",11
+2020-04-11 12:15:00,7.0,"(Mrs. Freshley's) Sweet Rolles, Pecan Twirls",11
+2020-04-11 18:00:00,4.4,Peanut Butter Cracker,11
+2020-04-11 19:30:00,2.7,Chicken Casserole,11
+2020-04-11 19:30:00,0.0,Potato Salad,11
+2020-04-11 19:30:00,4.1,Green Beans,11
+2020-04-11 19:30:00,18.0,Apple Pie,11
+2020-04-11 19:30:00,0.0,Diet Mountain Dew,11
+2020-04-12 05:30:00,12.0,Honey Nut Cheerios,11
+2020-04-12 05:30:00,12.0,2% Milk,11
+2020-04-12 12:00:00,2.2,Chicken Casserole,11
+2020-04-12 12:00:00,0.0,Potato Salad,11
+2020-04-12 12:00:00,4.1,Green Beans,11
+2020-04-12 12:00:00,18.0,Apple Pie,11
+2020-04-12 12:00:00,0.0,Diet Mountain Dew,11
+2020-04-12 18:30:00,5.1,Chicken Pot Pie,11
+2020-04-12 18:30:00,2.4,Mashed Potato,11
+2020-04-12 18:30:00,0.0,Diet Mountain Dew,11
+2020-04-12 18:30:00,32.0,Peach Cobbler,11
+2020-04-13 06:30:00,24.0,Std Bfast,11
+2020-04-13 09:40:00,14.0,Banana,11
+2020-04-13 12:00:00,2.7,Chicken Casserole,11
+2020-04-13 12:00:00,1.6,Mashed Potato,11
+2020-04-13 12:00:00,4.1,Green Beans,11
+2020-04-13 12:00:00,44.0,Cranberry Sauce,11
+2020-04-13 12:00:00,0.0,Diet Mountain Dew,11
+2020-04-13 12:00:00,18.0,Apple Pie,11
+2020-04-13 18:00:00,2.7,Chicken Casserole,11
+2020-04-13 18:00:00,1.6,Mashed Potato,11
+2020-04-13 18:00:00,6.7,Peas,11
+2020-04-13 18:00:00,22.0,Cranberry Sauce,11
+2020-04-13 18:00:00,0.0,Diet Mountain Dew,11
+2020-04-13 18:00:00,29.0,Chocolate Pudding,11
+2020-04-14 08:00:00,5.3,Sausage Biscuit,11
+2020-04-14 08:00:00,145.0,Pillsbury Cinnamon Roll,11
+2020-04-14 08:00:00,0.0,Diet Mountain Dew,11
+2020-04-14 15:00:00,5.5,Cheese and Cracker,11
+2020-04-14 15:00:00,61.0,Coke,11
+2020-04-14 18:30:00,0.0,Porkchop,11
+2020-04-14 18:30:00,1.3,Baked Potato,11
+2020-04-14 18:30:00,0.9,Salad,11
+2020-04-14 18:30:00,2.7,Toast,11
+2020-04-14 18:30:00,31.0,Mountain Dew,11
+2020-04-15 06:45:00,24.0,Std Bfast,11
+2020-04-15 13:30:00,3.1,Chili,11
+2020-04-15 13:30:00,0.0,Diet Mountain Dew,11
+2020-04-15 17:00:00,18.0,Oreo Cookie,11
+2020-04-15 17:00:00,2.8,Peanuts,11
+2020-04-15 20:15:00,18.0,Banana Sandwich,11
+2020-04-15 20:15:00,30.0,Cookies,11
+2020-04-15 20:15:00,0.0,Diet Mountain Dew,11
+2020-04-16 07:00:00,40.0,Boost,11
+2020-05-03 19:00:00,54.0,(Graeter's Ice Cream) Black Raspberry Chocolate Chip Ice Cream,12
+2020-05-03 19:17:00,2.2,Cheese and Crackers,12
+2020-05-03 21:44:00,1.1,Cheese Balls,12
+2020-05-04 05:24:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,12
+2020-05-04 05:24:00,20.0,(Kellogg's) Frosted Flakes,12
+2020-05-04 06:32:00,0.0,Coffee,12
+2020-05-04 06:32:00,1.1,Coffee Cream,12
+2020-05-04 06:32:00,0.0,Stevia,12
+2020-05-04 07:30:00,0.4,Egg,12
+2020-05-04 08:28:00,0.0,Ibuprofen,12
+2020-05-04 08:28:00,0.0,Aspirin,12
+2020-05-04 09:20:00,0.0,Coffee,12
+2020-05-04 09:20:00,0.0,Stevia,12
+2020-05-04 09:20:00,1.2,Half and Half,12
+2020-05-04 12:04:00,0.0,Diet Pepsi,12
+2020-05-04 12:10:00,8.7,"(Jersey Mikes) Salad - Cheese, Steak, Ranch",12
+2020-05-04 16:32:00,0.2,Moon Cheddar Cheese,12
+2020-05-04 16:50:00,0.3,"Sargento Cranberries Snack Pack Cheese, Cashews",12
+2020-05-04 18:29:00,1.1,Cream Cheese,12
+2020-05-04 18:29:00,0.6,Sausage,12
+2020-05-04 18:45:00,0.0,Tea,12
+2020-05-04 18:45:00,0.0,Stevia,12
+2020-05-04 20:27:00,0.0,Olives,12
+2020-05-04 21:15:00,3.0,Grapes,12
+2020-05-04 22:40:00,0.3,Babybel Cheese,12
+2020-05-05 03:46:00,0.0,Ibuprofen,12
+2020-05-05 03:48:00,0.3,Babybel Cheese,12
+2020-05-05 04:34:00,0.0,Coffee,12
+2020-05-05 04:34:00,1.1,Coffee Cream,12
+2020-05-05 04:34:00,0.0,Stevia,12
+2020-05-05 09:18:00,0.4,Egg,12
+2020-05-05 10:03:00,0.0,Coffee,12
+2020-05-05 10:03:00,1.1,Coffee Cream,12
+2020-05-05 10:03:00,0.0,Stevia,12
+2020-05-05 12:00:00,1.1,Cream Cheese,12
+2020-05-05 12:00:00,0.6,Sausage,12
+2020-05-05 12:47:00,0.0,(Gatorade) Zero Sugar Sport Drink,12
+2020-05-05 14:20:00,0.3,Moon Cheddar Cheese,12
+2020-05-05 14:30:00,0.0,Peppermint Tea,12
+2020-05-05 14:30:00,0.0,Stevia,12
+2020-05-05 16:45:00,0.0,Coffee,12
+2020-05-05 16:45:00,0.0,Stevia,12
+2020-05-05 16:45:00,0.0,MCT Oil,12
+2020-05-05 17:47:00,0.0,Chicken Thigh,12
+2020-05-05 17:47:00,4.5,Green Beans,12
+2020-05-05 20:49:00,0.3,Moon Cheddar Cheese,12
+2020-05-06 05:56:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,12
+2020-05-06 05:56:00,20.0,(Kellogg's) Frosted Flakes,12
+2020-05-06 08:55:00,0.4,Egg,12
+2020-05-06 08:55:00,0.0,Bacon,12
+2020-05-06 12:18:00,0.0,Jim Beam Bourbon,12
+2020-05-06 13:10:00,1.1,Cream Cheese,12
+2020-05-06 13:10:00,0.6,Sausage,12
+2020-05-06 13:10:00,0.0,Coffee,12
+2020-05-06 13:10:00,1.1,Coffee Cream,12
+2020-05-06 13:10:00,0.0,Stevia,12
+2020-05-06 13:10:00,0.0,MCT Oil,12
+2020-05-06 14:23:00,0.0,Diet Coke,12
+2020-05-06 15:32:00,0.0,Fried Cheddar Cheese Bite,12
+2020-05-06 17:38:00,27.0,Mint Chocolate Milano Cookies,12
+2020-05-06 19:01:00,0.0,Brownie,12
+2020-05-06 19:22:00,40.0,Dark Chocolate Chip,12
+2020-05-06 19:30:00,0.5,Corn Cheese Puffs,12
+2020-05-06 19:42:00,2.2,Cheese and Crackers,12
+2020-05-07 05:25:00,0.0,Coffee,12
+2020-05-07 05:25:00,1.1,Coffee Cream,12
+2020-05-07 05:25:00,0.0,Stevia,12
+2020-05-07 05:25:00,0.0,MCT Oil,12
+2020-05-07 06:53:00,0.4,Egg,12
+2020-05-07 06:53:00,1.6,Buttered Toast,12
+2020-05-07 10:10:00,0.0,Coffee,12
+2020-05-07 10:10:00,0.0,Stevia,12
+2020-05-07 12:12:00,38.0,Pork BBQ,12
+2020-05-07 12:12:00,20.0,Beans,12
+2020-05-07 12:12:00,2.0,Potato,12
+2020-05-07 12:12:00,0.4,Strawberry,12
+2020-05-07 14:00:00,0.4,Strawberry,12
+2020-05-07 14:10:00,24.0,Chocolate Peanut Butter Bar,12
+2020-05-07 15:55:00,30.0,(BlueBird) Peanut Butter Wafers,12
+2020-05-07 17:45:00,10.0,Peanut M & M,12
+2020-05-07 18:50:00,11.0,Grilled Cheese,12
+2020-05-07 19:40:00,17.3,(Kashi) Go Lean Crunch,12
+2020-05-08 05:54:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,12
+2020-05-08 05:54:00,20.0,(Kellogg's) Frosted Flakes,12
+2020-05-08 07:40:00,2.9,Whole Wheat Toast,12
+2020-05-08 07:40:00,0.0,Butter,12
+2020-05-08 07:40:00,1.1,Cream Cheese,12
+2020-05-08 07:55:00,0.0,Coffee,12
+2020-05-08 07:55:00,1.1,Coffee Cream,12
+2020-05-08 07:55:00,0.0,Stevia,12
+2020-05-08 08:51:00,0.0,Coffee,12
+2020-05-08 08:51:00,1.2,Half and Half,12
+2020-05-08 08:51:00,0.0,Stevia,12
+2020-05-08 10:30:00,2.1,(Smoke House) Almonds,12
+2020-05-08 12:41:00,5.9,Chicken Ranch Salad,12
+2020-05-08 16:35:00,0.0,Diet Coke,12
+2020-05-08 17:45:00,0.0,(Grey Goose) Vodka,12
+2020-05-08 17:53:00,1.6,Kale,12
+2020-05-08 17:53:00,0.3,Mozzarella,12
+2020-05-08 17:53:00,6.5,Chicken Burger,12
+2020-05-08 17:53:00,4.5,Green Beans,12
+2020-05-08 19:02:00,3.3,Butter Toast,12
+2020-05-08 19:24:00,55.7,Angel Food Candy,12
+2020-05-09 05:30:00,0.0,Coffee,12
+2020-05-09 05:30:00,1.1,Coffee Cream,12
+2020-05-09 05:30:00,0.0,Stevia,12
+2020-05-09 05:30:00,0.0,MCT Oil,12
+2020-05-09 06:00:00,12.0,Yogurt,12
+2020-05-09 06:00:00,7.0,Blackberries,12
+2020-05-09 06:00:00,15.0,Blueberries,12
+2020-05-09 06:00:00,14.0,Kashi,12
+2020-05-09 08:36:00,0.0,Coffee,12
+2020-05-09 08:36:00,1.1,Coffee Cream,12
+2020-05-09 08:36:00,0.0,Stevia,12
+2020-05-09 10:14:00,0.0,Coffee,12
+2020-05-09 10:14:00,1.1,Coffee Cream,12
+2020-05-09 10:14:00,0.0,Stevia,12
+2020-05-09 12:12:00,4.0,(Wendy's) Southwest Avocado Chicken Salad,12
+2020-05-09 14:45:00,0.0,Diet Coke,12
+2020-05-09 14:45:00,0.6,Cheese Curd,12
+2020-05-09 16:09:00,0.4,Biscuit Chicken Strips,12
+2020-05-09 16:45:00,55.7,Angel Food Candy,12
+2020-05-09 18:40:00,4.6,Chicken Cheese Sandwich,12
+2020-05-09 19:49:00,55.7,Angel Food Candy,12
+2020-05-09 21:28:00,44.0,(Garrett's) Caramel Popcorn Cheddar,12
+2020-05-10 06:05:00,4.0,(Natrel) Lactose Free 2% Partly Skimmed Milk,12
+2020-05-10 06:05:00,20.0,(Kellogg's) Frosted Flakes,12
+2020-05-10 07:21:00,0.4,Egg,12
+2020-05-10 07:21:00,0.1,Cheese,12
+2020-05-10 07:21:00,1.6,Buttered Toast,12
+2020-05-10 07:21:00,0.0,Coffee,12
+2020-05-10 07:21:00,1.1,Coffee Cream,12
+2020-05-10 07:21:00,0.0,Stevia,12
+2020-05-10 08:10:00,0.0,Coffee,12
+2020-05-10 08:10:00,1.2,Half and Half,12
+2020-05-10 08:10:00,0.0,Stevia,12
+2020-05-10 11:25:00,0.0,Coffee,12
+2020-05-10 11:25:00,1.2,Half and Half,12
+2020-05-10 11:25:00,0.0,Stevia,12
+2020-05-10 12:20:00,7.0,Sushi,12
+2020-05-10 12:20:00,0.7,Soup,12
+2020-05-10 12:20:00,0.0,Diet Coke,12
+2020-05-10 17:25:00,6.9,Chicken Salad Sandwich,12
+2020-05-10 17:45:00,72.0,Ginger Bread Cookie,12
+2020-05-10 19:40:00,0.0,Chicken Salad Sandwich,12
+2020-05-10 19:40:00,0.1,Rice,12
+2020-05-10 19:40:00,0.1,Cheddar Popcorn,12
+2020-05-10 20:15:00,16.0,Peppermint Bark,12
+2020-05-10 21:01:00,0.0,Tea,12
+2020-05-10 21:01:00,0.0,Stevia,12
+2020-05-10 22:40:00,0.0,(Michelob) Ultra Light Beer,12
+2020-05-11 07:00:00,40.0,Boost,12
+2019-12-30 00:00:00,22.0,Ice Cream Sandwich,13
+2019-12-30 00:00:00,9.8,Lasagna,13
+2019-12-30 00:00:00,0.4,Red Wine,13
+2019-12-30 00:00:00,0.5,Cashew Nut,13
+2019-12-30 00:00:00,5.2,Chocolate,13
+2019-12-30 00:00:00,0.0,Herbal Tea,13
+2019-12-30 00:00:00,5.8,Honey,13
+2019-12-31 00:00:00,0.7,Pretzel Rod,13
+2019-12-31 00:00:00,24.0,Std Bfast,13
+2019-12-31 00:00:00,19.0,Latte,13
+2019-12-31 00:00:00,0.0,Lactose Free Milk,13
+2019-12-31 00:00:00,0.0,Potato Chip,13
+2019-12-31 00:00:00,1.0,Chicken Noodle Soup,13
+2019-12-31 00:00:00,28.0,(Cara Cara) Pink Navel Oranges,13
+2019-12-31 00:00:00,3.9,Small Sweet Potato,13
+2019-12-31 00:00:00,0.0,Turkey Leg,13
+2019-12-31 00:00:00,1.8,Stuffing,13
+2019-12-31 00:00:00,5.9,English Peas,13
+2019-12-31 00:00:00,22.0,Ice Cream Sandwich,13
+2019-12-31 00:00:00,20.0,Pound Cake,13
+2019-12-31 00:00:00,0.4,Strawberry,13
+2019-12-31 00:00:00,15.0,Blueberry,13
+2019-12-31 00:00:00,28.0,Ice Cream,13
+2020-01-01 00:00:00,0.0,Small Blueberry Pancake,13
+2020-01-01 00:00:00,35.0,Syrup,13
+2020-01-01 00:00:00,19.0,Latte,13
+2020-01-01 00:00:00,0.0,Lactose Free Milk,13
+2020-01-01 00:00:00,0.0,Turkey Leg,13
+2020-01-01 00:00:00,0.0,Potato Chip,13
+2020-01-01 00:00:00,17.0,Pear,13
+2020-01-01 00:00:00,0.5,Cashew Nut,13
+2020-01-01 00:00:00,19.0,Latte,13
+2020-01-01 00:00:00,0.0,Lactose Free Milk,13
+2020-01-01 00:00:00,15.0,Toffee,13
+2020-01-01 00:00:00,5.1,Vegetable Lasagna,13
+2020-01-01 00:00:00,1.1,Green Bean,13
+2020-01-01 00:00:00,28.0,Ice Cream,13
+2020-01-02 00:00:00,24.0,Std Bfast,13
+2020-01-02 00:00:00,19.0,Latte,13
+2020-01-02 00:00:00,0.0,Lactose Free Milk,13
+2020-01-02 00:00:00,3.1,Low Fat Cottage Cheese,13
+2020-01-02 00:00:00,14.0,Banana,13
+2020-01-02 00:00:00,1.6,Low Fat Cottage Cheese,13
+2020-01-02 00:00:00,29.0,Greek Yogurt,13
+2020-01-02 00:00:00,22.0,Ice Cream Sandwich,13
+2020-01-02 00:00:00,0.1,Rice,13
+2020-01-02 00:00:00,0.6,Bean,13
+2020-01-02 00:00:00,5.1,duck burrito,13
+2020-01-02 00:00:00,1.4,Salsa,13
+2020-01-02 00:00:00,0.1,Corn Chips,13
+2020-01-03 00:00:00,1.6,Low Fat Cottage Cheese,13
+2020-01-03 00:00:00,14.0,Banana,13
+2020-01-03 00:00:00,19.0,Latte,13
+2020-01-03 00:00:00,0.0,Turkey Leg,13
+2020-01-03 00:00:00,28.0,(Cara Cara) Pink Navel Oranges,13
+2020-01-03 00:00:00,0.0,Beer,13
+2020-01-03 00:00:00,7.5,duck soup with dumpling,13
+2020-01-03 00:00:00,0.1,Egg,13
+2020-01-03 00:00:00,0.3,potato chip,13
+2020-01-03 00:00:00,28.0,Ice Cream,13
+2020-01-03 00:00:00,22.0,Ice Cream Sandwich,13
+2020-01-04 00:00:00,24.0,Std Bfast,13
+2020-01-04 00:00:00,19.0,Latte,13
+2020-01-04 00:00:00,29.0,Greek Yogurt,13
+2020-01-04 00:00:00,19.0,Apple,13
+2020-01-04 00:00:00,7.0,Ham and Turkey Pesto Sandwich,13
+2020-01-04 00:00:00,2.8,Cheese Crackers,13
+2020-01-04 00:00:00,19.0,Latte,13
+2020-01-04 00:00:00,1.2,Mixed Nut,13
+2020-01-04 00:00:00,3.0,Pasta Salad,13
+2020-01-04 00:00:00,1.4,Salad Dressing,13
+2020-01-04 00:00:00,0.2,Egg,13
+2020-01-04 00:00:00,15.0,Toffee,13
+2020-01-04 00:00:00,28.0,Ice Cream,13
+2020-01-04 00:00:00,59.0,Cookie,13
+2020-01-05 00:00:00,0.5,Oatmeal,13
+2020-01-05 00:00:00,6.0,Maple Syrup,13
+2020-01-05 00:00:00,5.0,Tea with Milk,13
+2020-01-05 00:00:00,5.8,Honey,13
+2020-01-05 00:00:00,5.0,Turkey and Brie Sandwich,13
+2020-01-05 00:00:00,0.7,Mixed Nut,13
+2020-01-05 00:00:00,19.0,Latte,13
+2020-01-05 00:00:00,37.0,Soda,13
+2020-01-05 00:00:00,0.0,Lamb,13
+2020-01-05 00:00:00,3.9,Small Sweet Potato,13
+2020-01-05 00:00:00,4.0,Beet,13
+2020-01-05 00:00:00,0.0,Tea,13
+2020-01-05 00:00:00,5.8,Honey,13
+2020-01-05 00:00:00,78.7,Cookie,13
+2020-01-06 00:00:00,40.0,Boost,13
+2020-06-05 16:00:00,41.0,Pepsi (Real Sugar),14
+2020-06-05 16:00:00,0.5,Simply Naked Pita Chips,14
+2020-06-05 16:00:00,2.0,Roasted Red Pepper Hummus,14
+2020-06-05 16:00:00,5.3,Milk Chocolate Petit Beurre Biscuits,14
+2020-06-05 19:30:00,0.0,On Gold Standard 100% Whey Protein,14
+2020-06-05 19:30:00,12.0,2% Milk,14
+2020-06-05 19:30:00,2.5,Frozen Strawberries,14
+2020-06-05 19:30:00,0.0,Pork Loin Tenderloin (Hornet),14
+2020-06-06 06:10:00,24.0,Standard Breakfast,14
+2020-06-06 09:49:00,1.0,Quest Protein Bar Double Chocolate Chunk,14
+2020-06-06 11:50:00,4.4,Chicken Parmesan with Tomato Sauce,14
+2020-06-06 11:50:00,3.1,Mashed Potatoes with Brown Gravy,14
+2020-06-06 11:50:00,1.0,"Mixed Vegetables (corn, peas, carrots)",14
+2020-06-06 13:55:00,7.0,Lifesavers Breath Mints,14
+2020-06-06 18:50:00,2.0,Thomas Blueberry English Muffins,14
+2020-06-06 18:50:00,0.5,Jimmy Dean Hot Premium Pork Sausage,14
+2020-06-06 18:50:00,0.2,Large Egg,14
+2020-06-06 18:50:00,0.0,Kerry Gold Butter,14
+2020-06-06 18:50:00,15.0,Lanad o Lakes Cinnamon Sugar,14
+2020-06-06 19:32:00,7.2,Asndes Cremede Menth Thin Mints,14
+2020-06-07 09:20:00,1.0,Quest Protein Bar White Chocolate Raspberry Bar,14
+2020-06-07 10:19:00,6.0,V8 Low Sodium,14
+2020-06-07 12:20:00,7.0,"Club Sandwich with turkey, bacon, and cheddar cheese",14
+2020-06-07 13:25:00,4.0,Lifesaver Peppermint Breath Mint,14
+2020-06-07 17:30:00,5.3,Lu Petit Ecolier Milk Chocolate Biscuit Cookie,14
+2020-06-07 19:21:00,0.0,Chicken Breast Air Fried,14
+2020-06-07 19:21:00,15.0,"Green Smoothie (with avocado, cotton candy green grapes, pear, broccoli, kale, spinach, banana)",14
+2020-06-07 19:21:00,5.3,Lu Petit Ecolier Milk Chocolate Biscuit Cookie,14
+2020-06-08 06:10:00,24.0,Standard Breakfast,14
+2020-06-08 09:10:00,41.0,Pepsi,14
+2020-06-08 09:10:00,13.0,Lifesaver Gummies (wild berries),14
+2020-06-08 09:10:00,9.0,Uncle Al's Strawberry Cremes Cookies,14
+2020-06-08 11:25:00,2.0,Taco Bell Chicken Quesadilla,14
+2020-06-08 11:25:00,0.6,Soft Taco,14
+2020-06-08 15:05:00,13.0,Lifesaver Gummies (wild berries),14
+2020-06-08 17:30:00,9.0,Sathers Caramel Creams,14
+2020-06-08 19:40:00,2.0,Large Eggs Scrambled (nothing added),14
+2020-06-08 19:40:00,1.0,Thomas English Muffin Blueberry,14
+2020-06-08 19:40:00,1.0,Thomas English Muffin Cinnamon,14
+2020-06-08 19:40:00,12.0,2% Milk,14
+2020-06-08 19:40:00,0.0,On Gold Standard 100% Whey Protein,14
+2020-06-08 19:40:00,0.0,Kerry Gold Butter,14
+2020-06-09 07:50:00,18.0,Special K with strawberries,14
+2020-06-09 07:50:00,12.0,2% Milk,14
+2020-06-09 10:20:00,9.0,Uncle Al's Strawberry Cremes Cookies,14
+2020-06-09 10:20:00,41.0,Pepsi,14
+2020-06-09 14:45:00,9.0,Goetzes Caramel Cremes,14
+2020-06-09 15:58:00,1.0,Quest Protein Bar Caramel Chocolate Chunk,14
+2020-06-09 18:30:00,7.0,Pizza Slice of NY Pepperoni,14
+2020-06-09 18:30:00,2.0,Mozarrella Sticks,14
+2020-06-09 18:30:00,41.0,Coca Cola,14
+2020-06-10 06:15:00,24.0,Standard Breakfast,14
+2020-06-10 09:28:00,32.0,Oreo's Peppermint Bark,14
+2020-06-10 11:50:00,7.0,Pizza Slice of NY Pepperoni,14
+2020-06-10 11:50:00,1.2,Strawberry Scone,14
+2020-06-10 11:50:00,41.0,Coca Cola,14
+2020-06-10 15:27:00,1.0,Quest Protein Bar Caramel Chocolate Chunk,14
+2020-06-10 19:30:00,8.5,Kraft Mac and Cheese,14
+2020-06-10 19:30:00,0.0,On Gold Standard 100% Whey Protein,14
+2020-06-10 19:30:00,12.0,2% Milk,14
+2020-06-10 19:30:00,5.0,Frozen Strawberries,14
+2020-06-11 06:00:00,1.0,Quest Protein Bar Birthday Cake,14
+2020-06-11 09:18:00,2.0,Sun Chips Garden Salsa,14
+2020-06-11 11:45:00,2.0,Hard Boiled Eggs,14
+2020-06-11 11:45:00,3.0,Cottage Cheese,14
+2020-06-11 11:45:00,20.0,Apple Pie ,14
+2020-06-11 12:50:00,4.0,Lifesavers Breath Mints,14
+2020-06-11 17:50:00,16.0,Ghiradelli Peppermint Bark Square,14
+2020-06-11 18:15:00,0.5,Jimmy Dean Hot Premium Pork Sausage,14
+2020-06-11 18:15:00,2.0,Thomas English Muffin Cinnamon,14
+2020-06-11 18:15:00,0.0,Kerry Gold Butter,14
+2020-06-11 18:15:00,15.0,Land o Lakes Cinnamon Butter,14
+2020-06-11 18:15:00,12.0,2% Milk,14
+2020-06-12 06:05:00,24.0,Standard Breakfast,14
+2020-06-12 09:10:00,41.0,Pepsi,14
+2020-06-12 09:10:00,32.0,Oreo's Peppermint Bark,14
+2020-06-12 09:10:00,9.0,Uncle Al's Strawberry Cremes Cookies,14
+2020-06-12 09:10:00,31.0,M&M's,14
+2020-06-12 09:10:00,9.0,Sathers Caramel Creams,14
+2020-06-12 12:45:00,41.0,Pepsi,14
+2020-06-12 12:45:00,31.0,M&M's,14
+2020-06-12 12:45:00,26.0,"Milkyway ""Fun Size"" Candy Bar",14
+2020-06-12 12:45:00,13.0,Whoopers Malted Milk Balls,14
+2020-06-12 12:45:00,12.0,Uncle Al's Strawberry Cremes Cookies,14
+2020-06-12 17:15:00,13.0,Sloppy Joe with 1 Bun,14
+2020-06-12 17:15:00,0.2,Lay's Wavy Potato Chips,14
+2020-06-12 17:15:00,5.3,Lut Petit Ecolier Milk Chocolate Biscuit Cookie,14
+2020-06-13 09:30:00,40.0,Boost,14
+2020-02-17 00:00:00,4.7,Coffee + skim milk,15
+2020-02-17 00:00:00,4.0,Glucerna snack bar,15
+2020-02-17 00:00:00,25.0,Small pc red velvet cake,15
+2020-02-17 00:00:00,0.3,Ruffles chips,15
+2020-02-17 00:00:00,0.0,Panko breaded baked fish ,15
+2020-02-17 00:00:00,1.1,Celery,15
+2020-02-17 00:00:00,4.5,Onion,15
+2020-02-18 00:00:00,4.7,Coffee + skim milk,15
+2020-02-18 00:00:00,4.7,Coffee,15
+2020-02-18 00:00:00,24.0,Standard breakfast,15
+2020-02-18 00:00:00,35.5,Muffin,15
+2020-02-18 00:00:00,3.5,Northern Harvest Sweet + Spicy Chunk light Tuna,15
+2020-02-18 00:00:00,5.0,multigrain cakes,15
+2020-02-18 00:00:00,3.8,BLT salad,15
+2020-02-18 00:00:00,17.0,Whole grapefruit,15
+2020-02-19 00:00:00,1.8,Slim Fast,15
+2020-02-19 00:00:00,4.7,Coffee + skim milk,15
+2020-02-19 00:00:00,1.9,Friendly Farm Cottage Cheese 1% milkfat,15
+2020-02-19 00:00:00,13.0,Harris Teeter canned sliced peaches,15
+2020-02-19 00:00:00,5.7,Peach juice,15
+2020-02-19 00:00:00,1.0,Sarah Lee Honey Wheat Bread with Butter,15
+2020-02-19 00:00:00,4.7,Coffee + skim milk,15
+2020-02-19 00:00:00,0.4,2 fried eggs,15
+2020-02-19 00:00:00,35.5,Muffin,15
+2020-02-19 00:00:00,0.0,Butter,15
+2020-02-19 00:00:00,0.0,2 slices bacon,15
+2020-02-19 00:00:00,1.4,chicken cesear salad wrap,15
+2020-02-19 00:00:00,0.4,Salt and vinegar chips,15
+2020-02-19 00:00:00,19.0,Honest Organic Honey Green Tea,15
+2020-02-19 00:00:00,5.0,Taco Bell Nachos Grande,15
+2020-02-19 00:00:00,13.0,Taco Bell Cinnamon Twists,15
+2020-02-19 00:00:00,49.0,Crystal Light Lemonade,15
+2020-02-20 00:00:00,4.7,Coffee + skim milk,15
+2020-02-20 00:00:00,4.7,Coffee + skim milk,15
+2020-02-20 00:00:00,24.0,Standard breakfast,15
+2020-02-20 00:00:00,1.8,Slim fast shake,15
+2020-02-20 00:00:00,1.0,2/3 bag Orville Redenbacher butter popcorn,15
+2020-02-20 00:00:00,14.5,Banana,15
+2020-02-20 00:00:00,4.7,Coffee + skim milk,15
+2020-02-20 00:00:00,9.5,Chef Salad,15
+2020-02-20 00:00:00,5.0,V8 juice ,15
+2020-02-21 00:00:00,0.4,Slice of Boar's head Swiss cheese,15
+2020-02-21 00:00:00,70.0,2 muffins,15
+2020-02-21 00:00:00,4.7,Coffee + skim milk,15
+2020-02-21 00:00:00,2.0,2 pieces honey wheat toast with butter,15
+2020-02-21 00:00:00,4.7,Coffee + skim milk,15
+2020-02-21 00:00:00,15.0,Sugg's coconut greek yogurt,15
+2020-02-21 00:00:00,0.0,Freddy's Steakbuurger,15
+2020-02-21 00:00:00,47.3,Small chocolate shake (1/2),15
+2020-02-21 00:00:00,4.7,Coffee + skim milk,15
+2020-02-21 00:00:00,47.3,Small chocolate shake (1/2),15
+2020-02-21 00:00:00,3.6,Ham and cheese sandwhich,15
+2020-02-21 00:00:00,4.7,Coffee + skim milk,15
+2020-02-22 00:00:00,4.7,Coffee + skim milk,15
+2020-02-22 00:00:00,24.0,Standard breakfast,15
+2020-02-22 00:00:00,1.9,1/2 cup cottge cheese,15
+2020-02-22 00:00:00,13.0,peach slices,15
+2020-02-22 00:00:00,0.0,Chai tea,15
+2020-02-22 00:00:00,4.7,Coffee + skim milk,15
+2020-02-22 00:00:00,0.4,Old El Priso burrito 2 taco shells,15
+2020-02-22 00:00:00,0.0,Gnd beef,15
+2020-02-22 00:00:00,0.1,cheese,15
+2020-02-22 00:00:00,0.3,rice + beans,15
+2020-02-22 00:00:00,0.0,Diet Soda,15
+2020-02-22 00:00:00,5.7,Outback Cobb salad with salmon,15
+2020-02-22 00:00:00,1.0,Blue cheese dressing,15
+2020-02-22 00:00:00,37.0,Outback cheesecake with chocolate sauce,15
+2020-02-23 00:00:00,4.7,Coffee + skim milk,15
+2020-02-23 00:00:00,4.7,Coffee + skim milk,15
+2020-02-23 00:00:00,35.5,Muffin,15
+2020-02-23 00:00:00,4.7,Coffee + skim milk,15
+2020-02-23 00:00:00,17.0,1 whole grapefruit,15
+2020-02-23 00:00:00,6.7,2 leftover burritos,15
+2020-02-23 00:00:00,0.6,Pecans,15
+2020-02-23 00:00:00,0.7,Outback bread loaf (1/2) + butter,15
+2020-02-23 00:00:00,14.5,Banana,15
+2020-02-25 00:00:00,40.0,Boost,15
+2020-02-21 00:00:00,3.8,Salmon cakes,16
+2020-02-21 00:00:00,2.6,Large coffee with heavy cream,16
+2020-02-21 00:00:00,24.0,Standard breakfast,16
+2020-02-21 00:00:00,3.6,Ham and cheese sandwhich,16
+2020-02-21 00:00:00,28.0,Brownies,16
+2020-02-21 00:00:00,1.1,Peanut Butter,16
+2020-02-21 00:00:00,3.2,Two slices of bread,16
+2020-02-21 00:00:00,0.0,Butter,16
+2020-02-21 00:00:00,5.6,"Chipotle burrito bowl chicken and steak, black beans, cheese, lettuce, salsa, sour cream",16
+2020-02-21 00:00:00,0.0,2 Yuengling beers,16
+2020-02-22 00:00:00,5.0,2 cups coffee w/ heavy cream,16
+2020-02-22 00:00:00,1.4,Elmo's diner breakfast burrito 2 eggs/sausage/black beans/sour cream,16
+2020-02-22 00:00:00,0.0,Side of home fried potatoes,16
+2020-02-22 00:00:00,2.6,1 cup coffee,16
+2020-02-23 00:00:00,24.0,Standard breakfast,16
+2020-02-23 00:00:00,0.0,brown rice,16
+2020-02-23 00:00:00,0.0,sardines ,16
+2020-02-23 00:00:00,1.6,kimchi,16
+2020-02-23 00:00:00,6.0,french bread,16
+2020-02-23 00:00:00,0.0,Swiss cheese,16
+2020-02-23 00:00:00,0.1,Salami,16
+2020-02-23 00:00:00,5.2,Chicken soup,16
+2020-02-23 00:00:00,9.0,"Crostinis (slice of French bread, swiss, tomato)",16
+2020-02-24 00:00:00,5.2,Chicken soup,16
+2020-02-24 00:00:00,4.8,"Chicken enchiladas with black beans, spanish rice, salsa",16
+2020-02-24 00:00:00,0.0,Beer,16
+2020-02-25 00:00:00,24.0,Standard breakfast,16
+2020-02-25 00:00:00,9.9,1 bagel with cream cheese,16
+2020-02-25 00:00:00,2.6,1 coffee with cream,16
+2020-02-25 00:00:00,21.0,1 ensure plus,16
+2020-02-25 00:00:00,8.0,"12"" Italian BMT Subway whole wheat mayo",16
+2020-02-25 00:00:00,0.0,Bojangles chicken thigh,16
+2020-02-25 00:00:00,80.0,Sweat tea ice,16
+2020-02-26 00:00:00,5.2,Chicken soup,16
+2020-02-26 00:00:00,14.0,Banana,16
+2020-02-26 00:00:00,1.1,Peanut Butter,16
+2020-02-26 00:00:00,24.4,Plain cheese pizza,16
+2020-02-26 00:00:00,0.0,Anchovies,16
+2020-02-26 00:00:00,0.6,Salad,16
+2020-02-26 00:00:00,1.0,Blue Cheese dressing,16
+2020-02-26 00:00:00,25.0,Lemonade,16
+2020-02-27 00:00:00,24.0,Standard breakfast,16
+2020-02-27 00:00:00,6.1,Plain cheese pizza,16
+2020-02-27 00:00:00,5.6,cooked black eyed peas,16
+2020-02-28 00:00:00,40.0,Boost,16
