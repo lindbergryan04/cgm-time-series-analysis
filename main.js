@@ -60,7 +60,7 @@ const width = 1000;
 const height = 600;
 let xScale;
 let yScale;
-function renderLinegraph(dexcomData) {
+function renderLineGraph(dexcomData) {
 
     const svg = d3
         .select('#chart')
