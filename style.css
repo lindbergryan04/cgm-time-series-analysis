@@ -1,12 +1,14 @@
 /* style.css */
 
 :root {
-    --color-accent: oklch(65% 0.3 280);
+    --color-accent: oklch(70% 0.2 280);
     --background-color: white;
     --text-color: black;
     --input-bg: white;
     --input-text: black;
     --gridline-color: #ccc;
+    --dot-color: var(--color-accent);
+    --line-color: oklch(0.6 0.3 280);
   }
 
   #chart {

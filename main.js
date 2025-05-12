@@ -55,13 +55,12 @@ Preview of dexcomData:
 
 
 
-// render scatter plot function, ripped from lab 6, which will be modified to fit the dexcom and food log data as a line graph. (probably)
-const width = 1000;
+const width = 1000; // make sure to adjust width in style.css to match this
 const height = 600;
 let patient_id = 1; // add selector for patient id in future
 let xScale;
 let yScale;
-function renderLineGraph(dexcomData) {
+function renderLineGraph(dexcomData, foodLogData) {
     // Clear any existing chart
     d3.select('#chart').selectAll('*').remove();
 
@@ -105,7 +104,7 @@ function renderLineGraph(dexcomData) {
     
     console.log('Y scale domain:', yScale.domain());
 
-    // Add gridlines BEFORE the axes
+    // Add gridlines before the axes so they are underneath
     const gridlines = svg
         .append('g')
         .attr('class', 'gridlines')
@@ -113,45 +112,6 @@ function renderLineGraph(dexcomData) {
 
     // Create gridlines as an axis with no labels and full-width ticks
     gridlines.call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width));
-
-    // Scale dots based on lines edited
-    /*
-    const [minLines, maxLines] = d3.extent(commits, (d) => d.totalLines);
-    const rScale = d3
-        .scaleSqrt()
-        .domain([minLines, maxLines])
-        .range([5, 12]); // set dot size based on lines edited
-    
-
-    // Sort commits by total lines in descending order (so smaller dots are on top and can be hovered over)
-    const sortedCommits = d3.sort(commits, (d) => -d.totalLines);
-
-    const dots = svg.append('g').attr('class', 'dots');
-
-    dots
-        .selectAll('circle')
-        .data(sortedCommits)
-        .join('circle')
-        .attr('cx', (d) => {
-            const date = new Date(d.datetime);
-            date.setHours(12, 0, 0, 0);
-            return xScale(date);
-        })
-        .attr('cy', (d) => yScale(d.hourFrac))
-        .attr('r', (d) => rScale(d.totalLines))
-        .attr('fill', 'var(--color-accent)')
-        .style('fill-opacity', 0.8) // transparency for overlapping dots
-        .style('cursor', 'pointer') // show pointer cursor on hover
-        .on('mouseenter', (event, commit) => {
-            renderTooltipContent(commit);
-            updateTooltipVisibility(true);
-            updateTooltipPosition(event);
-        })
-        .on('mouseleave', () => {
-            updateTooltipVisibility(false);
-        })
-        
-    */
 
     // Create the axes
     const xAxis = d3.axisBottom(xScale);
@@ -169,17 +129,59 @@ function renderLineGraph(dexcomData) {
         .attr('transform', `translate(${usableArea.left}, 0)`)
         .call(yAxis);
 
-    // Create the line graph
+    // Create the line
     svg.append("path")
         .datum(filteredData)
         .attr("fill", "none")
-        .attr("stroke", "steelblue")
+        .attr("stroke", "var(--line-color)")
         .attr("stroke-width", 1.5)
         .attr("d", d3.line()
             .x(d => xScale(d.timestamp))
             .y(d => yScale(d.value))
             .curve(d3.curveMonotoneX)  // optional smoothing
         );
+
+    // Scale dots by sugar value
+    const [minSugar, maxSugar] = d3.extent(foodLogData, (d) => d.value);
+    const rScale = d3
+        .scaleSqrt()
+        .domain([minSugar, maxSugar])
+        .range([5, 12]);
+
+    const sortedSugarValues = d3.sort(foodLogData, (d) => -d.value);
+
+    const dots = svg.append('g').attr('class', 'dots');
+
+    dots
+        .selectAll('circle')
+        .data(sortedSugarValues)
+        .join('circle')
+        .attr('cx', (d) => xScale(d.timestamp))
+        .attr('cy', (d) => {
+            // Feature to plot points at the y level of the glucose chart so they are on top of the line.
+            // Find the closest Dexcom reading before and after this food log entry
+            const before = filteredData.filter(dex => dex.timestamp <= d.timestamp).pop();
+            const after = filteredData.filter(dex => dex.timestamp >= d.timestamp).shift();
+            
+            if (!before || !after) return yScale(0); // Fallback if no surrounding points
+            
+            // Interpolate the glucose value at this timestamp
+            const t = (d.timestamp - before.timestamp) / (after.timestamp - before.timestamp);
+            const interpolatedValue = before.value + t * (after.value - before.value);
+            
+            return yScale(interpolatedValue);
+        })
+        .attr('r', (d) => rScale(d.value))
+        .attr('fill', 'var(--dot-color)')
+        .style('fill-opacity', 0.8)
+        .style('cursor', 'pointer')
+        .on('mouseenter', (event, d) => {
+            // to be implemented
+            console.log('Food entry:', d);
+        })
+        .on('mouseleave', () => {
+            // to be implemented
+        });
 }
 
-renderLineGraph(dexcomData);
+renderLineGraph(dexcomData, foodLogData);
