@@ -62,17 +62,18 @@ let patiend_id = 1; // add selector for patient id in future
 let xScale;
 let yScale;
 function renderLineGraph(dexcomData) {
+    // Clear any existing chart
+    d3.select('#chart').selectAll('*').remove();
 
     const svg = d3
         .select('#chart')
         .append('svg')
+        .attr('width', width)
+        .attr('height', height)
         .attr('viewBox', [0, 0, width, height])
-        .attr('preserveAspectRatio', 'xMidYMid meet')  // keep proportions on resize
-        .style('width', '100%')
-        .style('height', '100%')
         .style('overflow', 'visible');
 
-    const margin = { top: 10, right: 10, bottom: 30, left: 20 };
+    const margin = { top: 20, right: 30, bottom: 40, left: 50 };
     const usableArea = {
         top: margin.top,
         right: width - margin.right,
