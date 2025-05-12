@@ -196,6 +196,7 @@ function renderLineGraph(dexcomData, foodLogData) {
         .range([5, 12]);
 
     const sortedSugarValues = d3.sort(foodLogData, (d) => -d.value);
+    console.log('Sorted sugar values:', sortedSugarValues);
 
     const dots = svg.append('g').attr('class', 'dots');
 
