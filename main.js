@@ -241,4 +241,12 @@ function renderLineGraph(dexcomData, foodLogData) {
         });
 }
 
+/* Ryan's code */
+// implement second chart
+
+/* Audrey's code */
+//implement patient info
+
+
+
 renderLineGraph(dexcomData, foodLogData);
