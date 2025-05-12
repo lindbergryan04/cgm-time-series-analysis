@@ -3,12 +3,9 @@ TODO.txt
 ==================
 -- Ryan
 ==================
-- Join demographics data frame with dexcom dataframe
-- Create second chart for aggregate data:
-  - Filter by males
-  - Filter by females
-  - Filter by prediabetic
-  - Filter by non-prediabetic
+- implement chart functionality for hyper/hypoglycemic view
+- change button labels to prediabetic/normal instead of high/low hba1c. 
+- change chart titles
 
 ==================
 -- Karina
@@ -25,11 +22,7 @@ TODO.txt
 - Create buttons for:
   - Hypoglycemic view
   - Hyperglycemic view
-- Create buttons on aggregate chart to select between:
-  - Male
-  - Female
-  - Prediabetic
-  - Non-prediabetic
+- Style buttons for aggregate chart (in <div id="aggregate-chart-controls">)
 - Add line for Dexcom tooltip
 
 ==================
