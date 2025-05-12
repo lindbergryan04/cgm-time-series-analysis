@@ -46,6 +46,33 @@ Preview of dexcomData:
 ]
 */
 
+async function loadDemographicsData() {
+    const data = await d3.csv('data/demographics.csv', (row) => ({
+        ...row,
+        patient_id: Number(row.patient_id),
+        age: Number(row.age),
+        gender: row.gender,
+        condition: row.condition
+    }));
+    return data;
+}
+
+//Audrey load data 
+function populatePatientDropdown(demographicsData) {
+    const select = document.getElementById('patient-select');
+    select.innerHTML = '';
+
+    const patientIDs = [...new Set(demographicsData.map(d => d.patient_id))];
+    patientIDs.forEach(id => {
+        const option = document.createElement('option');
+        option.value = id;
+        option.textContent = `Patient ${id}`;
+        select.appendChild(option);
+    });
+
+    patient_id = patientIDs[0];
+}
+
 
 
 
@@ -247,6 +274,50 @@ function renderLineGraph(dexcomData, foodLogData) {
 /* Audrey's code */
 //implement patient info
 
+function renderPatientInfo() {
+    const infoContainer = document.getElementById('patient-info');
+    infoContainer.innerHTML = '';
+
+    const patient = demographicsData.find(d => d.patient_id === patient_id);
+    const patientDexData = dexcomData.filter(d => d.patient_id === patient_id);
+
+    if (!patient || patientDexData.length === 0) {
+        infoContainer.textContent = 'Patient data not available.';
+        return;
+    }
+
+    const total = patientDexData.length;
+    const hyperCount = patientDexData.filter(d => d.value > 126).length;
+    const hypoCount = patientDexData.filter(d => d.value < 70).length;
+    const hyperPct = ((hyperCount / total) * 100).toFixed(1);
+    const hypoPct = ((hypoCount / total) * 100).toFixed(1);
+
+    infoContainer.innerHTML = `
+        <p><strong>Patient ID:</strong> ${patient.patient_id}</p>
+        <p><strong>Age:</strong> ${patient.age}</p>
+        <p><strong>Gender:</strong> ${patient.gender}</p>
+        <p><strong>Condition:</strong> ${patient.condition}</p>
+        <p><strong>% Time Hyperglycemic (>126):</strong> ${hyperPct}%</p>
+        <p><strong>% Time Hypoglycemic (<70):</strong> ${hypoPct}%</p>
+    `;
+}
+document.getElementById('patient-select').addEventListener('change', (event) => {
+    patient_id = Number(event.target.value);
+    renderLineGraph(dexcomData, foodLogData);
+    renderPatientInfo();
+});
+
+// async function initialize() {
+//     dexcomData = await loadDexcomData();
+//     foodLogData = await loadFoodLogData();
+//     demographicsData = await loadDemographicsData();
+
+//     populatePatientDropdown(demographicsData);
+//     renderLineGraph(dexcomData, foodLogData);
+//     renderPatientInfo();
+// }
+
+// initialize();
 
 
 renderLineGraph(dexcomData, foodLogData);
