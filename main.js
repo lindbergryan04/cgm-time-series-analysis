@@ -56,7 +56,7 @@ function updateTooltipVisibility(isVisible) {
     tooltip.hidden = !isVisible;
 }
 
-// Add threshold button click handler
+// Add button click handler for hyperglycemia and hypoglycemia threshold buttons
 document.querySelector('#hyperglycemia').addEventListener('click', function() {
     this.classList.toggle('active');
 });
