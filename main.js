@@ -57,9 +57,14 @@ function updateTooltipVisibility(isVisible) {
 }
 
 // Add threshold button click handler
-document.querySelector('.threshold-button').addEventListener('click', function() {
+document.querySelector('#hyperglycemia').addEventListener('click', function() {
     this.classList.toggle('active');
 });
+
+document.querySelector('#hypoglycemia').addEventListener('click', function() {
+    this.classList.toggle('active');
+});
+
 
 // Tooltip position
 function updateTooltipPosition(event) {
