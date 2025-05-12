@@ -193,21 +193,24 @@ function renderLineGraph(dexcomData, foodLogData) {
             .curve(d3.curveCatmullRom.alpha(0.5))  // adjustable alpha for smoothing the line
         );
 
+
+    const filteredFoodData = foodLogData.filter(d => d.patient_id === patient_id);
+
     // Scale dots by sugar value
-    const [minSugar, maxSugar] = d3.extent(foodLogData, (d) => d.value);
+    const [minSugar, maxSugar] = d3.extent(filteredFoodData, (d) => d.value);
     const rScale = d3
         .scaleSqrt()
         .domain([minSugar, maxSugar])
         .range([5, 12]);
 
-    const sortedSugarValues = d3.sort(foodLogData, (d) => -d.value);
-    console.log('Sorted sugar values:', sortedSugarValues);
+    const sortedFoodData = d3.sort(filteredFoodData, (d) => -d.value);
+    console.log('Sorted sugar values:', sortedFoodData);
 
     const dots = svg.append('g').attr('class', 'dots');
 
     dots
         .selectAll('circle')
-        .data(sortedSugarValues)
+        .data(sortedFoodData)
         .join('circle')
         .attr('cx', (d) => xScale(d.timestamp))
         .attr('cy', (d) => {
