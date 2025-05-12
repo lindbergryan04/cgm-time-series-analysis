@@ -71,7 +71,9 @@ function renderLineGraph(dexcomData) {
         .attr('width', width)
         .attr('height', height)
         .attr('viewBox', [0, 0, width, height])
-        .style('overflow', 'visible');
+        .style('overflow', 'visible')
+        .attr('preserveAspectRatio', 'xMidYMid meet');
+
 
     const margin = { top: 20, right: 30, bottom: 40, left: 50 };
     const usableArea = {
@@ -161,6 +163,7 @@ function renderLineGraph(dexcomData) {
         .attr('transform', `translate(${usableArea.left}, 0)`)
         .call(yAxis);
 
+    /*
     // Create the line graph
     svg.append("path")
         .datum(filteredData)
@@ -172,6 +175,7 @@ function renderLineGraph(dexcomData) {
             .y(d => yScale(d.value))
             .curve(d3.curveMonotoneX)  // optional smoothing
         );
+    */
 }
 
 renderLineGraph(dexcomData);
