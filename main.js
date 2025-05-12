@@ -1,7 +1,7 @@
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 
 // load data functions
-async function loadDexcomData() {
+async function loadDexcomData() { /* for line graph */
     const data = await d3.csv('data/cleaned_data/dexcom.csv', (row) => ({
         ...row,
         timestamp: new Date(row.timestamp),
@@ -13,7 +13,7 @@ async function loadDexcomData() {
     return data;
 }
 
-async function loadFoodLogData() {
+async function loadFoodLogData() { /* for line graph */
     const data = await d3.csv('data/cleaned_data/food_logs.csv', (row) => ({
         ...row,
         timestamp: new Date(row.timestamp),
@@ -26,8 +26,23 @@ async function loadFoodLogData() {
     return data;
 }
 
+async function loadAggregateData() { /* for aggregate graph */
+    const data = await d3.csv('data/cleaned_data/dexcom_aggregate.csv', (row) => ({
+        ...row,
+        timestamp: new Date(row.timestamp),
+        value: Number(row.value),
+        patient_id: Number(row.patient_id),
+        gender: row.Gender,
+        HbA1c: Number(row.HbA1c)
+    }));
+
+    console.log('First few aggregate entries:', data.slice(0, 3));
+    return data;
+}
+
 let dexcomData = await loadDexcomData();
 let foodLogData = await loadFoodLogData();
+let aggregateData = await loadAggregateData();
 
 /*
 Preview of dexcomData:
@@ -136,9 +151,12 @@ function renderTooltipContent(food_item) {
 
 const width = 1200; // make sure to adjust width in style.css to match this
 const height = 600;
-let patient_id = 1; // add selector for patient id in future
-let xScale;
-let yScale;
+
+
+let patient_id = 1; 
+// TODO: Shriya: add dropdown menu for patient id 
+// remember to call renderLineGraph() after changing patient_id.
+
 function renderLineGraph(dexcomData, foodLogData) {
     // Clear any existing chart
     d3.select('#chart').selectAll('*').remove();
@@ -164,30 +182,31 @@ function renderLineGraph(dexcomData, foodLogData) {
 
     // Filter data to a only the patient_id that is currently selected
     const filteredData = dexcomData.filter(d => d.patient_id === patient_id);
-    console.log('Filtered data:', filteredData);
-    console.log('Number of filtered points:', filteredData.length);
-    console.log('Patient ID being filtered for:', patient_id);
 
-    xScale = d3
+    const xScale = d3
         .scaleTime()
         .domain(d3.extent(filteredData, (d) => d.timestamp))
         .range([usableArea.left, usableArea.right])
         .nice();
     
-    console.log('X scale domain:', xScale.domain());
-
-    yScale = d3
+    const yScale = d3
         .scaleLinear()
         .domain([d3.min(filteredData, d => d.value), d3.max(filteredData, d => d.value)])
         .range([usableArea.bottom, usableArea.top]);
     
-    console.log('Y scale domain:', yScale.domain());
-
     // Add gridlines before the axes so they are underneath
     const gridlines = svg
         .append('g')
         .attr('class', 'gridlines')
         .attr('transform', `translate(${usableArea.left}, 0)`);
+
+    // Add title
+    svg.append("text")
+        .attr("class", "chart-title")
+        .attr("x", usableArea.left)
+        .attr("y", margin.top)
+        .attr("dy", "-0.5em")
+        .text(`Patient: ${patient_id}`);
 
     // Create gridlines as an axis with no labels and full-width ticks
     gridlines.call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width));
@@ -199,21 +218,38 @@ function renderLineGraph(dexcomData, foodLogData) {
     // Add X axis
     svg
         .append('g')
+        .attr('class', 'x-axis')
         .attr('transform', `translate(0, ${usableArea.bottom})`)
         .call(xAxis);
+
+    // Add X axis label
+    svg.append("text")
+        .attr("class", "x-axis-label")
+        .attr("x", usableArea.left + usableArea.width / 2)
+        .attr("y", height - 10)
+        .style("text-anchor", "middle")
+        .text("Time");
 
     // Add Y axis
     svg
         .append('g')
+        .attr('class', 'y-axis')
         .attr('transform', `translate(${usableArea.left}, 0)`)
         .call(yAxis);
 
+    // Add Y axis label
+    svg.append("text")
+        .attr("class", "y-axis-label")
+        .attr("transform", "rotate(-90)")
+        .attr("x", -usableArea.top - usableArea.height / 2)
+        .attr("y", 20)
+        .style("text-anchor", "middle")
+        .text("Glucose (mg/dL)");
+
     // Create the line
     svg.append("path")
+        .attr("class", "glucose-line individual-patient-line")
         .datum(filteredData)
-        .attr("fill", "none")
-        .attr("stroke", "var(--line-color)")
-        .attr("stroke-width", 1.5)
         .attr("d", d3.line()
             .x(d => xScale(d.timestamp))
             .y(d => yScale(d.value))
@@ -231,8 +267,6 @@ function renderLineGraph(dexcomData, foodLogData) {
         .range([5, 12]);
 
     const sortedFoodData = d3.sort(filteredFoodData, (d) => -d.value);
-    console.log('Sorted sugar values:', sortedFoodData);
-
     const dots = svg.append('g').attr('class', 'dots');
 
     dots
@@ -269,7 +303,202 @@ function renderLineGraph(dexcomData, foodLogData) {
 }
 
 /* Ryan's code */
-// implement second chart
+
+function renderAggregateGraph(aggregateData) {
+    // Clear any existing chart
+    d3.select('#aggregate-chart').selectAll('*').remove();
+
+    const svg = d3
+        .select('#aggregate-chart')
+        .append('svg')
+        .attr('width', width)
+        .attr('height', height)
+        .attr('viewBox', [0, 0, width, height])
+        .style('overflow', 'visible')
+        .attr('preserveAspectRatio', 'xMidYMid meet');
+
+    const margin = { top: 20, right: 30, bottom: 40, left: 50 };
+    const usableArea = {
+        top: margin.top,
+        right: width - margin.right,
+        bottom: height - margin.bottom,
+        left: margin.left,
+        width: width - margin.left - margin.right,
+        height: height - margin.top - margin.bottom,
+    };
+
+    // Filter data based on current selections
+    function getFilteredData(windowSize = 30) { // windowSize is the number of points to average
+        let filtered = aggregateData;
+        
+        // Apply gender filter if active
+        if (document.querySelector('#male').classList.contains('active')) {
+            filtered = filtered.filter(d => d.gender === 'MALE');
+        } else if (document.querySelector('#female').classList.contains('active')) {
+            filtered = filtered.filter(d => d.gender === 'FEMALE');
+        }
+        
+        // Apply HbA1c filter if active
+        if (document.querySelector('#low-a1c').classList.contains('active')) {
+            filtered = filtered.filter(d => d.HbA1c < 5.7);
+        } else if (document.querySelector('#high-a1c').classList.contains('active')) {
+            filtered = filtered.filter(d => d.HbA1c >= 5.7);
+        }
+
+        // Get the start time of the first day
+        const startTime = d3.min(filtered, d => d.timestamp);
+        // Calculate the end of day 9 (9 days after start) this removes outlier patients who had their data recorded for longer.
+        const endTime = new Date(startTime.getTime() + (9 * 24 * 60 * 60 * 1000));
+        
+        // Filter to only include first 9 days
+        filtered = filtered.filter(d => d.timestamp <= endTime);
+
+        // Group data by timestamp and calculate mean value
+        const groupedData = d3.group(filtered, d => d.timestamp);
+        const meanData = Array.from(groupedData, ([timestamp, values]) => ({
+            timestamp: timestamp,
+            value: d3.mean(values, d => d.value)
+        }));
+
+        // Sort by timestamp
+        const sortedData = meanData.sort((a, b) => a.timestamp - b.timestamp);
+
+        // Calculate rolling mean
+        const rollingMeanData = sortedData.map((d, i) => {
+            const start = Math.max(0, i - Math.floor(windowSize / 2));
+            const end = Math.min(sortedData.length, i + Math.floor(windowSize / 2) + 1);
+            const window = sortedData.slice(start, end);
+            return {
+                timestamp: d.timestamp,
+                value: d3.mean(window, x => x.value)
+            };
+        });
+
+        return rollingMeanData;
+    }
+
+    // Create scales and update visualization
+    function updateScales() {
+        const currentData = getFilteredData();
+        
+        const xScale = d3
+            .scaleTime()
+            .domain(d3.extent(currentData, (d) => d.timestamp))
+            .range([usableArea.left, usableArea.right])
+            .nice();
+        
+        const yScale = d3
+            .scaleLinear()
+            .domain([70, 170])  // Fixed domain instead of calculating from data
+            .range([usableArea.bottom, usableArea.top]);
+        
+        // Add gridlines
+        const gridlines = svg
+            .append('g')
+            .attr('class', 'gridlines')
+            .attr('transform', `translate(${usableArea.left}, 0)`);
+
+        gridlines.call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width));
+
+        // Create and add axes
+        svg
+            .append('g')
+            .attr('class', 'x-axis')
+            .attr('transform', `translate(0, ${usableArea.bottom})`)
+            .call(d3.axisBottom(xScale)
+                .ticks(9)  // Show 9 ticks for 9 days
+                .tickFormat(d => `Day ${Math.floor((d - xScale.domain()[0]) / (24 * 60 * 60 * 1000)) + 1}`)
+            );
+
+        // Add X axis label
+        svg.append("text")
+            .attr("class", "x-axis-label")
+            .attr("x", usableArea.left + usableArea.width / 2)
+            .attr("y", height - 10)
+            .style("text-anchor", "middle")
+            .text("Time (Days)");
+
+        svg
+            .append('g')
+            .attr('class', 'y-axis')
+            .attr('transform', `translate(${usableArea.left}, 0)`)
+            .call(d3.axisLeft(yScale));
+
+        // Add Y axis label
+        svg.append("text")
+            .attr("class", "y-axis-label")
+            .attr("transform", "rotate(-90)")
+            .attr("x", -usableArea.top - usableArea.height / 2)
+            .attr("y", 20)
+            .style("text-anchor", "middle")
+            .text("Glucose (mg/dL)");
+
+        // Create the line
+        svg.append("path")
+            .attr("class", "glucose-line aggregate-line")
+            .attr("fill", "none")
+            .attr("stroke", "var(--line-color)")
+            .attr("stroke-width", 0.75)
+            .datum(currentData)
+            .attr("d", d3.line()
+                .x(d => xScale(d.timestamp))
+                .y(d => yScale(d.value))
+                .curve(d3.curveCatmullRom.alpha(0.5))
+            );
+
+        // Add a title to show what's being displayed
+        const activeFilters = [];
+        if (document.querySelector('#male').classList.contains('active')) activeFilters.push('Male');
+        if (document.querySelector('#female').classList.contains('active')) activeFilters.push('Female');
+        if (document.querySelector('#low-a1c').classList.contains('active')) activeFilters.push('Low HbA1c');
+        if (document.querySelector('#high-a1c').classList.contains('active')) activeFilters.push('High HbA1c');
+        
+        const filterText = activeFilters.length > 0 ? activeFilters.join(', ') : 'All Patients';
+        
+        svg.append("text")
+            .attr("class", "aggregate-chart-title")
+            .attr("x", usableArea.left)
+            .attr("y", margin.top)
+            .attr("dy", "-0.5em")
+            .text(`Rolling Mean Glucose Levels - ${filterText}`);
+    }
+
+    // Add click handlers for the filter buttons
+    document.querySelectorAll('.filter-button').forEach(button => {
+        button.addEventListener('click', function() {
+            const buttonId = this.id;
+            
+            // Handle gender filters
+            if (buttonId === 'male' || buttonId === 'female') {
+                if (this.classList.contains('active')) {
+                    this.classList.remove('active');
+                } else {
+                    document.querySelector('#male').classList.remove('active');
+                    document.querySelector('#female').classList.remove('active');
+                    this.classList.add('active');
+                }
+            }
+            // Handle HbA1c filters
+            else if (buttonId === 'low-a1c' || buttonId === 'high-a1c') {
+                if (this.classList.contains('active')) {
+                    this.classList.remove('active');
+                } else {
+                    document.querySelector('#low-a1c').classList.remove('active');
+                    document.querySelector('#high-a1c').classList.remove('active');
+                    this.classList.add('active');
+                }
+            }
+            
+            // Clear existing visualization
+            svg.selectAll('*').remove();
+            // Update the visualization
+            updateScales();
+        });
+    });
+
+    // Initial render
+    updateScales();
+}
 
 /* Audrey's code */
 //implement patient info
@@ -321,3 +550,4 @@ document.getElementById('patient-select').addEventListener('change', (event) => 
 
 
 renderLineGraph(dexcomData, foodLogData);
+renderAggregateGraph(aggregateData);

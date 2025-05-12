@@ -13,21 +13,74 @@
   }
 
 
-  /* Chart styles */
+  /* Individual patient chart styles */
   #chart {
-    width: 1200px;
+    width: 1200px; /* make sure to adjust 'const width' in main.js to match this */
     margin: 40px auto; /* centers horizontally */
     max-width: 100vw;  
     overflow-x: auto;
 }
 
-.gridlines {
+  .chart-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+  }
+
+  .individual-patient-line {}
+
+  /* Aggregate chart styles */
+  #aggregate-chart {
+    width: 1200px; /* make sure to adjust 'const width' in main.js to match this */
+    margin: 40px auto; /* centers horizontally */
+    max-width: 100vw;  
+    overflow-x: auto;
+  }
+
+  #aggregate-chart-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+  }
+
+  .aggregate-line {}
+
+  /* both charts */
+
+  .x-axis-label {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  .y-axis-label {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  .gridlines {
     stroke: var(--gridline-color);
     stroke-width: 0.5;
     color: var(--gridline-color);
   }
 
-  /* Top buttons styles */
+  .glucose-line { /* styles both lines */
+    fill: none;
+    stroke: var(--line-color);
+    stroke-width: 1.5;
+  } 
+
+  .x-axis {}
+
+  .y-axis {}
+
+
+  /* Top buttons styles for individual patient chart */
   #top-buttons {
     display: flex;
     justify-content: right;
@@ -83,7 +136,7 @@
     background-color: rgba(134, 200, 255, 0.8);  /* Slightly darker pastel blue on hover when active */
   }
 
-  /* Tooltip styles */
+  /* Tooltip styles for individual patient chart */
 dl.info {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -132,7 +185,7 @@ dl.info dd {
   font-weight: 600;
 }
 
-/* Dot hover effects */
+/* Dot hover effects for individual patient chart */
 circle {
     transition: 200ms;
     transform-origin: center;
