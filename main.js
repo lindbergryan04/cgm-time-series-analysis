@@ -50,12 +50,54 @@ Preview of dexcomData:
 
 
 
+// Tooltip visibility
+function updateTooltipVisibility(isVisible) {
+    const tooltip = document.getElementById('food-log-tooltip');
+    tooltip.hidden = !isVisible;
+}
+
+// Tooltip position
+function updateTooltipPosition(event) {
+    const tooltip = document.getElementById('food-log-tooltip');
+    tooltip.style.left = `${event.clientX}px`;
+    tooltip.style.top = `${event.clientY}px`;
+}
+
+// Add tooltip functionality
+// Shows food, sugar, date, time, and interpolated glucose value, not sure how necessary the interpolated glucose value is.
+function renderTooltipContent(food_item) {
+    const food = document.getElementById('tooltip-food');
+    const sugar = document.getElementById('tooltip-sugar');
+    const date = document.getElementById('tooltip-date');
+    const time = document.getElementById('tooltip-time');
+    const glucose = document.getElementById('tooltip-glucose');
+
+    if (Object.keys(food_item).length === 0) return;
+
+    // Find the closest Dexcom readings before and after this food log entry
+    const before = dexcomData.filter(dex => dex.timestamp <= food_item.timestamp).pop();
+    const after = dexcomData.filter(dex => dex.timestamp >= food_item.timestamp).shift();
+    
+    // Interpolate the glucose value at this timestamp
+    let interpolatedGlucose = 'N/A';
+    if (before && after) {
+        const t = (food_item.timestamp - before.timestamp) / (after.timestamp - before.timestamp);
+        interpolatedGlucose = Math.round(before.value + t * (after.value - before.value));
+    }
+
+    food.textContent = food_item.food;
+    sugar.textContent = food_item.value;
+    date.textContent = food_item.timestamp?.toLocaleString('en', {
+        dateStyle: 'full'
+    });
+    time.textContent = food_item.timestamp?.toLocaleString('en', {
+        timeStyle: 'short'
+    });
+    glucose.textContent = `${interpolatedGlucose} mg/dL`;
+}
 
 
-
-
-
-const width = 1000; // make sure to adjust width in style.css to match this
+const width = 1200; // make sure to adjust width in style.css to match this
 const height = 600;
 let patient_id = 1; // add selector for patient id in future
 let xScale;
@@ -174,13 +216,14 @@ function renderLineGraph(dexcomData, foodLogData) {
         .attr('r', (d) => rScale(d.value))
         .attr('fill', 'var(--dot-color)')
         .style('fill-opacity', 0.8)
-        .style('cursor', 'pointer')
         .on('mouseenter', (event, d) => {
-            // to be implemented
-            console.log('Food entry:', d);
+            renderTooltipContent(d);
+            updateTooltipVisibility(true);
+            updateTooltipPosition(event);
+            
         })
         .on('mouseleave', () => {
-            // to be implemented
+            updateTooltipVisibility(false);
         });
 }
 

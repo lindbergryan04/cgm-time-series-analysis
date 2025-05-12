@@ -8,7 +8,24 @@
 </head>
 <body>
     <h1>CGM Analysis</h1>
+    <div id="toggle-threshold"></div>
     <div id="chart"></div>
+    <dl id="food-log-tooltip" class="info tooltip" hidden>
+        <dt>Food</dt>
+        <dd id="tooltip-food"></dd>
+
+        <dt>Sugar (g)</dt>
+        <dd id="tooltip-sugar"></dd>
+
+        <dt>Date</dt>
+        <dd id="tooltip-date"></dd>
+
+        <dt>Time</dt>
+        <dd id="tooltip-time"></dd>
+
+        <dt>Glucose (mg/dL)</dt>
+        <dd id="tooltip-glucose"></dd>
+    </dl>
     <script src="main.js" type="module"></script>
 </body>
 </html>

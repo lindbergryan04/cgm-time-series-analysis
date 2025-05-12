@@ -1,18 +1,19 @@
 /* style.css */
 
 :root {
-    --color-accent: oklch(70% 0.2 280);
+    --color-accent: oklch(0.76 0.2 280);
     --background-color: white;
     --text-color: black;
     --input-bg: white;
     --input-text: black;
     --gridline-color: #ccc;
     --dot-color: var(--color-accent);
-    --line-color: oklch(0.6 0.3 280);
+    --line-color: oklch(0.57 0.3 280);
+    --shadow-color: rgba(0, 0, 0, 0.1);
   }
 
   #chart {
-    width: 1000px;
+    width: 1200px;
     margin: 40px auto; /* centers horizontally */
     max-width: 95vw;  /* responsive width */
     overflow-x: auto;
@@ -23,4 +24,67 @@
     stroke-width: 0.5;
     color: var(--gridline-color);
   }
+
+
+  /* Tooltip styles */
+dl.info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5em 1em;
+    background-color: var(--background-color);
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--shadow-color);
+    transition-duration: 500ms;
+    transition-property: opacity, visibility;
+}
+
+dl.info dt {
+    margin: 0;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+dl.info dd {
+    margin: 0;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.tooltip {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    pointer-events: none;
+    transition: opacity 200ms;
+}
+
+.tooltip:not([hidden]) {
+    opacity: 1;
+}
+
+.tooltip[hidden] {
+    opacity: 0;
+}
+
+.tooltip a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Dot hover effects */
+circle {
+    transition: 200ms;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+circle:hover {
+    transform: scale(1.5);
+}
+
+
   
