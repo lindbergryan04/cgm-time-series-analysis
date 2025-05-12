@@ -6,7 +6,7 @@ async function loadDexcomData() {
         ...row,
         timestamp: new Date(row.timestamp),
         value: Number(row.value),
-        patient_id: row.patient_id
+        patient_id: Number(row.patient_id)
     }));
 
     console.log('First few entries of loaded data:', data.slice(0, 3));
@@ -169,7 +169,6 @@ function renderLineGraph(dexcomData) {
         .attr('transform', `translate(${usableArea.left}, 0)`)
         .call(yAxis);
 
-    /*
     // Create the line graph
     svg.append("path")
         .datum(filteredData)
@@ -181,7 +180,6 @@ function renderLineGraph(dexcomData) {
             .y(d => yScale(d.value))
             .curve(d3.curveMonotoneX)  // optional smoothing
         );
-    */
 }
 
 renderLineGraph(dexcomData);
