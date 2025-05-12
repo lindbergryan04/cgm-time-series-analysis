@@ -58,7 +58,7 @@ Preview of dexcomData:
 // render scatter plot function, ripped from lab 6, which will be modified to fit the dexcom and food log data as a line graph. (probably)
 const width = 1000;
 const height = 600;
-let patiend_id = 1; // add selector for patient id in future
+let patient_id = 1; // add selector for patient id in future
 let xScale;
 let yScale;
 function renderLineGraph(dexcomData) {
@@ -74,7 +74,6 @@ function renderLineGraph(dexcomData) {
         .style('overflow', 'visible')
         .attr('preserveAspectRatio', 'xMidYMid meet');
 
-
     const margin = { top: 20, right: 30, bottom: 40, left: 50 };
     const usableArea = {
         top: margin.top,
@@ -86,18 +85,25 @@ function renderLineGraph(dexcomData) {
     };
 
     // Filter data to a only the patient_id that is currently selected
-    const filteredData = dexcomData.filter(d => d.patient_id === patiend_id);
+    const filteredData = dexcomData.filter(d => d.patient_id === patient_id);
+    console.log('Filtered data:', filteredData);
+    console.log('Number of filtered points:', filteredData.length);
+    console.log('Patient ID being filtered for:', patient_id);
 
     xScale = d3
         .scaleTime()
         .domain(d3.extent(filteredData, (d) => d.timestamp))
         .range([usableArea.left, usableArea.right])
         .nice();
+    
+    console.log('X scale domain:', xScale.domain());
 
     yScale = d3
         .scaleLinear()
-        .domain([d3.min(filteredData, d => d.value) - 5, d3.max(filteredData, d => d.value) + 5])
+        .domain([d3.min(filteredData, d => d.value), d3.max(filteredData, d => d.value)])
         .range([usableArea.bottom, usableArea.top]);
+    
+    console.log('Y scale domain:', yScale.domain());
 
     // Add gridlines BEFORE the axes
     const gridlines = svg
