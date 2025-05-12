@@ -12,10 +12,12 @@
     --shadow-color: rgba(0, 0, 0, 0.1);
   }
 
+
+  /* Chart styles */
   #chart {
     width: 1200px;
     margin: 40px auto; /* centers horizontally */
-    max-width: 95vw;  /* responsive width */
+    max-width: 100vw;  
     overflow-x: auto;
 }
 
@@ -25,6 +27,49 @@
     color: var(--gridline-color);
   }
 
+  /* Top buttons styles */
+  #top-buttons {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .threshold-button {
+    background-color: rgba(51, 51, 51, 0.05);
+    border-radius: 8px;
+    border-width: 0;
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 10px 12px;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .threshold-button.active {
+    background-color: rgba(255, 163, 163, 0.8);  /* Pastel red */
+    color: #333333;
+  }
+
+  .threshold-button:hover {
+    background-color: rgba(51, 51, 51, 0.1);
+  }
+
+  .threshold-button.active:hover {
+    background-color: rgba(255, 182, 182, 0.9);  /* Slightly darker pastel red on hover when active */
+  }
 
   /* Tooltip styles */
 dl.info {

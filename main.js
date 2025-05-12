@@ -56,6 +56,11 @@ function updateTooltipVisibility(isVisible) {
     tooltip.hidden = !isVisible;
 }
 
+// Add threshold button click handler
+document.querySelector('.threshold-button').addEventListener('click', function() {
+    this.classList.toggle('active');
+});
+
 // Tooltip position
 function updateTooltipPosition(event) {
     const tooltip = document.getElementById('food-log-tooltip');
@@ -180,7 +185,7 @@ function renderLineGraph(dexcomData, foodLogData) {
         .attr("d", d3.line()
             .x(d => xScale(d.timestamp))
             .y(d => yScale(d.value))
-            .curve(d3.curveMonotoneX)  // optional smoothing
+            .curve(d3.curveCatmullRom.alpha(0.5))  // adjustable alpha for smoothing the line
         );
 
     // Scale dots by sugar value
