@@ -564,6 +564,7 @@ function renderPatientInfo() {
     <div class="patient-stats-row">
       <div class="stat"><span>Patient ID</span><strong>${patient.patient_id}</strong></div>
       <div class="stat"><span>Gender</span><strong>${patient.gender}</strong></div>
+      <div class="stat"><span>Condition</span><strong>${patient.condition}</strong></div>
       <div class="stat"><span>Hyperglycemic</span><strong>${hyperPct}%</strong></div>
       <div class="stat"><span>Hypoglycemic</span><strong>${hypoPct}%</strong></div>
     </div>
