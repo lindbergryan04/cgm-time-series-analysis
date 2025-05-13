@@ -285,3 +285,72 @@ dl.info dd {
   padding: 0 1rem;
 }
 
+/* Write Up */
+
+#write-up-button {
+  background: var(--surface);
+  border: 2px solid var(--primary);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 1;
+}
+
+#write-up-button:hover {
+  background: var(--primary);
+  color: var(--surface);
+}
+
+#write-up-title {
+  font-size: 2rem;
+  margin: 1rem 1.5rem;
+  padding: 1rem 1.5rem;
+  background: var(--surface);
+  border-left: 6px solid var(--primary);
+}
+
+#write-up-text {
+  font-size: 1rem;
+  margin: 1rem 1.5rem;
+  padding: 1rem 1.5rem;
+  background: var(--surface);
+  border-left: 6px solid var(--primary);
+  border-radius: 10px;
+  box-shadow: 0 3px 10px var(--shadow);
+  border-left: 6px solid var(--primary);
+}
+
+#back-button {
+  background: var(--surface);
+  border: 2px solid var(--primary);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  margin-right: 1rem;
+}
+
+#back-button:hover {
+  background: var(--primary);
+  color: var(--surface);
+}
+
+#write-up-container {
+  position: relative;
+}
+
+#top-section {
+  position: relative;
+  width: 100%;
+}
+
+
