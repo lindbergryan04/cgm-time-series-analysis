@@ -236,7 +236,56 @@ function renderLineGraph(dexcomData, foodLogData) {
             .y(d => yScale(d.value))
             .curve(d3.curveCatmullRom.alpha(0.5))  // adjustable alpha for smoothing the line
         );
+    const verticalLine = svg.append('line') // Only append the line once
+        .attr('y1', usableArea.top)
+        .attr('y2', usableArea.bottom)
+        .style('stroke', 'black')
+        .style('stroke-width', 1)
+        .style('opacity', 0); // Initially hidden
+        
+    const tooltip = d3
+        .select('body')
+        .append('div')
+        .attr('class', 'tooltip')
+        .style('position', 'absolute')
+        .style('visibility', 'hidden')
+        .style('background-color', 'white')
+        .style('border', '1px solid #ddd')
+        .style('padding', '5px')
+        .style('border-radius', '3px');
 
+    svg.on('mouseenter', function(event) {
+            verticalLine.style('visibility', 'visible');
+            tooltip.style('visibility', 'visible');
+        })
+        .on('mousemove', function(event) {
+            const [mouseX, mouseY] = d3.pointer(event);
+
+            if (mouseX < usableArea.left || mouseX > usableArea.right) {
+                tooltip.style('visibility', 'hidden');
+                return;
+            } else{
+                tooltip.style('visibility', 'visible');
+            }
+
+            verticalLine.attr('x1', mouseX).attr('x2', mouseX).style('opacity', 1);
+            const xDate = xScale.invert(mouseX);
+            const bisect = d3.bisector(d => d.timestamp).left;
+            const index = bisect(filteredData, xDate);
+            const dexcomtooltip = filteredData[index];
+            const time = dexcomtooltip.timestamp.toLocaleString('en', {dateStyle: 'medium', timeStyle: 'medium'});
+            tooltip
+            .style('top', event.pageY - 10 + 'px')
+            .style('left', event.pageX + 10 + 'px')
+            .html(`
+                <strong>Time:</strong> ${time}<br>
+                <strong>Glucose:</strong> ${dexcomtooltip.value} mg/dL
+            `);
+        })
+        .on('mouseleave', function(event){
+            verticalLine.style('visibility', 'hidden');
+            tooltip.style('visibility', 'hidden');
+        });  
 
     const filteredFoodData = foodLogData.filter(d => d.patient_id === patient_id);
 
@@ -467,6 +516,58 @@ function renderAggregateGraph(aggregateData) {
                 .y(d => yScale(d.value))
                 .curve(d3.curveCatmullRom.alpha(0.5))
             );
+
+        const verticalLine = svg.append('line') // Only append the line once
+            .attr('y1', usableArea.top)
+            .attr('y2', usableArea.bottom)
+            .style('stroke', 'black')
+            .style('stroke-width', 1)
+            .style('opacity', 1);
+
+        const tooltip = d3
+            .select('body')
+            .append('div')
+            .attr('class', 'tooltip')
+            .style('position', 'absolute')
+            .style('visibility', 'hidden')
+            .style('background-color', 'white')
+            .style('border', '1px solid #ddd')
+            .style('padding', '5px')
+            .style('border-radius', '3px');
+
+        svg
+            .on('mouseenter', function(event) {
+            verticalLine.style('visibility', 'visible');
+            tooltip.style('visibility', 'visible');
+        })
+            .on('mouseleave', function(event) {
+            verticalLine.style('visibility', 'hidden');
+            tooltip.style('visibility', 'hidden');
+
+        })
+            .on('mousemove', function(event) {
+            const [mouseX, mouseY] = d3.pointer(event);
+            if (mouseX < usableArea.left || mouseX > usableArea.right) {
+                tooltip.style('visibility', 'hidden');
+                return;
+            } else {
+                tooltip.style('visibility', 'visible');
+            }
+            verticalLine.attr('x1', mouseX).attr('x2', mouseX).style('opacity', 1);
+            const xDate = xScale.invert(mouseX);
+            const bisect = d3.bisector(d => d.timestamp).left;
+            const index = bisect(getFilteredData(), xDate);
+            const aggregateTooltip = currentData[index];
+            const time = aggregateTooltip.timestamp.toLocaleString('en', {dateStyle: 'medium', timeStyle: 'medium'});
+            aggregateTooltip.value = Math.round(aggregateTooltip.value);
+            tooltip
+                .style('top', event.pageY - 10 + 'px')
+                .style('left', event.pageX + 10 + 'px')
+                .html(`
+                    <strong>Time:</strong> ${time}<br>
+                    <strong>Glucose:</strong> ${aggregateTooltip.value} mg/dL
+                `);
+        });
 
         // Add a title to show what's being displayed
         const activeFilters = [];
