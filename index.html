@@ -1,49 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CGM Analysis</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Glucose Monitoring</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Glucose Trends Dashboard</h1>
-    <div id="top-controls">
+  <!-- Top section: heading, dropdown, buttons, and patient info -->
+  <div id="top-section">
+    <div id="top-left">
+      <h1>Patient Glucose Monitoring</h1>
+      <div id="top-controls">
         <label for="patient-select">Select Patient:</label>
         <select id="patient-select"></select>
         <button class="threshold-button" id="hyperglycemia" role="button">Hyperglycemia Zone</button>
         <button class="threshold-button" id="hypoglycemia" role="button">Hypoglycemia Zone</button>
-      </div>      
-    <div id="chart"></div>
-    <dl id="food-log-tooltip" class="info tooltip" hidden>
-        <dt>Food</dt>
-        <dd id="tooltip-food"></dd>
-
-        <dt>Sugar (g)</dt>
-        <dd id="tooltip-sugar"></dd>
-
-        <dt>Date</dt>
-        <dd id="tooltip-date"></dd>
-
-        <dt>Time</dt>
-        <dd id="tooltip-time"></dd>
-
-        <dt>Glucose (mg/dL)</dt>
-        <dd id="tooltip-glucose"></dd>
-    </dl>
-
-
-    <div id="aggregate-chart-controls">
-        <button class="filter-button" id="male">Male</button>
-        <button class="filter-button" id="female">Female</button>
-        <button class="filter-button" id="low-a1c">Low A1c</button>
-        <button class="filter-button" id="high-a1c">High A1c</button>
-      </div>      
-    <div id="aggregate-chart"></div>
-
-    <div id="glucose-chart"></div>
+      </div>
+    </div>
     <div id="patient-info"></div>
+  </div>
 
-    <script src="main.js" type="module"></script>
+  <!-- Line chart -->
+  <div id="chart"></div>
+
+  <!-- Tooltip -->
+  <dl id="food-log-tooltip" class="info tooltip" hidden>
+    <dt>Food</dt>
+    <dd id="tooltip-food"></dd>
+    <dt>Sugar (g)</dt>
+    <dd id="tooltip-sugar"></dd>
+    <dt>Date</dt>
+    <dd id="tooltip-date"></dd>
+    <dt>Time</dt>
+    <dd id="tooltip-time"></dd>
+    <dt>Glucose (mg/dL)</dt>
+    <dd id="tooltip-glucose"></dd>
+  </dl>
+
+  <!-- Aggregate chart controls -->
+  <div id="aggregate-chart-controls">
+    <button class="filter-button" id="male">Male</button>
+    <button class="filter-button" id="female">Female</button>
+    <button class="filter-button" id="low-a1c">Low A1c</button>
+    <button class="filter-button" id="high-a1c">High A1c</button>
+  </div>
+
+  <!-- Aggregate chart -->
+  <div id="aggregate-chart"></div>
+
+  <!-- Optional other chart -->
+  <div id="glucose-chart"></div>
+
+  <!-- JS -->
+  <script src="main.js" type="module"></script>
 </body>
 </html>

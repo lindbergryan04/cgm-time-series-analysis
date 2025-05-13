@@ -85,23 +85,40 @@ h1 {
 }
 
 #patient-info {
-  max-width: 300px;
-  margin: 1rem auto;
-  padding: 1rem;
+  width: 100%;
+  max-width: 700px;
+  padding: 1rem 1.5rem;
   background: var(--surface);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px var(--shadow);
+  border-radius: 10px;
+  box-shadow: 0 3px 10px var(--shadow);
+  border-left: 6px solid var(--primary);
+  font-size: 0.9rem;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#patient-info h2 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+  color: var(--primary);
+  border-bottom: 1px solid var(--grid);
+  padding-bottom: 0.25rem;
 }
 
 #patient-info p {
-  margin: 0.5rem 0;
-  font-size: 0.9rem;
-  color: var(--subtext);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
 }
 
 #patient-info p strong {
   color: var(--text);
+  font-weight: 600;
 }
+
 
 #chart,
 #aggregate-chart {
@@ -240,3 +257,4 @@ dl.info dd {
   margin: 1rem auto 0 auto;
   padding: 0 1rem;
 }
+

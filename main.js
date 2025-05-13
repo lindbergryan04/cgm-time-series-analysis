@@ -85,6 +85,8 @@ function populatePatientDropdown(demographicsData) {
     });
 
     patient_id = patientIDs[0];
+    select.value = patient_id; // Ensure dropdown reflects the selected patient
+    renderPatientInfo();       // <-- Fix: ensure info shows immediately
 }
 
 populatePatientDropdown(demographicsData);
@@ -558,13 +560,15 @@ function renderPatientInfo() {
     const hypoPct = ((hypoCount / total) * 100).toFixed(1);
 
     infoContainer.innerHTML = `
-        <p><strong>Patient ID:</strong> ${patient.patient_id}</p>
-        <p><strong>Age:</strong> ${patient.age}</p>
-        <p><strong>Gender:</strong> ${patient.gender}</p>
-        <p><strong>Condition:</strong> ${patient.condition}</p>
-        <p><strong>% Time Hyperglycemic (>126):</strong> ${hyperPct}%</p>
-        <p><strong>% Time Hypoglycemic (<70):</strong> ${hypoPct}%</p>
-    `;
+  <h2>Patient Overview</h2>
+  <p><span>Patient ID:</span><strong>${patient.patient_id}</strong></p>
+  <p><span>Age:</span><strong>${patient.age}</strong></p>
+  <p><span>Gender:</span><strong>${patient.gender}</strong></p>
+  <p><span>Condition:</span><strong>${patient.condition}</strong></p>
+  <p><span>% Time Hyperglycemic (>126):</span><strong>${hyperPct}%</strong></p>
+  <p><span>% Time Hypoglycemic (<70):</span><strong>${hypoPct}%</strong></p>
+`;
+
 }
 document.getElementById('patient-select').addEventListener('change', (event) => {
     patient_id = Number(event.target.value);
