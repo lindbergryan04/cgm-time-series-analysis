@@ -262,6 +262,7 @@ function renderLineGraph(dexcomData, foodLogData) {
         .text("Glucose (mg/dL)");
 
     const chartBody = svg.append("g").attr("clip-path", "url(#clip)");
+    
     // Create the line
     chartBody.append("path")
         .attr("class", "glucose-line individual-patient-line")
@@ -276,7 +277,8 @@ function renderLineGraph(dexcomData, foodLogData) {
         .attr('y2', usableArea.bottom)
         .style('stroke', 'black')
         .style('stroke-width', 1)
-        .style('opacity', 0); // Initially hidden
+        .style('opacity', 0) // Initially hidden
+        .style('pointer-events', 'none'); 
         
     const tooltip = d3
         .select('body')
@@ -407,8 +409,6 @@ function renderLineGraph(dexcomData, foodLogData) {
           this.classList.toggle('active', hypoVisible);
         });
 }
-
-/* Ryan's code */
 
 function renderAggregateGraph(aggregateData) {
     // Clear any existing chart
@@ -603,7 +603,8 @@ function renderAggregateGraph(aggregateData) {
             .attr('y2', usableArea.bottom)
             .style('stroke', 'black')
             .style('stroke-width', 1)
-            .style('opacity', 0);
+            .style('opacity', 0)
+            .style('pointer-events', 'none');
 
         const tooltip = d3
             .select('body')
