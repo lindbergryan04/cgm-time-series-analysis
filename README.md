@@ -1,3 +1,3 @@
 # cgm-time-series-analysis
 
-By: Ryan, Shriya, Karina, Audrey
+Link to website: https://lindbergryan04.github.io/cgm-time-series-analysis/
