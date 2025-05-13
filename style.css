@@ -1,129 +1,149 @@
-/* style.css */
+/* ———————————————————————————————————————————————
+   Healthcare-Styled Theme
+   Palette:
+     • Primary teal:    #1F7A8C
+     • Secondary green: #A1C181
+     • Accent orange:   #F99D1C
+     • Light gray bg:   #F7F9FA
+     • White surface:   #FFFFFF
+————————————————————————————————————————————————— */
 
 :root {
-    --color-accent: oklch(0.76 0.2 280);
-    --background-color: white;
-    --text-color: black;
-    --input-bg: white;
-    --input-text: black;
-    --gridline-color: #ccc;
-    --dot-color: var(--color-accent);
-    --line-color: oklch(0.57 0.3 280);
-    --shadow-color: rgba(0, 0, 0, 0.1);
-  }
+  --color-primary:    #1F7A8C;
+  --color-secondary:  #A1C181;
+  --color-accent:     #F99D1C;
+  --background:       #F7F9FA;
+  --surface:          #FFFFFF;
+  --text-primary:     #333333;
+  --text-secondary:   #555555;
+  --gridline-color:   #DDE3E6;
+  --shadow-color:     rgba(0, 0, 0, 0.1);
+  --line-color:       var(--color-primary);
+  --dot-color:        var(--color-secondary);
+}
 
+* {
+  box-sizing: border-box;
+}
 
-  /* Chart styles */
-  #chart {
-    width: 1200px;
-    margin: 40px auto; /* centers horizontally */
-    max-width: 100vw;  
-    overflow-x: auto;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+#top-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 0 1.5rem;
+}
+
+.threshold-button {
+  background-color: var(--surface);
+  border: 2px solid var(--color-primary);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.threshold-button:hover {
+  background-color: var(--color-primary);
+  color: var(--surface);
+}
+
+.threshold-button.active {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--surface);
+}
+
+#chart {
+  max-width: 95%;
+  margin: 1.5rem auto;
+  background-color: var(--surface);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow-color);
+  overflow-x: auto;
+}
+
+svg {
+  width: 100%;
+  height: auto;
 }
 
 .gridlines {
-    stroke: var(--gridline-color);
-    stroke-width: 0.5;
-    color: var(--gridline-color);
-  }
+  stroke: var(--gridline-color);
+  stroke-width: 0.5;
+}
 
-  /* Top buttons styles */
-  #top-buttons {
-    display: flex;
-    justify-content: right;
-    gap: 10px;
-    margin-bottom: 20px;
-    max-width: 100vw;
-    width: 1200px;
-    margin: 0 auto;
-  }
+path {
+  /* the line’s stroke is set via JS to var(--line-color) */
+  shape-rendering: crispEdges;
+}
 
-  .threshold-button {
-    background-color: rgba(51, 51, 51, 0.05);
-    border-radius: 8px;
-    border-width: 0;
-    color: #333333;
-    cursor: pointer;
-    display: inline-block;
-    font-family: sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 10px 12px;
-    text-align: center;
-    transition: all 200ms;
-    vertical-align: baseline;
-    white-space: nowrap;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-  }
+circle {
+  fill: var(--dot-color);
+  stroke: var(--surface);
+  stroke-width: 1px;
+  transition: transform 0.2s, r 0.2s;
+  cursor: pointer;
+}
 
-  #hyperglycemia.active {
-    background-color: rgba(255, 163, 163, 0.8);  /* Pastel red */
-    color: #333333;
-  }
+circle:hover {
+  transform: scale(1.3);
+}
 
-  #hyperglycemia.active:hover {
-    background-color: rgba(255, 182, 182, 0.9);  /* Slightly darker pastel red on hover when active */
-  }
-
-  .threshold-button:hover {
-    background-color: rgba(51, 51, 51, 0.1);
-  }
-
-  #hypoglycemia.active {
-    background-color: rgba(159, 212, 255, 0.8);  /* Pastel blue */
-    color: #333333;
-  }
-
-  #hypoglycemia.active:hover {
-    background-color: rgba(134, 200, 255, 0.8);  /* Slightly darker pastel blue on hover when active */
-  }
-
-  /* Tooltip styles */
+/* Tooltip */
 dl.info {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0.5em 1em;
-    background-color: var(--background-color);
-    padding: 1em;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px var(--shadow-color);
-    backdrop-filter: blur(8px);
-    border: 1px solid var(--shadow-color);
-    transition-duration: 500ms;
-    transition-property: opacity, visibility;
-}
-
-dl.info dt {
-    margin: 0;
-    color: var(--text-color);
-    opacity: 0.7;
-}
-
-dl.info dd {
-    margin: 0;
-    color: var(--color-accent);
-    font-weight: 600;
-}
-
-.tooltip {
-    position: fixed;
-    top: 1em;
-    left: 1em;
-    pointer-events: none;
-    transition: opacity 200ms;
+  position: fixed;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5em 1em;
+  background-color: var(--surface);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px var(--shadow-color);
+  border: 1px solid var(--gridline-color);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  pointer-events: none;
+  z-index: 10;
 }
 
 .tooltip:not([hidden]) {
-    opacity: 1;
+  opacity: 1;
+  visibility: visible;
 }
 
-.tooltip[hidden] {
-    opacity: 0;
+dl.info dt {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+dl.info dd {
+  margin: 0;
+  font-weight: 600;
+  color: var(--color-primary);
 }
 
 .tooltip a {
@@ -132,16 +152,9 @@ dl.info dd {
   font-weight: 600;
 }
 
-/* Dot hover effects */
-circle {
-    transition: 200ms;
-    transform-origin: center;
-    transform-box: fill-box;
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  h1 { font-size: 1.5rem; }
+  .threshold-button { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
+  #top-buttons { padding: 0 1rem; }
 }
-
-circle:hover {
-    transform: scale(1.5);
-}
-
-
-  
