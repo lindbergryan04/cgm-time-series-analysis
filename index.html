@@ -6,7 +6,18 @@
   <title>Patient Glucose Monitoring</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+    
+  <div id="glucose-info-box" class="info-box">
+    <h3>Understanding Glucose Metrics</h3>
+    <p><strong>HbA1c:</strong> A HbA1c test measures a patient's average blood sugar levels over two/three months. This test is often used to diagnose diabetes and the risk of developing diabetes.</p>
+    <p><strong>Hyperglycemia:</strong> Hyperglycemia is a condition where there is too much glucose in your blood. A person is considered to be pre-diabetic if they are in the 140 mg/dL - 200 mg/dL range one/two hours after eating. We chose 170 mg/dL as the threshold for hyperglycemia in our graph because this falls in the middle of that threshold.</p>
+    <p><strong>Hypoglycemia:</strong> Hypoglycemia is a condition where your blood sugar is lower than the normal range, usually considered to be anything below the threshold of 70 mg/dL.</p>
+    <p><strong>What does it mean to be prediabetic?</strong> A patient is considered prediabetic with a HbA1c score of 5.7% - 6.4% and diabetic with a score of > 6.5%.</p>
+    <p>Prediabetes increases the time someone spends in hyperglycemia compared to someone without prediabetes. Prolonged time spent in hyperglycemia can increase the risk of developing diabetes.</p>
+  </div>
+  
   <!-- Top section: heading, dropdown, buttons, and patient info -->
   <div id="top-section">
     <button id="write-up-button" onclick="window.location.href='writeup/index.html'">Write Up</button>
@@ -20,15 +31,6 @@
       </div>
     </div>
     <div id="patient-info"></div>
-  </div>
-  
-  <div id="glucose-info-box" class="info-box">
-    <h3>Understanding Glucose Metrics</h3>
-    <p><strong>HbA1c:</strong> A HbA1c test measures a patient's average blood sugar levels over two/three months. This test is often used to diagnose diabetes and the risk of developing diabetes.</p>
-    <p><strong>Hyperglycemia:</strong> Hyperglycemia is a condition where there is too much glucose in your blood. A person is considered to be pre-diabetic if they are in the 140 mg/dL - 200 mg/dL range one/two hours after eating. We chose 170 mg/dL as the threshold for hyperglycemia in our graph because this falls in the middle of that threshold.</p>
-    <p><strong>Hypoglycemia:</strong> Hypoglycemia is a condition where your blood sugar is lower than the normal range, usually considered to be anything below the threshold of 70 mg/dL.</p>
-    <p><strong>What does it mean to be prediabetic?</strong> A patient is considered prediabetic with a HbA1c score of 5.7% - 6.4% and diabetic with a score of > 6.5%.</p>
-    <p>Prediabetes increases the time someone spends in hyperglycemia compared to someone without prediabetes. Prolonged time spent in hyperglycemia can increase the risk of developing diabetes.</p>
   </div>
   
 
