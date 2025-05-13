@@ -1,200 +1,211 @@
-/* style.css */
+/* ——————————————————————————————————————————————————
+   Healthcare Dashboard Theme
+   Palette:
+     • Teal primary:    #1F7A8C
+     • Mint secondary:  #A1C181
+     • Orange accent:   #F99D1C
+     • Soft gray bg:    #F7F9FA
+     • White cards:     #FFFFFF
+     • Text dark:       #333333
+     • Text light:      #555555
+     • Gridlines:       #DDE3E6
+————————————————————————————————————————————————— */
 
 :root {
-    --color-accent: oklch(0.76 0.2 280);
-    --background-color: white;
-    --text-color: black;
-    --input-bg: white;
-    --input-text: black;
-    --gridline-color: #ccc;
-    --dot-color: var(--color-accent);
-    --line-color: oklch(0.57 0.3 280);
-    --shadow-color: rgba(0, 0, 0, 0.1);
-  }
-
-
-  /* Individual patient chart styles */
-  #chart {
-    width: 1200px; /* make sure to adjust 'const width' in main.js to match this */
-    margin: 40px auto; /* centers horizontally */
-    max-width: 100vw;  
-    overflow-x: auto;
+  --primary:   #1F7A8C;
+  --secondary: #A1C181;
+  --accent:    #F99D1C;
+  --bg:        #F7F9FA;
+  --surface:   #FFFFFF;
+  --text:      #333333;
+  --subtext:   #555555;
+  --grid:      #DDE3E6;
+  --shadow:    rgba(0,0,0,0.1);
 }
 
-  .chart-title {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    list-style: none;
-    margin: 0;
-  }
+* {
+  box-sizing: border-box;
+}
 
-  .individual-patient-line {}
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
 
-  /* Aggregate chart styles */
-  #aggregate-chart {
-    width: 1200px; /* make sure to adjust 'const width' in main.js to match this */
-    margin: 40px auto; /* centers horizontally */
-    max-width: 100vw;  
-    overflow-x: auto;
-  }
+h1 {
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary);
+}
 
-  #aggregate-chart-title {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    list-style: none;
-    margin: 0;
-  }
+#top-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding: 0 1.5rem;
+}
 
-  .aggregate-line {}
+.threshold-button,
+.filter-button {
+  background: var(--surface);
+  border: 2px solid var(--primary);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
 
-  /* both charts */
+.threshold-button.active,
+.filter-button.active {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--surface);
+}
 
-  .x-axis-label {
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 20px;
-  }
+.threshold-button:hover,
+.filter-button:hover {
+  background: var(--primary);
+  color: var(--surface);
+}
 
-  .y-axis-label {
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 20px;
-  }
+#patient-select {
+  margin: 1rem 1.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--grid);
+  border-radius: 4px;
+  font-size: 1rem;
+}
 
-  .gridlines {
-    stroke: var(--gridline-color);
-    stroke-width: 0.5;
-    color: var(--gridline-color);
-  }
+#patient-info {
+  max-width: 300px;
+  margin: 1rem auto;
+  padding: 1rem;
+  background: var(--surface);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow);
+}
 
-  .glucose-line { /* styles both lines */
-    fill: none;
-    stroke: var(--line-color);
-    stroke-width: 1.5;
-  } 
+#patient-info p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--subtext);
+}
 
-  .x-axis {}
+#patient-info p strong {
+  color: var(--text);
+}
 
-  .y-axis {}
+#chart,
+#aggregate-chart {
+  max-width: 95%;
+  margin: 1rem auto;
+  padding: 1rem;
+  background: var(--surface);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow);
+  overflow-x: auto;
+}
 
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
-  /* Top buttons styles for individual patient chart */
-  #top-buttons {
-    display: flex;
-    justify-content: right;
-    gap: 10px;
-    margin-bottom: 20px;
-    max-width: 100vw;
-    width: 1200px;
-    margin: 0 auto;
-  }
+.gridlines line {
+  stroke: var(--grid);
+  stroke-width: 0.5;
+}
 
-  .threshold-button {
-    background-color: rgba(51, 51, 51, 0.05);
-    border-radius: 8px;
-    border-width: 0;
-    color: #333333;
-    cursor: pointer;
-    display: inline-block;
-    font-family: sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 10px 12px;
-    text-align: center;
-    transition: all 200ms;
-    vertical-align: baseline;
-    white-space: nowrap;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-  }
+path.glucose-line {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 2;
+}
 
-  #hyperglycemia.active {
-    background-color: rgba(255, 163, 163, 0.8);  /* Pastel red */
-    color: #333333;
-  }
+path.aggregate-line {
+  stroke: var(--primary);
+  stroke-width: 1.5;
+}
 
-  #hyperglycemia.active:hover {
-    background-color: rgba(255, 182, 182, 0.9);  /* Slightly darker pastel red on hover when active */
-  }
+circle {
+  fill: var(--secondary);
+  stroke: var(--surface);
+  stroke-width: 1;
+  cursor: pointer;
+  transition: r 0.2s;
+}
 
-  .threshold-button:hover {
-    background-color: rgba(51, 51, 51, 0.1);
-  }
+circle:hover {
+  r: 1.3em;
+}
 
-  #hypoglycemia.active {
-    background-color: rgba(159, 212, 255, 0.8);  /* Pastel blue */
-    color: #333333;
-  }
+/* Axes labels */
+.x-axis-label,
+.y-axis-label {
+  fill: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
 
-  #hypoglycemia.active:hover {
-    background-color: rgba(134, 200, 255, 0.8);  /* Slightly darker pastel blue on hover when active */
-  }
+/* Chart titles inside SVG */
+.chart-title,
+.aggregate-chart-title {
+  fill: var(--primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
 
-  /* Tooltip styles for individual patient chart */
+/* Tooltip */
 dl.info {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0.5em 1em;
-    background-color: var(--background-color);
-    padding: 1em;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px var(--shadow-color);
-    backdrop-filter: blur(8px);
-    border: 1px solid var(--shadow-color);
-    transition-duration: 500ms;
-    transition-property: opacity, visibility;
-}
-
-dl.info dt {
-    margin: 0;
-    color: var(--text-color);
-    opacity: 0.7;
-}
-
-dl.info dd {
-    margin: 0;
-    color: var(--color-accent);
-    font-weight: 600;
-}
-
-.tooltip {
-    position: fixed;
-    top: 1em;
-    left: 1em;
-    pointer-events: none;
-    transition: opacity 200ms;
+  position: fixed;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5em 1em;
+  background: var(--surface);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px var(--shadow);
+  border: 1px solid var(--grid);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  pointer-events: none;
+  z-index: 10;
 }
 
 .tooltip:not([hidden]) {
-    opacity: 1;
+  opacity: 1;
+  visibility: visible;
 }
 
-.tooltip[hidden] {
-    opacity: 0;
+dl.info dt {
+  font-size: 0.85rem;
+  color: var(--subtext);
+}
+
+dl.info dd {
+  font-weight: 600;
+  color: var(--primary);
 }
 
 .tooltip a {
-  color: var(--color-accent);
+  color: var(--accent);
   text-decoration: none;
   font-weight: 600;
 }
 
-/* Dot hover effects for individual patient chart */
-circle {
-    transition: 200ms;
-    transform-origin: center;
-    transform-box: fill-box;
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  h1 { font-size: 1.5rem; }
+  .threshold-button,
+  .filter-button { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
+  #patient-select { width: calc(100% - 3rem); }
 }
-
-circle:hover {
-    transform: scale(1.5);
-}
-
-
-  
