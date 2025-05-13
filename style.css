@@ -42,11 +42,12 @@ h1 {
   color: var(--primary);
 }
 
-#top-buttons {
+#top-controls {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
   gap: 0.75rem;
-  padding: 0 1.5rem;
+  margin: 1rem 1.5rem;
+  flex-wrap: wrap;
 }
 
 .threshold-button,
@@ -228,4 +229,14 @@ dl.info dd {
   border-color: var(--secondary);
   background-color: var(--secondary);
   color: var(--surface);
+}
+
+#aggregate-chart-controls {
+  display: flex;
+  justify-content: center; /* change to center if preferred */
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 800px;
+  margin: 1rem auto 0 auto;
+  padding: 0 1rem;
 }
