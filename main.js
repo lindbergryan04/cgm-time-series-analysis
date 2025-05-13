@@ -41,7 +41,7 @@ async function loadAggregateData() { /* for aggregate graph */
 }
 
 async function loadDemographicsData() {
-    const data = await d3.csv('data/demographics.csv', (row) => ({
+    const data = await d3.csv('data/Demographics.csv', (row) => ({
         patient_id: Number(row.ID),
         gender: row.Gender,
         hba1c: Number(row.HbA1c)
