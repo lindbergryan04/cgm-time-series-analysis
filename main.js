@@ -81,16 +81,6 @@ function updateTooltipVisibility(isVisible) {
     tooltip.hidden = !isVisible;
 }
 
-// Add button click handler for hyperglycemia and hypoglycemia threshold buttons
-document.querySelector('#hyperglycemia').addEventListener('click', function() {
-    this.classList.toggle('active');
-});
-
-document.querySelector('#hypoglycemia').addEventListener('click', function() {
-    this.classList.toggle('active');
-});
-
-
 // Tooltip position
 function updateTooltipPosition(event) {
     const tooltip = document.getElementById('food-log-tooltip');
@@ -135,8 +125,6 @@ function renderTooltipContent(food_item) {
 const width = 1200; // make sure to adjust width in style.css to match this
 const height = 600;
 
-// TODO: Shriya: add dropdown menu for patient id 
-// remember to call renderLineGraph() after changing patient_id.
 
 function renderLineGraph(dexcomData, foodLogData) {
     // Clear any existing chart
@@ -343,7 +331,7 @@ function renderLineGraph(dexcomData, foodLogData) {
               .attr('x', usableArea.left)
               .attr('y', usableArea.top)
               .attr('width', usableArea.width)
-              .attr('height', 130)
+              .attr('height', yScale(126))
               .attr('fill', '#ffa3a3cc')
               .style('opacity', 0.3);
           } else {
@@ -360,9 +348,9 @@ function renderLineGraph(dexcomData, foodLogData) {
             svg.append('rect')
               .attr('id', 'hypoglycemia-zone')
               .attr('x', usableArea.left)
-              .attr('y', 490)
+              .attr('y', yScale(70))
               .attr('width', usableArea.width)
-              .attr('height', 70)
+              .attr('height', usableArea.bottom - yScale(70))
               .attr('fill', '#9fd4ffcc')
               .style('opacity', 0.3);
           } else {
@@ -661,6 +649,9 @@ document.getElementById('patient-select').addEventListener('change', (event) => 
     patient_id = Number(event.target.value);
     renderLineGraph(dexcomData, foodLogData);
     renderPatientInfo();
+    document.querySelector('#hyperglycemia').classList.remove('active');
+    document.querySelector('#hypoglycemia').classList.remove('active');
+
 });
 
 // async function initialize() {
