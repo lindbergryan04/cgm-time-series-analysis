@@ -1,0 +1,40 @@
+TODO.txt
+
+==================
+-- Ryan
+==================
+- implement chart functionality for hyper/hypoglycemic view
+- change button labels to prediabetic/normal instead of high/low hba1c. 
+- change chart titles
+
+==================
+-- Karina
+==================
+- Style components 
+
+==================
+-- Shriya
+==================
+- Make Figma Pages background
+- Style dropdown components (for Karina to style)
+- Implement zoom brushing function
+- Implement drop-down functionality
+- Create buttons for:
+  - Hypoglycemic view
+  - Hyperglycemic view
+- Style buttons for aggregate chart (in <div id="aggregate-chart-controls">)
+- Add line for Dexcom tooltip
+
+==================
+-- Audrey
+==================
+Patient Info Chart:
+- Add `demographics.csv` to repo (from data website)
+- Load `demographics.csv` into JS
+- Add `<div>` to HTML to hold patient info
+- Create function: `renderPatientInfo()`
+  - Filter `demographics.csv` by `patient_id` (variable defined at top of JS)
+  - Calculate aggregates for:
+    - % time above hyperglycemic threshold (likely 155)
+    - % time below hypoglycemic threshold (likely 55)
+
