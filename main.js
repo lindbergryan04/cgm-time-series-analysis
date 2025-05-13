@@ -567,7 +567,7 @@ function renderAggregateGraph(aggregateData) {
             .attr("x", usableArea.left + usableArea.width / 2)
             .attr("y", height - 10)
             .style("text-anchor", "middle")
-            .text("Time (Days)");
+            .text("Time");
 
         svg
             .append('g')
@@ -730,7 +730,7 @@ function renderPatientInfo() {
     <div class="patient-stats-row">
       <div class="stat"><span>Patient ID</span><strong>${patient.patient_id}</strong></div>
       <div class="stat"><span>Gender</span><strong>${patient.gender}</strong></div>
-      <div class="stat"><span>Prediabetic:</span><strong>${patient.hba1c > 5.7 ? 'Yes' : 'No'}</strong></div>
+      <div class="stat"><span>Prediabetic:</span><strong>${patient.hba1c >= 5.7 ? 'Yes' : 'No'}</strong></div>
       <div class="stat"><span>HbA1c:</span><strong>${patient.hba1c}</strong></div>
       <div class="stat"><span>Hyperglycemic</span><strong>${hyperPct}%</strong></div>
       <div class="stat"><span>Hypoglycemic</span><strong>${hypoPct}%</strong></div>
