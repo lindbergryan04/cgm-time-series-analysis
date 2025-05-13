@@ -104,7 +104,7 @@ h1 {
 
 #chart,
 #aggregate-chart {
-  max-width: 95%;
+  max-width: 78%;
   margin: 1rem auto;
   padding: 1rem;
   background: var(--surface);
