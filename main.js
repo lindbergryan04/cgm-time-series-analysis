@@ -201,7 +201,7 @@ function renderLineGraph(dexcomData, foodLogData) {
         .attr("x", usableArea.left)
         .attr("y", margin.top)
         .attr("dy", "-0.5em")
-        .text(`Patient: ${patient_id}`);
+        .text(`Daily Glucose Levels for Patient ${patient_id}`);
 
     // Create gridlines as an axis with no labels and full-width ticks
     gridlines.call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width));
@@ -496,8 +496,8 @@ function renderAggregateGraph(aggregateData) {
             .attr("x", usableArea.left)
             .attr("y", margin.top)
             .attr("dy", "-0.5em")
-            .text(`Rolling Mean Glucose Levels - ${filterText}`);
-    }
+            .text(`Average Glucose Over Time (${filterText})`);
+        }
 
     // Add click handlers for the filter buttons
     document.querySelectorAll('.filter-button').forEach(button => {
