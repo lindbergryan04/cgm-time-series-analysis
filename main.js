@@ -378,7 +378,7 @@ function renderLineGraph(dexcomData, foodLogData) {
               .attr('x', usableArea.left)
               .attr('y', usableArea.top)
               .attr('width', usableArea.width)
-              .attr('height', yScale(126))
+              .attr('height', yScale(170))
               .attr('fill', '#ffa3a3cc')
               .style('opacity', 0.3);
           } else {
@@ -720,7 +720,7 @@ function renderPatientInfo() {
     }
 
     const total = patientDexData.length;
-    const hyperCount = patientDexData.filter(d => d.value > 126).length;
+    const hyperCount = patientDexData.filter(d => d.value > 170).length;
     const hypoCount = patientDexData.filter(d => d.value < 70).length;
     const hyperPct = ((hyperCount / total) * 100).toFixed(1);
     const hypoPct = ((hypoCount / total) * 100).toFixed(1);
