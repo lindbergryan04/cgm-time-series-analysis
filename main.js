@@ -149,6 +149,15 @@ function renderLineGraph(dexcomData, foodLogData) {
         height: height - margin.top - margin.bottom,
     };
 
+    svg.append("defs")
+        .append("clipPath")
+        .attr("id", "clip")
+        .append("rect")
+        .attr("x", usableArea.left)
+        .attr("y", usableArea.top)
+        .attr("width", usableArea.width)
+        .attr("height", usableArea.height);
+
     // Filter data to a only the patient_id that is currently selected
     const filteredData = dexcomData.filter(d => d.patient_id === patient_id);
 
@@ -162,7 +171,44 @@ function renderLineGraph(dexcomData, foodLogData) {
         .scaleLinear()
         .domain([d3.min(filteredData, d => d.value), d3.max(filteredData, d => d.value)])
         .range([usableArea.bottom, usableArea.top]);
-    
+
+    // Add zoom functionality
+    const zoom = d3.zoom()
+        .scaleExtent([1, 10])
+        .translateExtent([[usableArea.left, usableArea.top], [usableArea.right, usableArea.bottom]])
+        .extent([[usableArea.left, usableArea.top], [usableArea.right, usableArea.bottom]])
+        .on('zoom', zoomed);
+
+    svg.call(zoom);
+
+    function zoomed(event) {
+    const newX = event.transform.rescaleX(xScale);
+    const newY = event.transform.rescaleY(yScale);
+
+        // Update line
+    svg.selectAll('.glucose-line')
+        .attr('d', d3.line()
+        .x(d => newX(d.timestamp))
+        .y(d => newY(d.value))
+        .curve(d3.curveCatmullRom.alpha(0.5)));
+
+        // Update axes
+    svg.select('.x-axis').call(d3.axisBottom(newX));
+    svg.select('.y-axis').call(d3.axisLeft(newY));
+
+        // Update dots
+    svg.selectAll('.dots circle')
+        .attr('cx', d => newX(d.timestamp))
+        .attr('cy', d => {
+    const before = filteredData.filter(dex => dex.timestamp <= d.timestamp).pop();
+    const after = filteredData.filter(dex => dex.timestamp >= d.timestamp).shift();
+    if (!before || !after) return newY(0);
+    const t = (d.timestamp - before.timestamp) / (after.timestamp - before.timestamp);
+    const interpolated = before.value + t * (after.value - before.value);
+        return newY(interpolated);
+        });
+    }
+
     // Add gridlines before the axes so they are underneath
     const gridlines = svg
         .append('g')
@@ -215,8 +261,9 @@ function renderLineGraph(dexcomData, foodLogData) {
         .style("text-anchor", "middle")
         .text("Glucose (mg/dL)");
 
+    const chartBody = svg.append("g").attr("clip-path", "url(#clip)");
     // Create the line
-    svg.append("path")
+    chartBody.append("path")
         .attr("class", "glucose-line individual-patient-line")
         .datum(filteredData)
         .attr("d", d3.line()
@@ -285,7 +332,7 @@ function renderLineGraph(dexcomData, foodLogData) {
         .range([5, 12]);
 
     const sortedFoodData = d3.sort(filteredFoodData, (d) => -d.value);
-    const dots = svg.append('g').attr('class', 'dots');
+    const dots = chartBody.append('g').attr('class', 'dots');
 
     dots
         .selectAll('circle')
@@ -386,6 +433,15 @@ function renderAggregateGraph(aggregateData) {
         height: height - margin.top - margin.bottom,
     };
 
+    svg.append("defs")
+        .append("clipPath")
+        .attr("id", "clip")
+        .append("rect")
+        .attr("x", usableArea.left)
+        .attr("y", usableArea.top)
+        .attr("width", usableArea.width)
+        .attr("height", usableArea.height);
+
     // Filter data based on current selections
     function getFilteredData(windowSize = 30) { // windowSize is the number of points to average
         let filtered = aggregateData;
@@ -450,8 +506,44 @@ function renderAggregateGraph(aggregateData) {
             .scaleLinear()
             .domain([70, 170])  // Fixed domain instead of calculating from data
             .range([usableArea.bottom, usableArea.top]);
-        
-        // Add gridlines
+
+        // Add zoom functionality
+        const zoom = d3.zoom()
+            .scaleExtent([1, 10])
+            .translateExtent([[usableArea.left, usableArea.top], [usableArea.right, usableArea.bottom]])
+            .extent([[usableArea.left, usableArea.top], [usableArea.right, usableArea.bottom]])
+            .on('zoom', zoomed);
+
+        svg.call(zoom);
+
+        function zoomed(event) {
+        const newX = event.transform.rescaleX(xScale);
+        const newY = event.transform.rescaleY(yScale);
+
+            // Update line
+        chartBody.selectAll('.glucose-line')
+            .attr('d', d3.line()
+            .x(d => newX(d.timestamp))
+            .y(d => newY(d.value))
+            .curve(d3.curveCatmullRom.alpha(0.5)));
+
+            // Update axes
+        svg.select('.x-axis').call(d3.axisBottom(newX));
+        svg.select('.y-axis').call(d3.axisLeft(newY));
+
+            // Update dots
+        svg.selectAll('.dots circle')
+            .attr('cx', d => newX(d.timestamp))
+            .attr('cy', d => {
+        const before = filteredData.filter(dex => dex.timestamp <= d.timestamp).pop();
+        const after = filteredData.filter(dex => dex.timestamp >= d.timestamp).shift();
+        if (!before || !after) return newY(0);
+        const t = (d.timestamp - before.timestamp) / (after.timestamp - before.timestamp);
+        const interpolated = before.value + t * (after.value - before.value);
+            return newY(interpolated);
+            });
+        }
+            // Add gridlines
         const gridlines = svg
             .append('g')
             .attr('class', 'gridlines')
@@ -491,9 +583,10 @@ function renderAggregateGraph(aggregateData) {
             .attr("y", 20)
             .style("text-anchor", "middle")
             .text("Glucose (mg/dL)");
-
+        
+        const chartBody = svg.append("g").attr("clip-path", "url(#clip)");
         // Create the line
-        svg.append("path")
+        chartBody.append("path")
             .attr("class", "glucose-line aggregate-line")
             .attr("fill", "none")
             .attr("stroke", "var(--line-color)")
@@ -510,7 +603,7 @@ function renderAggregateGraph(aggregateData) {
             .attr('y2', usableArea.bottom)
             .style('stroke', 'black')
             .style('stroke-width', 1)
-            .style('opacity', 1);
+            .style('opacity', 0);
 
         const tooltip = d3
             .select('body')
@@ -649,6 +742,7 @@ document.getElementById('patient-select').addEventListener('change', (event) => 
     patient_id = Number(event.target.value);
     renderLineGraph(dexcomData, foodLogData);
     renderPatientInfo();
+    // Reset the filter buttons
     document.querySelector('#hyperglycemia').classList.remove('active');
     document.querySelector('#hypoglycemia').classList.remove('active');
 
