@@ -301,10 +301,16 @@ function renderLineGraph(dexcomData, foodLogData) {
             if (mouseX < usableArea.left || mouseX > usableArea.right) {
                 tooltip.style('visibility', 'hidden');
                 return;
-            } else{
-                tooltip.style('visibility', 'visible');
             }
 
+            // Check if food log tooltip is visible
+            const foodLogTooltip = document.getElementById('food-log-tooltip');
+            if (!foodLogTooltip.hidden) {
+                tooltip.style('visibility', 'hidden');
+                return;
+            }
+
+            tooltip.style('visibility', 'visible');
             verticalLine.attr('x1', mouseX).attr('x2', mouseX).style('opacity', 1);
             const xDate = xScale.invert(mouseX);
             const bisect = d3.bisector(d => d.timestamp).left;
