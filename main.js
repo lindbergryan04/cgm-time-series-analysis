@@ -40,9 +40,19 @@ async function loadAggregateData() { /* for aggregate graph */
     return data;
 }
 
+async function loadDemographicsData() {
+    const data = await d3.csv('data/demographics.csv', (row) => ({
+        patient_id: Number(row.ID),
+        gender: row.Gender,
+        hba1c: Number(row.HbA1c)
+    }));
+    return data;
+}
+
 let dexcomData = await loadDexcomData();
 let foodLogData = await loadFoodLogData();
 let aggregateData = await loadAggregateData();
+let demographicsData = await loadDemographicsData();
 
 /*
 Preview of dexcomData:
@@ -61,18 +71,7 @@ Preview of dexcomData:
 ]
 */
 
-async function loadDemographicsData() {
-    const data = await d3.csv('data/demographics.csv', (row) => ({
-        patient_id: Number(row.ID),
-        gender: row.Gender,
-        hba1c: Number(row.HbA1c)
-    }));
-    return data;
-}
-let demographicsData = await loadDemographicsData();
-
 let patient_id = 1
-//Audrey load data 
 function populatePatientDropdown(demographicsData) {
     const select = document.getElementById('patient-select');
     select.innerHTML = '';
@@ -89,8 +88,6 @@ function populatePatientDropdown(demographicsData) {
 }
 
 populatePatientDropdown(demographicsData);
-
-
 
 // Tooltip visibility
 function updateTooltipVisibility(isVisible) {
