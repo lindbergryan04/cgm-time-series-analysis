@@ -69,8 +69,9 @@ async function loadDemographicsData() {
     }));
     return data;
 }
+let demographicsData = await loadDemographicsData();
 
-
+let patient_id = 1
 //Audrey load data 
 function populatePatientDropdown(demographicsData) {
     const select = document.getElementById('patient-select');
@@ -87,7 +88,7 @@ function populatePatientDropdown(demographicsData) {
     patient_id = patientIDs[0];
 }
 
-
+populatePatientDropdown(demographicsData);
 
 
 
@@ -151,8 +152,6 @@ function renderTooltipContent(food_item) {
 const width = 1200; // make sure to adjust width in style.css to match this
 const height = 600;
 
-
-let patient_id = 1; 
 // TODO: Shriya: add dropdown menu for patient id 
 // remember to call renderLineGraph() after changing patient_id.
 
@@ -298,6 +297,47 @@ function renderLineGraph(dexcomData, foodLogData) {
         })
         .on('mouseleave', () => {
             updateTooltipVisibility(false);
+        });
+
+        let hyperVisible = false;
+        let hypoVisible = false;
+        
+        document.querySelector('#hyperglycemia').addEventListener('click', function () {
+          hyperVisible = !hyperVisible;
+        
+          if (hyperVisible) {
+            svg.append('rect')
+              .attr('id', 'hyperglycemia-zone')
+              .attr('x', usableArea.left)
+              .attr('y', usableArea.top)
+              .attr('width', usableArea.width)
+              .attr('height', 130)
+              .attr('fill', '#ffa3a3cc')
+              .style('opacity', 0.3);
+          } else {
+            svg.select('#hyperglycemia-zone').remove();
+          }
+        
+          this.classList.toggle('active', hyperVisible);
+        });
+        
+        document.querySelector('#hypoglycemia').addEventListener('click', function () {
+          hypoVisible = !hypoVisible;
+        
+          if (hypoVisible) {
+            svg.append('rect')
+              .attr('id', 'hypoglycemia-zone')
+              .attr('x', usableArea.left)
+              .attr('y', 490)
+              .attr('width', usableArea.width)
+              .attr('height', 70)
+              .attr('fill', '#9fd4ffcc')
+              .style('opacity', 0.3);
+          } else {
+            svg.select('#hypoglycemia-zone').remove();
+          }
+        
+          this.classList.toggle('active', hypoVisible);
         });
 }
 
