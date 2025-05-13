@@ -560,15 +560,15 @@ function renderPatientInfo() {
     const hypoPct = ((hypoCount / total) * 100).toFixed(1);
 
     infoContainer.innerHTML = `
-  <h2>Patient Overview</h2>
-  <p><span>Patient ID:</span><strong>${patient.patient_id}</strong></p>
-  <p><span>Age:</span><strong>${patient.age}</strong></p>
-  <p><span>Gender:</span><strong>${patient.gender}</strong></p>
-  <p><span>Condition:</span><strong>${patient.condition}</strong></p>
-  <p><span>% Time Hyperglycemic (>126):</span><strong>${hyperPct}%</strong></p>
-  <p><span>% Time Hypoglycemic (<70):</span><strong>${hypoPct}%</strong></p>
-`;
-
+    <h2>Patient Overview</h2>
+    <div class="patient-stats-row">
+      <div class="stat"><span>Patient ID</span><strong>${patient.patient_id}</strong></div>
+      <div class="stat"><span>Gender</span><strong>${patient.gender}</strong></div>
+      <div class="stat"><span>Hyperglycemic</span><strong>${hyperPct}%</strong></div>
+      <div class="stat"><span>Hypoglycemic</span><strong>${hypoPct}%</strong></div>
+    </div>
+  `;
+  
 }
 document.getElementById('patient-select').addEventListener('change', (event) => {
     patient_id = Number(event.target.value);

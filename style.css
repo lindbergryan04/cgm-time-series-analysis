@@ -86,26 +86,53 @@ h1 {
 
 #patient-info {
   width: 100%;
-  max-width: 700px;
+  max-width: 900px;
+  margin: 1rem auto;
   padding: 1rem 1.5rem;
   background: var(--surface);
+  border-left: 6px solid var(--primary);
   border-radius: 10px;
   box-shadow: 0 3px 10px var(--shadow);
-  border-left: 6px solid var(--primary);
-  font-size: 0.9rem;
-  margin: 1rem auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
 }
 
 #patient-info h2 {
-  font-size: 1rem;
-  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
   color: var(--primary);
+  margin-bottom: 0.75rem;
   border-bottom: 1px solid var(--grid);
   padding-bottom: 0.25rem;
 }
+
+.patient-stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.stat {
+  background: var(--bg);
+  border: 1px solid var(--grid);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  min-width: 120px;
+  flex: 1 1 130px;
+  text-align: center;
+}
+
+.stat span {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--subtext);
+  margin-bottom: 0.25rem;
+}
+
+.stat strong {
+  font-size: 1rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
 
 #patient-info p {
   margin: 0;
