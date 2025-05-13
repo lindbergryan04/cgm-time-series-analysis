@@ -63,14 +63,13 @@ Preview of dexcomData:
 
 async function loadDemographicsData() {
     const data = await d3.csv('data/demographics.csv', (row) => ({
-        ...row,
-        patient_id: Number(row.patient_id),
-        age: Number(row.age),
-        gender: row.gender,
-        condition: row.condition
+        patient_id: Number(row.ID),
+        gender: row.Gender,
+        hba1c: Number(row.HbA1c)
     }));
     return data;
 }
+
 
 //Audrey load data 
 function populatePatientDropdown(demographicsData) {
