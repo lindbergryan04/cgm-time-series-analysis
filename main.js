@@ -54,22 +54,6 @@ let foodLogData = await loadFoodLogData();
 let aggregateData = await loadAggregateData();
 let demographicsData = await loadDemographicsData();
 
-/*
-Preview of dexcomData:
-[
-    {
-        timestamp: Date,  
-        value: 180,      
-        patient_id: "123" 
-    },
-    {
-        timestamp: Date,
-        value: 165,
-        patient_id: "123"
-    },
-    // ... more entries ...
-]
-*/
 
 let patient_id = 1
 function populatePatientDropdown(demographicsData) {
@@ -562,9 +546,8 @@ function renderPatientInfo() {
     infoContainer.innerHTML = `
   <h2>Patient Overview</h2>
   <p><span>Patient ID:</span><strong>${patient.patient_id}</strong></p>
-  <p><span>Age:</span><strong>${patient.age}</strong></p>
   <p><span>Gender:</span><strong>${patient.gender}</strong></p>
-  <p><span>Condition:</span><strong>${patient.condition}</strong></p>
+  <p><span>Prediabetic::</span><strong>${patient.hba1c > 5.7 ? 'Yes' : 'No'}</strong></p>
   <p><span>% Time Hyperglycemic (>126):</span><strong>${hyperPct}%</strong></p>
   <p><span>% Time Hypoglycemic (<70):</span><strong>${hypoPct}%</strong></p>
 `;
