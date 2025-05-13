@@ -1,25 +1,26 @@
-/* ———————————————————————————————————————————————
-   Healthcare-Styled Theme
+/* ——————————————————————————————————————————————————
+   Healthcare Dashboard Theme
    Palette:
-     • Primary teal:    #1F7A8C
-     • Secondary green: #A1C181
-     • Accent orange:   #F99D1C
-     • Light gray bg:   #F7F9FA
-     • White surface:   #FFFFFF
+     • Teal primary:    #1F7A8C
+     • Mint secondary:  #A1C181
+     • Orange accent:   #F99D1C
+     • Soft gray bg:    #F7F9FA
+     • White cards:     #FFFFFF
+     • Text dark:       #333333
+     • Text light:      #555555
+     • Gridlines:       #DDE3E6
 ————————————————————————————————————————————————— */
 
 :root {
-  --color-primary:    #1F7A8C;
-  --color-secondary:  #A1C181;
-  --color-accent:     #F99D1C;
-  --background:       #F7F9FA;
-  --surface:          #FFFFFF;
-  --text-primary:     #333333;
-  --text-secondary:   #555555;
-  --gridline-color:   #DDE3E6;
-  --shadow-color:     rgba(0, 0, 0, 0.1);
-  --line-color:       var(--color-primary);
-  --dot-color:        var(--color-secondary);
+  --primary:   #1F7A8C;
+  --secondary: #A1C181;
+  --accent:    #F99D1C;
+  --bg:        #F7F9FA;
+  --surface:   #FFFFFF;
+  --text:      #333333;
+  --subtext:   #555555;
+  --grid:      #DDE3E6;
+  --shadow:    rgba(0,0,0,0.1);
 }
 
 * {
@@ -28,86 +29,138 @@
 
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: var(--background);
-  color: var(--text-primary);
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
 }
 
 h1 {
   margin: 1rem 0;
-  font-size: 2rem;
   text-align: center;
-  color: var(--color-primary);
+  font-size: 2rem;
+  color: var(--primary);
 }
 
 #top-buttons {
   display: flex;
   justify-content: flex-end;
-  gap: 1rem;
+  gap: 0.75rem;
   padding: 0 1.5rem;
 }
 
-.threshold-button {
-  background-color: var(--surface);
-  border: 2px solid var(--color-primary);
+.threshold-button,
+.filter-button {
+  background: var(--surface);
+  border: 2px solid var(--primary);
   border-radius: 999px;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--primary);
   cursor: pointer;
-  transition: background 0.3s, color 0.3s, border-color 0.3s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
-.threshold-button:hover {
-  background-color: var(--color-primary);
+.threshold-button.active,
+.filter-button.active {
+  background: var(--secondary);
+  border-color: var(--secondary);
   color: var(--surface);
 }
 
-.threshold-button.active {
-  background-color: var(--color-secondary);
-  border-color: var(--color-secondary);
+.threshold-button:hover,
+.filter-button:hover {
+  background: var(--primary);
   color: var(--surface);
 }
 
-#chart {
-  max-width: 95%;
-  margin: 1.5rem auto;
-  background-color: var(--surface);
+#patient-select {
+  margin: 1rem 1.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--grid);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+#patient-info {
+  max-width: 300px;
+  margin: 1rem auto;
   padding: 1rem;
+  background: var(--surface);
   border-radius: 8px;
-  box-shadow: 0 2px 8px var(--shadow-color);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+#patient-info p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--subtext);
+}
+
+#patient-info p strong {
+  color: var(--text);
+}
+
+#chart,
+#aggregate-chart {
+  max-width: 95%;
+  margin: 1rem auto;
+  padding: 1rem;
+  background: var(--surface);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow);
   overflow-x: auto;
 }
 
 svg {
   width: 100%;
   height: auto;
+  display: block;
 }
 
-.gridlines {
-  stroke: var(--gridline-color);
+.gridlines line {
+  stroke: var(--grid);
   stroke-width: 0.5;
 }
 
-path {
-  /* the line’s stroke is set via JS to var(--line-color) */
-  shape-rendering: crispEdges;
+path.glucose-line {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 2;
+}
+
+path.aggregate-line {
+  stroke: var(--primary);
+  stroke-width: 1.5;
 }
 
 circle {
-  fill: var(--dot-color);
+  fill: var(--secondary);
   stroke: var(--surface);
-  stroke-width: 1px;
-  transition: transform 0.2s, r 0.2s;
+  stroke-width: 1;
   cursor: pointer;
+  transition: r 0.2s;
 }
 
 circle:hover {
-  transform: scale(1.3);
+  r: 1.3em;
+}
+
+/* Axes labels */
+.x-axis-label,
+.y-axis-label {
+  fill: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Chart titles inside SVG */
+.chart-title,
+.aggregate-chart-title {
+  fill: var(--primary);
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 /* Tooltip */
@@ -116,12 +169,11 @@ dl.info {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.5em 1em;
-  background-color: var(--surface);
+  background: var(--surface);
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 4px 16px var(--shadow-color);
-  border: 1px solid var(--gridline-color);
-  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px var(--shadow);
+  border: 1px solid var(--grid);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s ease, visibility 0.2s ease;
@@ -135,19 +187,17 @@ dl.info {
 }
 
 dl.info dt {
-  margin: 0;
   font-size: 0.85rem;
-  color: var(--text-secondary);
+  color: var(--subtext);
 }
 
 dl.info dd {
-  margin: 0;
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--primary);
 }
 
 .tooltip a {
-  color: var(--color-accent);
+  color: var(--accent);
   text-decoration: none;
   font-weight: 600;
 }
@@ -155,6 +205,7 @@ dl.info dd {
 /* Responsive tweaks */
 @media (max-width: 600px) {
   h1 { font-size: 1.5rem; }
-  .threshold-button { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
-  #top-buttons { padding: 0 1rem; }
+  .threshold-button,
+  .filter-button { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
+  #patient-select { width: calc(100% - 3rem); }
 }
