@@ -6,47 +6,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Patient Glucose Monitoring</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Top section: heading, dropdown, buttons, and patient info -->
-  <div id="top-section">
-    <button id="write-up-button" onclick="window.location.href='writeup/index.html'">Write Up</button>
-    <div id="top-left">
-      <h1>Patient Glucose Monitoring</h1>
-      <div id="glucose-info-box" class="info-box">
-        <h3>Data Context</h3>
-        <p><strong>About the Data:</strong> The glucose and dietary data in this visualization comes from a 10-day
-          wearable device study conducted by the BIG IDEAs Lab at Duke University. Participants wore Dexcom G6 CGMs and
-          Empatica E4 wristbands while logging their meals. You can read more about the dataset <a
-            href="https://physionet.org/content/big-ideas-glycemic-wearable/1.1.2/" target="_blank">here</a>.</p>
-        <p><strong>HbA1c:</strong> The HbA1c test measures a patient’s average blood sugar levels over the past two to
-          three months. It’s commonly used to diagnose diabetes and assess the risk of developing it.</p>
-        <p><strong>Hyperglycemia:</strong> Hyperglycemia refers to having too much glucose in the blood. A person is
-          considered prediabetic if their levels fall between 140–200 mg/dL one to two hours after eating. We chose 170
-          mg/dL as the hyperglycemia threshold in our graph, as it sits near the midpoint of this range.</p>
-        <p><strong>Hypoglycemia:</strong> Hypoglycemia occurs when blood sugar drops below normal levels — typically
-          anything under 70 mg/dL.</p>
-        <p><strong>Prediabetes:</strong> A person is considered prediabetic if their HbA1c is
-          between 5.7% and 6.4%. A score of 6.5% or higher is considered diabetic. People with prediabetes tend to spend
-          more time in a hyperglycemic state compared to those without it. Extended time in this range increases the
-          risk of developing type 2 diabetes and other complications.</p>
+  <section class="hero-section">
+    <div class="container", id="top-section">
+      <div id="text-section">
+        <h1>
+          The Effect of <span class="highlight">Prediabetes</span> on the Body’s Ability to Regulate Blood Glucose?
+        </h1>
+        <div class="buttons">
+          <button class="btn btn-primary">About the Data</button>
+          <button class="btn btn-secondary">The Process</button>
+        </div>
+      </div>
+      <div class="illustration">
+        <img src="assets/Checkup-2--Streamline-Manchester.png" alt="Illustration" />
       </div>
     </div>
-    <div id="patient-info"></div>
-    <div id="top-controls">
-      <select id="patient-select"></select>
-      <h3 id="chart-header">Individual Patient Data</h3>
-      <div class="threshold-buttons">
-        <button class="threshold-button" id="hyperglycemia" role="button">Hyperglycemia Zone</button>
-        <button class="threshold-button" id="hypoglycemia" role="button">Hypoglycemia Zone</button>
-      </div>
-    </div>
+  </section>
+  
+  <div class="team">
+    <span>Shriya Pattapu</span>
+    <span>Ryan Lindberg</span>
+    <span>Audrey Meredith</span>
+    <span>Karina Shah</span>
   </div>
 
-
-  <!-- Line chart -->
-  <div id="chart"></div>
+   <section class="glucose-section">
+      <h2 class="section-title">How does Glucose Volume Vary Between Normal and Prediabetic Patients?</h2>
+      <div class="glucose-content">
+        <div class="left-column">
+          <p class="section-subtitle">
+            We expect prediabetic patients to spend more time in the hyperglycemic range—but that's not always the case.
+            Since glucose was monitored over just 10 days, individual fluctuations or temporary changes in diet could affect the results.
+          </p>
+          <div id="glucose-info-box" class="info-box">
+            <h3>Understanding Metrics</h3>
+            <p><strong>About the Data:</strong> The glucose and dietary data in this visualization comes from a 10-day
+              wearable device study conducted by the BIG IDEAs Lab at Duke University. Participants wore Dexcom G6 CGMs and
+              Empatica E4 wristbands while logging their meals. You can read more about the dataset <a
+                href="https://physionet.org/content/big-ideas-glycemic-wearable/1.1.2/" target="_blank">here</a>.</p>
+            <p><strong>HbA1c:</strong> The HbA1c test measures a patient's average blood sugar levels over the past two to
+              three months. It's commonly used to diagnose diabetes and assess the risk of developing it.</p>
+            <p><strong>Hyperglycemia:</strong> Hyperglycemia refers to having too much glucose in the blood. A person is
+              considered prediabetic if their levels fall between 140–200 mg/dL one to two hours after eating. We chose 170
+              mg/dL as the hyperglycemia threshold in our graph, as it sits near the midpoint of this range.</p>
+            <p><strong>Hypoglycemia:</strong> Hypoglycemia occurs when blood sugar drops below normal levels — typically
+              anything under 70 mg/dL.</p>
+            <p><strong>Prediabetes:</strong> A person is considered prediabetic if their HbA1c is
+              between 5.7% and 6.4%. A score of 6.5% or higher is considered diabetic. People with prediabetes tend to spend
+              more time in a hyperglycemic state compared to those without it. Extended time in this range increases the
+              risk of developing type 2 diabetes and other complications.</p>
+          </div>
+        </div>
+        <div id="patient-info"></div>
+      </div>
+    </section>
+    
+    
+    
+    <section class="patient-chart-section">
+      <h2 id="chart-header">Daily Glucose Level for Patient 1</h2>
+      <div id="top-controls">
+        <select id="patient-select"></select>
+        <div class="threshold-buttons">
+          <button class="threshold-button" id="hyperglycemia">Hyperglycemia Zone</button>
+          <button class="threshold-button" id="hypoglycemia">Hypoglycemia Zone</button>
+        </div>
+      </div>
+      <div id="chart"></div>
+    </section>
 
   <!-- Tooltip -->
   <dl id="food-log-tooltip" class="info tooltip" hidden>
@@ -62,24 +93,39 @@
     <dd id="tooltip-glucose"></dd>
   </dl>
 
-  <!-- Aggregate chart title -->
   
-
-
   <!-- Aggregate chart controls -->
-  <div id="aggregate-chart-controls">
-    <p id="filter-text">Filter by:</p>
-    <div class="filter-buttons-container">
-      <button class="filter-button" id="male">Male</button>
-      <button class="filter-button" id="female">Female</button>
-      <button class="filter-button" id="low-a1c">Low A1c</button>
-      <button class="filter-button" id="high-a1c">High A1c</button>
-    </div>
-    <h2 id="aggregate-chart-header">Combined Patient Data</h2>
-  </div>
+  <section class="aggregate-section">
+    <p class="aggregate-intro">Zooming Out: What Can Averages Tell Us About Glucose Regulation?</p>
+    <h2 id="aggregate-chart-header">Average Glucose Over Time (All Patients)</h2>
 
-  <!-- Aggregate chart -->
-  <div id="aggregate-chart"></div>
+    <div id="aggregate-chart-controls">
+      <p id="filter-text">Filter by:</p>
+      <div class="filter-buttons-container">
+        <button class="filter-button" id="male">Male</button>
+        <button class="filter-button" id="female">Female</button>
+        <button class="filter-button" id="low-a1c">Low A1c</button>
+        <button class="filter-button" id="high-a1c">High A1c</button>
+      </div>
+    </div>
+
+    <div id="aggregate-chart"></div>
+  </section>
+
+  <section class="conclusion-section">
+    <div class="conclusion-content">
+      <img src="assets/Pharmacist--Streamline-Manchester.png" alt="Doctor Illustration" />
+      <div class="conclusion-text">
+        <h3>Conclusion</h3>
+        <p>
+          Individuals with prediabetes tend to experience sharper spikes in glucose levels following food consumption
+          and generally spend more time in hyperglycemic ranges compared to those without prediabetes. This pattern
+          reflects impaired glucose regulation. However, it's important to note that discrepancies in the data may arise
+          due to the short 10-day monitoring window. Random fluctuations in diet can influence glucose patterns.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <!-- JS -->
   <script src="main.js" type="module"></script>

@@ -12,438 +12,580 @@
 ————————————————————————————————————————————————— */
 
 :root {
-  --primary:   #1F7A8C;
-  --secondary: #A1C181;
-  --accent:    #F99D1C;
-  --bg:        #F7F9FA;
-  --surface:   #FFFFFF;
-  --text:      #333333;
-  --subtext:   #555555;
-  --grid:      #DDE3E6;
-  --shadow:    rgba(0,0,0,0.1);
+    --primary: #1F7A8C;
+    --secondary: #A1C181;
+    --accent: #F99D1C;
+    --bg: #F7F9FA;
+    --surface: #FFFFFF;
+    --text: #333333;
+    --subtext: #555555;
+    --grid: #DDE3E6;
+    --shadow: rgba(0, 0, 0, 0.1);
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  margin-bottom: 10rem;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.5;
-
+    margin: 0;
+    margin-bottom: 10rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    background-color: #FFF2E7;
 }
 
 h1 {
-  margin: 1rem 0;
-  text-align: center;
-  font-size: 2rem;
-  color: var(--primary);
+    margin: 1rem 0;
+    /* text-align: center; */
+    /* font-size: 2rem; */
+    /* color: var(--primary); */
 }
 
 #top-controls {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 1rem auto auto;
-  max-width: 78%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem auto auto;
+    max-width: 78%;
 }
 
 .threshold-buttons {
-  display: flex;
-  gap: 0.75rem;
+    display: flex;
+    gap: 0.75rem;
 }
 
-.threshold-button
-{
-  background: var(--surface);
-  border: 2px solid var(--primary);
-  border-radius: 20px;
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--primary);
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+.threshold-button {
+    background: var(--surface);
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
-.filter-button
-{
-  background: var(--surface);
-  border: 2px solid var(--primary);
-  border-radius: 20px;
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--primary);
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+.filter-button {
+    background: var(--surface);
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
 .threshold-button.active,
 .filter-button.active {
-  background: var(--secondary);
-  border-color: var(--secondary);
-  color: var(--surface);
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--surface);
 }
 
 .threshold-button:hover,
 .filter-button:hover {
-  background: var(--primary);
-  color: var(--surface);
+    background: var(--primary);
+    color: var(--surface);
 }
-
-#patient-info {
-  width: 100%;
-  max-width: 1080px;
-  margin: 1rem auto;
-  padding: 0.1rem 1rem 1rem 1.5rem;
-  background: var(--surface);
-  border-left: 6px solid var(--primary);
-  border-radius: 10px;
-  box-shadow: 0 3px 10px var(--shadow);
-}
-
-#patient-info h2 {
-  font-size: 1.1rem;
-  color: var(--primary);
-  margin-bottom: 0.75rem;
-  border-bottom: 1px solid var(--grid);
-  padding-bottom: 0.25rem;
-}
-
-.patient-stats-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: space-between;
-}
-
-.stat {
-  background: var(--bg);
-  border: 1px solid var(--grid);
-  border-radius: 8px;
-  padding: 0.5rem 0.75rem;
-  min-width: 120px;
-  flex: 1 1 130px;
-  text-align: center;
-}
-
-.stat span {
-  display: block;
-  font-size: 0.8rem;
-  color: var(--subtext);
-  margin-bottom: 0.25rem;
-}
-
-.stat strong {
-  font-size: 1rem;
-  color: var(--text);
-  font-weight: 600;
-}
-
-
-#patient-info p {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
-#patient-info p strong {
-  color: var(--text);
-  font-weight: 600;
-}
-
 
 #chart,
 #aggregate-chart {
-  max-width: 78%;
-  margin: 0rem auto 1rem auto ;
-  padding: 1rem;
-  background: var(--surface);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px var(--shadow);
-  overflow-x: auto;
+    max-width: 78%;
+    margin: 0rem auto 1rem auto;
+    padding: 1rem;
+    background: var(--surface);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow);
+    overflow-x: auto;
 }
 
 svg {
-  width: 100%;
-  height: auto;
-  display: block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .gridlines line {
-  stroke: var(--grid);
-  stroke-width: 0.5;
+    stroke: var(--grid);
+    stroke-width: 0.5;
 }
 
 path.glucose-line {
-  fill: none;
-  stroke: var(--primary);
-  stroke-width: 2;
+    fill: none;
+    stroke: var(--primary);
+    stroke-width: 2;
 }
 
 path.aggregate-line {
-  stroke: var(--primary);
-  stroke-width: 1.5;
+    stroke: var(--primary);
+    stroke-width: 1.5;
 }
 
 circle {
-  fill: var(--secondary);
-  stroke: var(--surface);
-  stroke-width: 1;
-  cursor: pointer;
-  transition: r 0.2s;
+    fill: var(--secondary);
+    stroke: var(--surface);
+    stroke-width: 1;
+    cursor: pointer;
+    transition: r 0.2s;
 }
 
 circle:hover {
-  r: 1.3em;
+    r: 1.3em;
 }
 
 /* Axes labels */
 .x-axis-label,
 .y-axis-label {
-  fill: var(--text);
-  font-size: 0.9rem;
-  font-weight: 600;
+    fill: var(--text);
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
 /* Chart titles inside SVG */
 .chart-title,
 .aggregate-chart-title {
-  fill: var(--primary);
-  font-size: 1.1rem;
-  font-weight: 600;
+    fill: var(--primary);
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 /* Tooltip */
 dl.info {
-  position: fixed;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5em 1em;
-  background: var(--surface);
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px var(--shadow);
-  border: 1px solid var(--grid);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s ease, visibility 0.2s ease;
-  pointer-events: none;
-  z-index: 10;
+    position: fixed;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5em 1em;
+    background: var(--surface);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px var(--shadow);
+    border: 1px solid var(--grid);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+    z-index: 10;
 }
 
 .tooltip:not([hidden]) {
-  opacity: 1;
-  visibility: visible;
+    opacity: 1;
+    visibility: visible;
 }
 
 dl.info dt {
-  font-size: 0.85rem;
-  color: var(--subtext);
+    font-size: 0.85rem;
+    color: var(--subtext);
 }
 
 dl.info dd {
-  font-weight: 600;
-  color: var(--primary);
+    font-weight: 600;
+    color: var(--primary);
 }
 
 .tooltip a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
 }
 
 /* Responsive tweaks */
 @media (max-width: 600px) {
-  h1 { font-size: 1.5rem; }
-  .threshold-button,
-  .filter-button { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
-  #patient-select { width: calc(100% - 3rem); }
+    h1 {
+        /* font-size: 1.5rem; */
+    }
+
+    .threshold-button,
+    .filter-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    #patient-select {
+        width: calc(100% - 3rem);
+    }
 }
 
 #patient-select {
-  margin: 1rem 0 1.0rem;
-  padding: 0.5rem 1rem;
-  border: 2px solid var(--primary);
-  border-radius: 999px;
-  font-size: 1rem;
-  background-color: var(--surface);
-  color: var(--primary);
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 2px 6px var(--shadow);
-  transition: border-color 0.2s, background 0.2s;
+    margin: 1rem 0 1.0rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--primary);
+    border-radius: 999px;
+    font-size: 1rem;
+    background-color: var(--surface);
+    color: var(--primary);
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 6px var(--shadow);
+    transition: border-color 0.2s, background 0.2s;
 }
 
 #patient-select:hover {
-  border-color: var(--secondary);
-  background-color: var(--secondary);
-  color: var(--surface);
+    border-color: var(--secondary);
+    background-color: var(--secondary);
+    color: var(--surface);
 }
 
 #chart-header {
-  font-size: 1.5rem;
-  color: var(--primary);
-  margin: 0;
-  margin-left: 14rem;
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin: 0;
+    margin-left: 14rem;
 }
 
 #filter-text {
-  font-size: 1rem;
-  text-align: center;
-  color: var(--primary);
-  font-weight: 600;
-  margin-top: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--primary);
+    font-weight: 600;
+    margin-top: 2rem;
 }
 
 #aggregate-chart-header {
-  font-size: 1.5rem;
-  margin-bottom: 0;
-  margin-left: 0.7rem;
-  flex: 2;
-  color: var(--primary);
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    margin-left: 0.7rem;
+    flex: 2;
+    color: var(--primary);
 }
 
 #aggregate-chart-controls {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  max-width: 78%;
-  margin: 3rem auto 0.5rem auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    max-width: 78%;
+    margin: 3rem auto 0.5rem auto;
 }
 
 .filter-buttons-container {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: flex-start;
-  flex: 1;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    flex: 1;
 }
 
 /* Write Up */
 
 #write-up-button {
-  background: var(--surface);
-  border: 2px solid var(--primary);
-  border-radius: 999px;
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--primary);
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  z-index: 1;
+    background: var(--surface);
+    border: 2px solid var(--primary);
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary);
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    z-index: 1;
 }
 
 #write-up-button:hover {
-  background: var(--primary);
-  color: var(--surface);
+    background: var(--primary);
+    color: var(--surface);
 }
 
 #write-up-title {
-  font-size: 2rem;
-  margin: 1rem 1.5rem;
-  padding: 1rem 1.5rem;
-  background: var(--surface);
-  border-radius: 20px;
+    font-size: 2rem;
+    margin: 1rem 1.5rem;
+    padding: 1rem 1.5rem;
+    background: var(--surface);
+    border-radius: 20px;
 }
 
 #write-up-question {
-  font-size: 1.3rem;
-  margin: 1rem auto;
-  margin-bottom: 0;
-  padding: 1rem 1.5rem;
-  color: #76a744;
-  text-align: center;
-  max-width: 50%;
+    font-size: 1.3rem;
+    margin: 1rem auto;
+    margin-bottom: 0;
+    padding: 1rem 1.5rem;
+    color: #76a744;
+    text-align: center;
+    max-width: 50%;
 }
 
 #write-up-text {
-  font-size: 1rem;
-  margin: auto;
-  padding: 1rem 1.5rem;
-  background: var(--surface);
-  border-radius: 10px;
-  box-shadow: 0 3px 10px var(--shadow);
-  color: #1e535e;
-  max-width: 50%;
+    font-size: 1rem;
+    margin: auto;
+    padding: 1rem 1.5rem;
+    background: var(--surface);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px var(--shadow);
+    color: #1e535e;
+    max-width: 50%;
 }
 
 #back-button {
-  background: var(--surface);
-  border: 2px solid var(--primary);
-  border-radius: 999px;
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--primary);
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  margin-right: 1rem;
+    background: var(--surface);
+    border: 2px solid var(--primary);
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary);
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    margin-right: 1rem;
 }
 
 #back-button:hover {
-  background: var(--primary);
-  color: var(--surface);
+    background: var(--primary);
+    color: var(--surface);
 }
 
 #write-up-container {
-  position: relative;
-  margin-bottom: 10rem;
+    position: relative;
+    margin-bottom: 10rem;
 }
-
-#top-section {
-  position: relative;
-  width: 100%;
-}
-
-
-#glucose-info-box {
-  background-color: white;
-  border-radius: 12px;
-  padding: 28px;
-  margin: 32px auto; /* auto horizontally centers the box */
-  width: 95%;
-  max-width: 1000px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 15px;
-  color: #333;
-  line-height: 1.6;
-}
-
-#glucose-info-box h3 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-size: 22px;
-  color: #146c8c;
-  font-weight: 600;
-  text-align: center;
-}
-
-#glucose-info-box p {
-  margin-bottom: 14px;
-}
-
-
 
 /* href links */
 
 a {
-  color: var(--primary);
-  text-decoration: none;
+    color: var(--primary);
+    text-decoration: none;
+    color: #FEB948;
 }
 
 a:hover {
-  color: var(--accent);
+    color: var(--accent);
+}
+
+/* layout overhaul with figma */
+
+#top-section {
+    position: relative;
+    width: 78%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    margin: 0 auto;
+
+}
+
+#text-section {
+    top: 101px;
+    left: 46px;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 200%;
+
+    letter-spacing: 0%;
+    color: #501200;
+    text-align: left;
+}
+
+.highlight {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FF7349;
+}
+
+.illustration {
+    width: 700px;
+    height: 500px;
+    margin-top: 4rem;
+}
+
+
+.team {
+    width: 78%;
+    height: 100px;
+    top: 714px;
+    left: 164px;
+    border-width: 1px;
+    border-radius: 18px;
+    border: 1px solid #501200;
+    border-style: dotted;
+    color: #FF7349;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    margin-top: 5rem;
+}
+
+.team span {
+    flex: 1;
+    text-align: center;
+}
+
+.btn-primary {
+    width: 250px;
+    height: 100px;
+    top: 432px;
+    left: 46px;
+    border-width: 1px;
+    border-radius: 18px;
+    background-color: #FEB948;
+    border: 1px solid #FEB948;
+    color: #FFFFFF;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-secondary {
+    width: 250px;
+    height: 100px;
+    top: 432px;
+    left: 253px;
+    border-width: 1px;
+    border-radius: 18px;
+    border: 1px solid #FEB948;
+    color: #FEB948;
+    background-color: #FFFFFF;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    margin-left: 1rem;
+}
+
+.section-title {
+    width: 100%;
+    height: 62px;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #501200;
+    margin: 0 auto;
+}
+
+.section-subtitle {
+    font-size: 28px;
+    color: #501200;
+    margin-bottom:2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+}
+
+.glucose-section {
+    width: 78%;
+    height: 1000px;
+    margin: auto;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.glucose-content {
+    display: flex;
+    gap: 2rem;
+}
+.left-column {
+    width: 60%;
+}
+
+#glucose-info-box {
+    border-radius: 18px;
+    background-color: #501200;
+    padding: 1.5rem;
+}
+
+#glucose-info-box p {
+    margin-bottom: 14px;
+    font-size: 20px;
+    color: white;
+}
+
+#glucose-info-box strong {
+    color: #FF7349;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+#glucose-info-box h3 {
+    color: #FEB948;
+    font-size:36px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+#patient-info {
+    border-radius: 18px;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 1rem;
+    margin-top: 3rem;
+    border: 1px solid #FEB948;
+}
+
+#patient-info h2 {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #FF7349;
+    margin-bottom: 2rem;
+}
+
+.patient-stats-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem 1rem;
+    padding: 1rem;
+}
+
+.stat {
+    padding: 1rem;
+    text-align: center;
+}
+
+.stat span {
+    display: block;
+    font-size: 30px;
+    font-weight: 600;
+    color: #501200;
+    margin-bottom: 0.5rem;
+}
+
+.stat strong {
+    font-size: 28px;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+#patient-info p {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+#patient-info p strong {
+    color: var(--text);
+    font-weight: 600;
 }
