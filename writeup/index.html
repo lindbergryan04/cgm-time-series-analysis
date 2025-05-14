@@ -1,30 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Write Up</title>
-  <link rel="stylesheet" href="../style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Write Up</title>
+    <link rel="stylesheet" href="../style.css" />
 </head>
 
 <body>
-  <div id="write-up-container">
-    <button id="back-button" onclick="window.location.href='../index.html'">Back</button>
-    <h1 id="write-up-title">Write Up</h1>
-    <h4 id="write-up-question">Rationale for our design decisions:</h4>
-    <p id="write-up-text">We used a calming teal and green color theme to match the healthcare focus of our project and make the interface feel clean and trustworthy. The buttons, dropdown, and info cards are styled with soft corners, clear spacing, and gentle shadows to keep everything organized and easy to read. We kept the layout simple and consistent so users can focus on the patient data without distractions. Interactive elements like buttons and tooltips respond smoothly to user actions, and the text is clear and readable on all screen sizes. Overall, the design supports a professional and caring experience for viewing medical information.    </p>
-    <h4 id="write-up-question">How did we choose our particular visual encodings and interaction techniques?</h4>
-    <p id="write-up-text"></p>
-    <h4 id="write-up-question">What alternatives did we consider and how did we arrive at our ultimate choices?</h4>
-    <p id="write-up-text"></p>
-    <h4 id="write-up-question">An overview of our development process</h4>
-    <p id="write-up-text"></p>
-    <h4 id="write-up-question">How was the work  split among the team members?</h4>
-    <p id="write-up-text"></p>
-    <h4 id="write-up-question">Roughly how much time did we spend developing our application (in people-hours)?</h4>
-    <p id="write-up-text"></p>
-    <h4 id="write-up-question">What aspects took the most time?</h4>
-    <p id="write-up-text"></p>
-  </div>
+    <div id="write-up-container">
+        <button id="back-button" onclick="window.location.href='../index.html'">Back</button>
+        <h1 id="write-up-title">Write Up</h1>
+        <h4 id="write-up-question">Rationale for our design decisions:</h4>
+        <p id="write-up-text">We used a calming teal and green color theme to match the healthcare focus of our project
+            and make the interface feel clean and trustworthy. The buttons, dropdown, and info cards are styled with
+            soft corners, clear spacing, and gentle shadows to keep everything organized and easy to read. We kept the
+            layout simple and consistent so users can focus on the patient data without distractions. Interactive
+            elements like buttons and tooltips respond smoothly to user actions, and the text is clear and readable on
+            all screen sizes. Overall, the design supports a professional and caring experience for viewing medical
+            information. </p>
+        <h4 id="write-up-question">How did we choose our particular visual encodings and interaction techniques?</h4>
+        <p id="write-up-text">Since we're working with time series data, we wanted to make it easy for users to explore
+            glucose trends over time. To do that, we used a line graph as our main visual, mapping time to the x-axis
+            and glucose levels to the y-axis. This layout puts all data on a consistent scale and helps users quickly
+            spot high or low glucose values and see when they occurred.
+            To make the chart more interactive, we added a vertical tracking bar and tooltip that follows the user's
+            cursor, so as they scrub through the graph, they can instantly see the exact time and glucose reading at any
+            point. We also overlaid semi-transparent dots along the line to mark meal times. These dots vary in size to
+            reflect the amount of sugar in each meal, and hovering over them reveals details like the food items eaten
+            and their sugar content. This gives users a clearer picture of the patient's diet and how different meals
+            may be impacting glucose levels. The main goal of our visualization is to help viewers understand how a
+            patient's HBA1c, their diabetic status, affects their blood glucose levels when they consume a specific
+            food. Finally, we included a zoom feature that lets users take a closer look at specific glucose events
+            during a particular time period.</p>
+        <h4 id="write-up-question">What alternatives did we consider and how did we arrive at our ultimate choices?</h4>
+        <p id="write-up-text">We considered using a brush selector to allow users to select multiple food events at
+            once, but ultimately decided against it. We felt it added unnecessary visual clutter and didn't align well
+            with our goal of keeping the interface clean and intuitive.
+            We also explored using a brush tool for zooming, but instead opted for a simpler approach that lets users
+            zoom in and out with their default scroll wheel. This method felt more responsive and familiar, providing a
+            smoother experience when exploring the data.
+            We wanted to include clear distinctions between these spikes and the time they a food item was consumed, we
+            did think about doing bars to delineate when a food was consumed but since our main point relied less on
+            food consumption and more on the level of the spike, we decided a dot would be sufficient.
+        </p>
+        <h4 id="write-up-question">An overview of our development process</h4>
+        <p id="write-up-text">We kicked things off by meeting as a group to browse datasets from PhysioNet, looking for
+            one we were all genuinely interested in. Each of us picked a few datasets and did some initial exploratory
+            data analysis (EDA) on our own using Python. After that, we regrouped to share our findings, ideas, and
+            visualizations.
+            In the end, we agreed to use the <a href="https://physionet.org/content/big-ideas-glycemic-wearable/1.1.2/" target="_blank">Glycemic Variability and Wearable Device Data</a> from the BIG IDEAs Lab. Once
+            we settled on the dataset, we started brainstorming how the visualization should look and how users would
+            interact with it. Each group member sketched out ideas, and we came to a shared design direction that
+            everyone liked.
+            From there, we met again to divide the work evenly and set up a timeline with clear goals. Once development
+            started, our workflow looked something like this:</p>
+        <ul id="write-up-text">
+            <li>Cleaned and formatted the data using Pandas</li>
+            <li>Built a line graph for individual patient data</li>
+            <li>Created a line graph for aggregate patient trends</li>
+            <li>Implemented core button functionalities</li>
+            <li>Started styling the page</li>
+            <li>Added interactions like line selection, tooltips, and zoom</li>
+            <li>Added patient info display</li>
+            <li>Wrote contextual info explaining glucose metrics</li>
+            <li>Did a lot of styling tweaks and layout refinements</li>
+            <li>Improved interaction behavior and responsiveness</li>
+            <li>Built the write-up/info page</li>
+            <li>Finalized the overall layout and design</li>
+        </ul>
+        <p id="write-up-text">Throughout the process, we tried to stay flexible, adjusting based on what was working and what wasn't, and
+            always aimed to keep the user experience clean and intuitive.</p>
+        <h4 id="write-up-question">How was the work split among the team members?</h4>
+        <p id="write-up-text">Ryan cleaned and formatted the data using pandas into a usable form that we could work
+            with. Ryan also built line graphs for both the individual patient data as well as for the aggregate patient
+            trends. Shriya added interactions to these graphs such as line selection, tooltips and zoom. Throughout the
+            project she improved the interaction behavior and modified it as needed to improve responsiveness. Karina
+            worked on the style.css and formatting the website so that the layout was appealing to the viewers.
+            Throughout the implementation of the website she made many styling tweaks to the layout, and colors so that
+            the website would have a clean and common theme throughout. Audrey did outside research to choose the
+            hyperglycemia and hypoglycemia thresholds and built the glucose metric information box so viewers who are
+            less educated on these terms can understand what the parts of our graphs represent and why they are
+            important when showing prediabetic trends.
+        </p>
+        <h4 id="write-up-question">Roughly how much time did we spend developing our application (in people-hours)? What
+            aspects took the most time?</h4>
+        <p id="write-up-text">Ryan spent around 18–20 hours working on the project. A large proportion of that time went
+            into cleaning the data, which turned out to be more difficult than expected. Many patients had mismatched
+            timestamps between their Dexcom and food log data, and there wasn't a consistent formatting standard across
+            patients. All patients were time shifted to various random times, so to aggregate data, they needed to be
+            time shifted back to a common date. Tracking down the bugs caused by these inconsistencies and figuring out
+            how to fix them took a lot of trial and error. On top of that, there were a bunch of small issues that kept
+            popping up and needed constant attention. Compared to all that, creating the charts was actually pretty
+            straightforward.
+            Shriya spent about 18-20 hours working on the project. Shriya thought the thing that took the most time was
+            not implementing the interactive features, which was my main task, but rather fixing bugs that appeared. For
+            instance when she was adding a dot tracker along the line, she had issues with it showing up outside of the
+            usable space, and showing negative values. She also realized much later that because she implemented the
+            zoom after coding up the thresholds, that the thresholds were not scaling with the zoom, which required
+            debugging. Though I think much of the debugging process was fruitful in helping understand the intricacies
+            of coding with Javascript and D3.js.
+            Audrey spent about 10 hours working on the project. She spent the most time creating the patient info box
+            which dynamically changes when you toggle between patients. working on outside research to figure out what
+            thresholds to use for the hyperglycemia and hypoglycemia
+        </p>
+    </div>
 
 </body>
