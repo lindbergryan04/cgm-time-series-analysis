@@ -7,4 +7,4 @@ TODO.txt
 - Make the whole project pop more! Any background color would go pretty far. 
 - Clarify that the hypo/hyper glycemic in the patient info box is % time
 - Write up page styling
-
+- Somehow communicate that the user can zoom

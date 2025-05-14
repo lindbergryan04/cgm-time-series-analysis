@@ -47,9 +47,14 @@ h1 {
 #top-controls {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin: 1rem auto auto;
+  max-width: 78%;
+}
+
+.threshold-buttons {
+  display: flex;
   gap: 0.75rem;
-  margin: 1rem 1.5rem;
-  flex-wrap: wrap;
 }
 
 .threshold-button,
@@ -152,7 +157,7 @@ h1 {
 #chart,
 #aggregate-chart {
   max-width: 78%;
-  margin: 1rem auto;
+  margin: 0rem auto 1rem auto ;
   padding: 1rem;
   background: var(--surface);
   border-radius: 8px;
@@ -300,7 +305,7 @@ dl.info dd {
   flex-wrap: wrap;
   gap: 0.5rem;
   max-width: 800px;
-  margin: 0rem auto 0 auto;
+  margin: 0rem auto 1rem auto;
   padding: 0 1rem;
 }
 
