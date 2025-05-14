@@ -56,6 +56,7 @@ let demographicsData = await loadDemographicsData();
 
 
 let patient_id = 1
+document.getElementById('chart-header').textContent = `Daily Glucose Levels for Patient ${patient_id}`;
 function populatePatientDropdown(demographicsData) {
     const select = document.getElementById('patient-select');
     select.innerHTML = '';
@@ -238,7 +239,6 @@ function renderLineGraph(dexcomData, foodLogData) {
         .attr("x", usableArea.left)
         .attr("y", margin.top)
         .attr("dy", "-0.5em")
-        .text(`Daily Glucose Levels for Patient ${patient_id}`);
 
     // Create gridlines as an axis with no labels and full-width ticks
     gridlines.call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width));
@@ -728,9 +728,7 @@ function renderAggregateGraph(aggregateData) {
     updateScales();
 }
 
-/* Audrey's code */
-//implement patient info
-
+//patient info box      
 function renderPatientInfo() {
     const infoContainer = document.getElementById('patient-info');
     infoContainer.innerHTML = '';
@@ -756,14 +754,16 @@ function renderPatientInfo() {
       <div class="stat"><span>Gender</span><strong>${patient.gender}</strong></div>
       <div class="stat"><span>Prediabetic:</span><strong>${patient.hba1c >= 5.7 ? 'Yes' : 'No'}</strong></div>
       <div class="stat"><span>HbA1c:</span><strong>${patient.hba1c}</strong></div>
-      <div class="stat"><span>Hyperglycemic</span><strong>${hyperPct}%</strong></div>
-      <div class="stat"><span>Hypoglycemic</span><strong>${hypoPct}%</strong></div>
+      <div class="stat"><span>% Time Hyperglycemic</span><strong>${hyperPct}%</strong></div>
+      <div class="stat"><span>% Time Hypoglycemic</span><strong>${hypoPct}%</strong></div>
     </div>
   `;
   
 }
+/* patient_id selector */
 document.getElementById('patient-select').addEventListener('change', (event) => {
     patient_id = Number(event.target.value);
+    document.getElementById('chart-header').textContent = `Daily Glucose Levels for Patient ${patient_id}`;
     renderLineGraph(dexcomData, foodLogData);
     renderPatientInfo();
     // Reset the filter buttons
