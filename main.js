@@ -711,9 +711,7 @@ function renderAggregateGraph(aggregateData) {
     updateScales();
 }
 
-/* Audrey's code */
-//implement patient info
-
+//patient info box      
 function renderPatientInfo() {
     const infoContainer = document.getElementById('patient-info');
     infoContainer.innerHTML = '';
@@ -739,8 +737,8 @@ function renderPatientInfo() {
       <div class="stat"><span>Gender</span><strong>${patient.gender}</strong></div>
       <div class="stat"><span>Prediabetic:</span><strong>${patient.hba1c >= 5.7 ? 'Yes' : 'No'}</strong></div>
       <div class="stat"><span>HbA1c:</span><strong>${patient.hba1c}</strong></div>
-      <div class="stat"><span>Hyperglycemic</span><strong>${hyperPct}%</strong></div>
-      <div class="stat"><span>Hypoglycemic</span><strong>${hypoPct}%</strong></div>
+      <div class="stat"><span>% Time Hyperglycemic</span><strong>${hyperPct}%</strong></div>
+      <div class="stat"><span>% Time Hypoglycemic</span><strong>${hypoPct}%</strong></div>
     </div>
   `;
   
