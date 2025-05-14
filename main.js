@@ -386,7 +386,7 @@ function renderLineGraph(dexcomData, foodLogData) {
               .attr('x', usableArea.left)
               .attr('y', usableArea.top)
               .attr('width', usableArea.width)
-              .attr('height', yScale(170))
+              .attr('height', yScale(175))
               .attr('fill', '#ffa3a3cc')
               .style('opacity', 0.3);
           } else {
