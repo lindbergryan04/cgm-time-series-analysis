@@ -83,14 +83,6 @@ h1 {
   color: var(--surface);
 }
 
-#patient-select {
-  margin: 1rem 1.5rem;
-  padding: 0.5rem;
-  border: 1px solid var(--grid);
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
 #patient-info {
   width: 100%;
   max-width: 1000px;
@@ -263,7 +255,7 @@ dl.info dd {
 }
 
 #patient-select {
-  margin: 1rem 1.5rem;
+  margin: 1rem 0 1.0rem;
   padding: 0.5rem 1rem;
   border: 2px solid var(--primary);
   border-radius: 999px;
@@ -288,11 +280,18 @@ dl.info dd {
   margin-top: 2rem;
   margin-bottom: 0;
   padding: 1rem 1.5rem;
-  border-radius: 20px;
   text-align: center;
   max-width: 78%;
   color: var(--primary);
 }
+
+#chart-header {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin: 0;
+  margin-left: 14rem;
+}
+
 #filter-text {
   font-size: 1rem;
   text-align: center;

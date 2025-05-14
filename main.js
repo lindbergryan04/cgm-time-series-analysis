@@ -56,6 +56,7 @@ let demographicsData = await loadDemographicsData();
 
 
 let patient_id = 1
+document.getElementById('chart-header').textContent = `Daily Glucose Levels for Patient ${patient_id}`;
 function populatePatientDropdown(demographicsData) {
     const select = document.getElementById('patient-select');
     select.innerHTML = '';
@@ -221,7 +222,6 @@ function renderLineGraph(dexcomData, foodLogData) {
         .attr("x", usableArea.left)
         .attr("y", margin.top)
         .attr("dy", "-0.5em")
-        .text(`Daily Glucose Levels for Patient ${patient_id}`);
 
     // Create gridlines as an axis with no labels and full-width ticks
     gridlines.call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width));
@@ -745,8 +745,10 @@ function renderPatientInfo() {
   `;
   
 }
+/* patient_id selector */
 document.getElementById('patient-select').addEventListener('change', (event) => {
     patient_id = Number(event.target.value);
+    document.getElementById('chart-header').textContent = `Daily Glucose Levels for Patient ${patient_id}`;
     renderLineGraph(dexcomData, foodLogData);
     renderPatientInfo();
     // Reset the filter buttons
