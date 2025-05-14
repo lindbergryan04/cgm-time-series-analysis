@@ -186,28 +186,45 @@ function renderLineGraph(dexcomData, foodLogData) {
     const newX = event.transform.rescaleX(xScale);
     const newY = event.transform.rescaleY(yScale);
 
-        // Update line
+    // Update line
     svg.selectAll('.glucose-line')
         .attr('d', d3.line()
         .x(d => newX(d.timestamp))
         .y(d => newY(d.value))
         .curve(d3.curveCatmullRom.alpha(0.5)));
 
-        // Update axes
+    // Update axes
     svg.select('.x-axis').call(d3.axisBottom(newX));
     svg.select('.y-axis').call(d3.axisLeft(newY));
 
-        // Update dots
+    // Update dots
     svg.selectAll('.dots circle')
         .attr('cx', d => newX(d.timestamp))
         .attr('cy', d => {
-    const before = filteredData.filter(dex => dex.timestamp <= d.timestamp).pop();
-    const after = filteredData.filter(dex => dex.timestamp >= d.timestamp).shift();
-    if (!before || !after) return newY(0);
-    const t = (d.timestamp - before.timestamp) / (after.timestamp - before.timestamp);
-    const interpolated = before.value + t * (after.value - before.value);
+        const before = filteredData.filter(dex => dex.timestamp <= d.timestamp).pop();
+        const after = filteredData.filter(dex => dex.timestamp >= d.timestamp).shift();
+        if (!before || !after) return newY(0);
+        const t = (d.timestamp - before.timestamp) / (after.timestamp - before.timestamp);
+        const interpolated = before.value + t * (after.value - before.value);
         return newY(interpolated);
         });
+
+    // Adjust the hyperglycemia zone
+    const hyperZone = svg.select('#hyperglycemia-zone');
+    if (hyperZone.size() > 0) {
+        hyperZone
+            .attr('y', usableArea.top) // Scale based on the y-axis
+            .attr('height', newY(170) - usableArea.top); // Adjust the height to scale with zoom
+        }
+    // Adjust the hypoglycemia zone
+    const hypoZone = svg.select('#hypoglycemia-zone');
+    if (hypoZone.size() > 0) {
+        const hypoTop = newY(70);
+        const height = Math.max(usableArea.bottom - hypoTop, 0);
+        hypoZone
+            .attr('y', hypoTop) // Scale based on the y-axis
+            .attr('height', height); // Adjust the height to scale with zoom
+        }
     }
 
     // Add gridlines before the axes so they are underneath
