@@ -665,13 +665,14 @@ function renderAggregateGraph(aggregateData) {
         if (document.querySelector('#high-a1c').classList.contains('active')) activeFilters.push('High HbA1c');
         
         const filterText = activeFilters.length > 0 ? activeFilters.join(', ') : 'All Patients';
+        let title = `Average Glucose Over Time (${filterText})`;
+        document.getElementById('aggregate-chart-header').textContent = title;
         
         svg.append("text")
             .attr("class", "aggregate-chart-title")
             .attr("x", usableArea.left)
             .attr("y", margin.top)
             .attr("dy", "-0.5em")
-            .text(`Average Glucose Over Time (${filterText})`);
         }
 
     // Add click handlers for the filter buttons

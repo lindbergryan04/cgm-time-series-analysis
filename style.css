@@ -57,12 +57,26 @@ h1 {
   gap: 0.75rem;
 }
 
-.threshold-button,
-.filter-button {
+.threshold-button
+{
   background: var(--surface);
   border: 2px solid var(--primary);
   border-radius: 20px;
   padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.filter-button
+{
+  background: var(--surface);
+  border: 2px solid var(--primary);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--primary);
@@ -274,17 +288,6 @@ dl.info dd {
   color: var(--surface);
 }
 
-#aggregate-chart-header {
-  font-size: 1.5rem;
-  margin: 1rem auto;
-  margin-top: 2rem;
-  margin-bottom: 0;
-  padding: 1rem 1.5rem;
-  text-align: center;
-  max-width: 78%;
-  color: var(--primary);
-}
-
 #chart-header {
   font-size: 1.5rem;
   color: var(--primary);
@@ -297,15 +300,32 @@ dl.info dd {
   text-align: center;
   color: var(--primary);
   font-weight: 600;
+  margin-top: 1rem;
 }
+
+#aggregate-chart-header {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  margin-left: 0.7rem;
+  flex: 2;
+  color: var(--primary);
+}
+
 #aggregate-chart-controls {
   display: flex;
-  justify-content: center; /* change to center if preferred */
-  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   gap: 0.5rem;
-  max-width: 800px;
-  margin: 0rem auto 1rem auto;
-  padding: 0 1rem;
+  max-width: 78%;
+  margin: 3rem auto 0.5rem auto;
+}
+
+.filter-buttons-container {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  flex: 1;
 }
 
 /* Write Up */
