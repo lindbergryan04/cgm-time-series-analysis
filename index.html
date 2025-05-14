@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,12 +15,22 @@
     <div id="top-left">
       <h1>Patient Glucose Monitoring</h1>
       <div id="glucose-info-box" class="info-box">
-        <h3>Understanding Glucose Metrics</h3>
-        <p><strong>HbA1c:</strong> A HbA1c test measures a patient's average blood sugar levels over two/three months. This test is often used to diagnose diabetes and the risk of developing diabetes.</p>
-        <p><strong>Hyperglycemia:</strong> Hyperglycemia is a condition where there is too much glucose in your blood. A person is considered to be pre-diabetic if they are in the 140 mg/dL - 200 mg/dL range one/two hours after eating. We chose 170 mg/dL as the threshold for hyperglycemia in our graph because this falls in the middle of that threshold.</p>
-        <p><strong>Hypoglycemia:</strong> Hypoglycemia is a condition where your blood sugar is lower than the normal range, usually considered to be anything below the threshold of 70 mg/dL.</p>
-        <p><strong>What does it mean to be prediabetic?</strong> A patient is considered prediabetic with a HbA1c score of 5.7% - 6.4% and diabetic with a score of > 6.5%.</p>
-        <p>Prediabetes increases the time someone spends in hyperglycemia compared to someone without prediabetes. Prolonged time spent in hyperglycemia can increase the risk of developing diabetes.</p>
+        <h3>Data Context</h3>
+        <p><strong>About the Data:</strong> The glucose and dietary data in this visualization comes from a 10-day
+          wearable device study conducted by the BIG IDEAs Lab at Duke University. Participants wore Dexcom G6 CGMs and
+          Empatica E4 wristbands while logging their meals. You can read more about the dataset <a
+            href="https://physionet.org/content/big-ideas-glycemic-wearable/1.1.2/" target="_blank">here</a>.</p>
+        <p><strong>HbA1c:</strong> The HbA1c test measures a patient’s average blood sugar levels over the past two to
+          three months. It’s commonly used to diagnose diabetes and assess the risk of developing it.</p>
+        <p><strong>Hyperglycemia:</strong> Hyperglycemia refers to having too much glucose in the blood. A person is
+          considered prediabetic if their levels fall between 140–200 mg/dL one to two hours after eating. We chose 170
+          mg/dL as the hyperglycemia threshold in our graph, as it sits near the midpoint of this range.</p>
+        <p><strong>Hypoglycemia:</strong> Hypoglycemia occurs when blood sugar drops below normal levels — typically
+          anything under 70 mg/dL.</p>
+        <p><strong>Prediabetes:</strong> A person is considered prediabetic if their HbA1c is
+          between 5.7% and 6.4%. A score of 6.5% or higher is considered diabetic. People with prediabetes tend to spend
+          more time in a hyperglycemic state compared to those without it. Extended time in this range increases the
+          risk of developing type 2 diabetes and other complications.</p>
       </div>
     </div>
     <div id="patient-info"></div>
@@ -31,7 +42,7 @@
       </div>
     </div>
   </div>
-  
+
 
   <!-- Line chart -->
   <div id="chart"></div>
@@ -52,7 +63,7 @@
 
   <!-- Aggregate chart title -->
   <h2 id="aggregate-chart-header">Combined Patient Data</h2>
-  
+
 
   <!-- Aggregate chart controls -->
   <div id="aggregate-chart-controls">
@@ -72,4 +83,5 @@
   <!-- JS -->
   <script src="main.js" type="module"></script>
 </body>
+
 </html>
