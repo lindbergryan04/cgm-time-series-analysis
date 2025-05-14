@@ -8,3 +8,4 @@ TODO.txt
 - Clarify that the hypo/hyper glycemic in the patient info box is % time
 - Write up page styling
 - Somehow communicate that the user can zoom
+- Change fonts?
