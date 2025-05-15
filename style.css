@@ -463,11 +463,11 @@ dl.info dd {
 
 #aggregate-chart-controls {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
     gap: 12px; /* space between label and buttons */
     margin: 20px 0;
-    margin-left: calc(-35vw + 50%);
+    margin-right: calc(-35vw + 50%);
     flex-wrap: wrap; /* optional for small screens */
 }
 
