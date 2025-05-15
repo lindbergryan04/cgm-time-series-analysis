@@ -4,7 +4,7 @@
      • Teal primary:    #1F7A8C
      • Mint secondary:  #A1C181
      • Orange accent:   #F99D1C
-     • Soft gray bg:    #F7F9FA
+     • Soft gray bg:    #F7F9FA 
      • White cards:     #FFFFFF
      • Text dark:       #333333
      • Text light:      #555555
@@ -62,7 +62,7 @@ h1 {
 }
 
 .threshold-button {
-    background-color: #f5c166;
+    background-color: var(--secondary);
     border: none;
     border-radius: 999px;
     padding: 12px 24px;
@@ -73,7 +73,7 @@ h1 {
   }
 
 .filter-button {
-    background-color: #f5c166;
+    background-color: var(--secondary);
     border: none;
     border-radius: 999px;
     padding: 10px 20px;
@@ -122,7 +122,7 @@ h1 {
     justify-content: space-around;
     align-items: center;
     width: 69.5rem;
-    border: 1px dotted #8b5e3c; /* Changed to dotted to match your screenshot more closely */
+    border: 1px dotted var(--primary); 
     border-radius: 18px;
     padding: 20px;
     margin: 20px;
@@ -135,9 +135,8 @@ h1 {
   }
 
   .hero-section {
-    background-color: #fdf4ec;
     padding: 60px 40px;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Inter', sans-serif;
   }
   
   .container {
@@ -170,7 +169,7 @@ h1 {
     gap: 20px;
   }
   .aggregate-intro{
-    color: #501200;
+    color: var(--primary);
     padding: 1rem 0;
     text-align: center;
     font-family: Inter;
@@ -180,7 +179,7 @@ h1 {
     line-height: normal;
   }
   .aggregate-subtitle{
-    color: #501200;
+    color: var(--primary);
     text-align: center;
     font-size: 1rem;
   }
@@ -195,14 +194,14 @@ h1 {
   }
   
   .btn-primary {
-    background-color: #f5c166;
-    color: #4a2b1c;
+    background-color: var(--secondary);
+    color: var(--primary);
   }
   
   .btn-secondary {
     background-color: white;
-    border: 1px solid #f5c166;
-    color: #4a2b1c;
+    border: 1px solid var(--secondary);
+    color: var(--primary);
   }
   
   .illustration img {
@@ -216,7 +215,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
-    color: #501200;
+    color: var(--primary);
     font-family: Inter;
     font-size: 1rem;
     font-style: normal;
@@ -282,6 +281,7 @@ h1 {
 }
 
 #patient-info p strong {
+  font: Inter, sans-serif;
   color: var(--text);
   font-weight: 600;
 }
@@ -432,7 +432,7 @@ dl.info dd {
 }
 
 #chart-header {
-    color: #501200;
+    color: var(--primary);
     padding: 1rem 0;
     text-align: center;
     font-family: Inter;
@@ -444,7 +444,7 @@ dl.info dd {
 
 #filter-text {
     font-weight: 600;
-    color: #4a2b1c;
+    color: var(--primary);
     margin: 0;
   }
 
@@ -613,7 +613,7 @@ dl.info dd {
     width: 95%;
     max-width: 1000px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    font-family: 'Segoe UI', sans-serif;
+    font-family: Inter, sans-serif;;
     font-size: 15px;
     color: #333;
     line-height: 1.6;
