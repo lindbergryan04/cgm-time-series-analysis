@@ -37,9 +37,7 @@ body {
   max-width: 69.5rem;  /* ≈1112px */
   aspect-ratio: 69.5 / 31.625; /* Maintains original shape */
   margin: 0 auto;
-  padding: 1rem; /* Optional inner spacing */
   box-sizing: border-box;
-
 }
 
 h1 {
@@ -53,10 +51,10 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 40px auto;
-    padding: 0 20px;
-    max-width: 1000px;
-  }
+    margin-bottom: 1rem;
+    margin-left: calc(-35vw + 50%);
+    margin-right: calc(-35vw + 50%);
+}
 
 .threshold-buttons {
   display: flex;
@@ -98,6 +96,7 @@ h1 {
   background: var(--primary);
   color: var(--surface);
 }
+
 .section-title{
     color: #501200;
     text-align: center;
@@ -117,6 +116,7 @@ h1 {
 
 
 }
+
 .team {
     display: flex;
     justify-content: space-around;
@@ -222,6 +222,7 @@ h1 {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    text-align: center;
 }
 
 #patient-info {
@@ -299,13 +300,20 @@ h1 {
 
 #chart,
 #aggregate-chart {
-  max-width: 78%;
-  margin: 0rem auto 1rem auto ;
-  padding: 1rem;
-  background: var(--surface);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px var(--shadow);
-  overflow-x: auto;
+    width: 70vw;
+    margin-left: calc(-35vw + 50%);
+    margin-right: calc(-35vw + 50%);
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.patient-chart-section,
+.aggregate-section {
+    width: 60vw;
+    margin-left: calc(-30vw + 50%);
+    margin-right: calc(-30vw + 50%);
+    padding: 0 1rem;
 }
 
 svg {
@@ -455,10 +463,11 @@ dl.info dd {
 
 #aggregate-chart-controls {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     gap: 12px; /* space between label and buttons */
     margin: 20px 0;
+    margin-left: calc(-35vw + 50%);
     flex-wrap: wrap; /* optional for small screens */
 }
 
@@ -470,76 +479,123 @@ dl.info dd {
 
 /* Write Up */
 
-#write-up-button {
-  background: var(--surface);
-  border: 2px solid var(--primary);
-  border-radius: 999px;
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--primary);
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  z-index: 1;
-}
-
-#write-up-button:hover {
-  background: var(--primary);
-  color: var(--surface);
-}
-
-#write-up-title {
-  font-size: 2rem;
-  margin: 1rem 1.5rem;
-  padding: 1rem 1.5rem;
-  background: var(--surface);
-  border-radius: 20px;
-}
-
-#write-up-question {
-  font-size: 1.3rem;
-  margin: 1rem auto;
-  margin-bottom: 0;
-  padding: 1rem 1.5rem;
-  color: #76a744;
-  text-align: center;
-  max-width: 50%;
-}
-
-#write-up-text {
-  font-size: 1rem;
-  margin: auto;
-  padding: 1rem 1.5rem;
-  background: var(--surface);
-  border-radius: 10px;
-  box-shadow: 0 3px 10px var(--shadow);
-  color: #1e535e;
-  max-width: 50%;
-}
-
-#back-button {
-  background: var(--surface);
-  border: 2px solid var(--primary);
-  border-radius: 999px;
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--primary);
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  margin-right: 1rem;
-}
-
-#back-button:hover {
-  background: var(--primary);
-  color: var(--surface);
-}
-
 #write-up-container {
   position: relative;
   margin-bottom: 10rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%);
+  border-radius: 24px;
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+#write-up-container:hover {
+  transform: translateY(-5px);
+}
+
+#write-up-title {
+  font-size: 2.5rem;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background: var(--surface);
+  border-radius: 20px;
+  color: var(--primary);
+  text-align: center;
+  max-width: 800px;
+  box-shadow: 0 4px 12px var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+#write-up-question {
+  font-size: 1.5rem;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  color: var(--accent);
+  text-align: center;
+  max-width: 800px;
+  background: var(--surface);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px var(--shadow);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+#write-up-question:hover {
+  transform: scale(1.02);
+}
+
+#write-up-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--surface);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px var(--shadow);
+  color: var(--text);
+  max-width: 800px;
+  position: relative;
+}
+
+#write-up-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--secondary), var(--accent));
+  border-radius: 4px 0 0 4px;
+}
+
+#write-up-button, #back-button {
+  background: var(--surface);
+  border: 2px solid var(--primary);
+  border-radius: 999px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 1;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+#write-up-button:hover, #back-button:hover {
+  background: var(--primary);
+  color: var(--surface);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+#back-button {
+  margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+  #write-up-title {
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+  }
+  
+  #write-up-question {
+    font-size: 1.3rem;
+    padding: 1rem 1.5rem;
+  }
+  
+  #write-up-text {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+  
+  #write-up-button, #back-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
 }
 
 #top-section {
@@ -602,4 +658,44 @@ a {
 
 a:hover {
   color: var(--accent);
+}
+
+.conclusion-section {
+    width: 70vw;
+    margin-left: calc(-35vw + 50%);
+    margin-right: calc(-35vw + 50%);
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: #fdf4ec;
+}
+
+.conclusion-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.conclusion-content img {
+    width: 28rem;
+    height: auto;
+}
+
+.conclusion-text {
+    flex: 1;
+    text-align: center;
+}
+
+.conclusion-text h3 {
+    color: #501200;
+    font-family: 'Inter';
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.conclusion-text p {
+    color: #4a2b1c;
+    font-size: 1rem;
+    line-height: 1.6;
 }
